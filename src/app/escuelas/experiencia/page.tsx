@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, KeyMessage, Ref } from "@/components/content";
+import { PageHero, Section, Callout, KeyMessage, Ref, CaseCard } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Experiencia internacional",
@@ -22,6 +22,13 @@ export default function ExperienciaPage() {
       />
 
       <Section title="Chile 2010 (M8.8)">
+        <CaseCard
+          country="Chile"
+          year={2010}
+          magnitude="M8.8"
+          deaths="~525"
+          lesson="La mentalización como factor protector central y herramienta terapéutica"
+        />
         <p>
           El terremoto del 27 de febrero de 2010 en Chile, uno de los más potentes registrados a
           nivel global, dio lugar a una respuesta psicosocial escolar que priorizó un concepto poco
@@ -53,6 +60,14 @@ export default function ExperienciaPage() {
       </Section>
 
       <Section title="Japón 1995 — Kobe (M7.2)">
+        <CaseCard
+          country="Japón — Kobe"
+          year={1995}
+          magnitude="M7.2"
+          deaths="~6,400"
+          schools="~4,000"
+          lesson="Estudio longitudinal de referencia: 8,800 NNA evaluados en 4 momentos"
+        />
         <p>
           El terremoto de Kobe del 17 de enero de 1995 generó una de las bases de evidencia
           longitudinal más sólidas sobre el impacto psicológico en población infantil. Un <strong>estudio
@@ -95,6 +110,14 @@ export default function ExperienciaPage() {
       </Section>
 
       <Section title="Indonesia 2018 — Sulawesi (M7.5)">
+        <CaseCard
+          country="Indonesia — Sulawesi"
+          year={2018}
+          magnitude="M7.5"
+          deaths="4,340"
+          schools="1,299"
+          lesson="Prácticas culturales locales como mecanismos de afrontamiento colectivo"
+        />
         <p>
           El terremoto y tsunami de Sulawesi Central en septiembre de 2018
           causó <span className="stat-inline">4,340</span> muertes y daños
@@ -125,6 +148,13 @@ export default function ExperienciaPage() {
       </Section>
 
       <Section title="Colombia 1999 — Eje Cafetero (M6.2)">
+        <CaseCard
+          country="Colombia — Eje Cafetero"
+          year={1999}
+          magnitude="M6.2"
+          deaths="~1,200"
+          lesson="PAPSIVI como capacidad instalada transferible del conflicto armado"
+        />
         <p>
           El terremoto del 25 de enero de 1999, con epicentro en el Eje Cafetero,
           causó aproximadamente <span className="stat-inline">1,200</span> muertes y afectó
@@ -152,6 +182,14 @@ export default function ExperienciaPage() {
       </Section>
 
       <Section title="Nepal 2015 (M7.8)">
+        <CaseCard
+          country="Nepal"
+          year={2015}
+          magnitude="M7.8"
+          deaths="~8,900"
+          schools="15,000 TLS"
+          lesson="Centros transicionales desplegados en un mes; retraso aumenta deserción"
+        />
         <p>
           El terremoto de abril de 2015 en Nepal interrumpió la educación de <span className="stat-inline">un
           millón</span> de estudiantes, y la respuesta del gobierno se convirtió en referencia
@@ -178,6 +216,13 @@ export default function ExperienciaPage() {
       </Section>
 
       <Section title="Ecuador 2016 — Costa (M7.8)">
+        <CaseCard
+          country="Ecuador — Costa"
+          year={2016}
+          magnitude="M7.8"
+          deaths="~670"
+          lesson="Plan 'Escuela para todos': referencia regional de respuesta educativa integrada"
+        />
         <p>
           El terremoto del 16 de abril de 2016 en la costa ecuatoriana dio lugar al Plan Nacional de
           Respuesta Educativa &quot;Escuela para todos, juntos nos levantamos&quot;, que se convirtió

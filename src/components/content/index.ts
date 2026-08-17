@@ -1,8 +1,13 @@
 export { Callout } from "./callout";
+export { CaseCard } from "./case-card";
 export { DataTable } from "./data-table";
 export { DosDonts } from "./dos-donts";
+export { HBar } from "./hbar";
 export { KeyMessage } from "./key-message";
 export { PageHero } from "./page-hero";
+export { Pyramid } from "./pyramid";
 export { Section } from "./section";
 export { Ref } from "./source-tag";
 export { Stat, StatGrid } from "./stat";
+export { StepCards } from "./step-cards";
+export { Timeline } from "./timeline";

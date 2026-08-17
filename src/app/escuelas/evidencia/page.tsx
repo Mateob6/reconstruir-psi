@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable, Ref, KeyMessage } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref, KeyMessage, Pyramid, HBar } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Evidencia",
@@ -89,6 +89,17 @@ export default function EvidenciaPage() {
           <span className="stat-inline">g&nbsp;=&nbsp;0.68</span> en nueve estudios<Ref id="R-002" />.
         </p>
 
+        <HBar
+          title="Tamaño de efecto pre-post por terapia (Morina et al., 2017)"
+          items={[
+            { label: "KIDNET/NET", value: 1.87 },
+            { label: "EMDR", value: 1.46 },
+            { label: "TCC", value: 1.07 },
+            { label: "Aula", value: 0.68 },
+          ]}
+          unit="g"
+        />
+
         <KeyMessage>
           Implementar cualquier intervención estructurada produce beneficios significativos frente a
           no intervenir. No hay diferencia estadísticamente significativa entre las modalidades
@@ -139,6 +150,21 @@ export default function EvidenciaPage() {
             ["Contexto país", "En desarrollo: g = −1.77", "Desarrollado: g = −0.15"],
             ["Quién entrega", "No especialistas: g = −2.60", "Prof. salud: g = −0.39"],
           ]}
+        />
+
+        <HBar
+          title="Efecto en TEPT por condición del moderador"
+          items={[
+            { label: "No especialistas", value: 2.60 },
+            { label: "Países en desarrollo", value: 1.77 },
+            { label: "≥6 sesiones", value: 1.77 },
+            { label: "≤60 min/sesión", value: 1.60 },
+            { label: "Prof. salud", value: 0.39 },
+            { label: "Países desarrollados", value: 0.15 },
+            { label: "<6 sesiones", value: 0.15 },
+            { label: ">60 min/sesión", value: 0.16 },
+          ]}
+          unit="g"
         />
 
         <Callout type="success" title="Colombia cumple todos los moderadores favorables">
@@ -219,6 +245,16 @@ export default function EvidenciaPage() {
           escenarios privilegiados para los niveles 1 a 3, dado que son las primeras instituciones
           en reanudar operaciones y ofrecen estructura, rutina y contacto con pares.
         </p>
+
+        <Pyramid
+          levels={[
+            { label: "Nivel 4", description: "Servicios especializados de psicología y psiquiatría", color: "danger" },
+            { label: "Nivel 3", description: "Apoyos focalizados no especializados (PAP, actividades psicosociales en escuelas)", color: "warning" },
+            { label: "Nivel 2", description: "Apoyos comunitarios y familiares", color: "accent" },
+            { label: "Nivel 1", description: "Servicios básicos y seguridad", color: "success" },
+          ]}
+          caption="Pirámide IASC: la mayoría se recupera con los niveles 1 y 2. Las escuelas operan en los niveles 1 a 3."
+        />
       </Section>
 
       <Section title="Marcos complementarios">

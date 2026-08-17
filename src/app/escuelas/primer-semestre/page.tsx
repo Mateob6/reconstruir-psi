@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, KeyMessage, Ref } from "@/components/content";
+import { PageHero, Section, Callout, KeyMessage, Ref, StepCards } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Primer semestre",
@@ -91,6 +91,13 @@ export default function PrimerSemestrePage() {
           como una secuencia lógica que va desde garantizar el retorno hasta integrar la salud
           psicosocial en todo el proceso<Ref id="R-120" />.
         </p>
+        <StepCards steps={[
+          { num: 1, title: "R", subtitle: "Reach — Alcanzar", description: "Asegurar que cada estudiante regrese al sistema educativo" },
+          { num: 2, title: "A", subtitle: "Assess — Evaluar", description: "Evaluación diagnóstica de los niveles reales de aprendizaje" },
+          { num: 3, title: "P", subtitle: "Prioritize — Priorizar", description: "Focalizar en competencias fundamentales de lectura y matemáticas" },
+          { num: 4, title: "I", subtitle: "Increase — Eficiencia", description: "Pedagogía estructurada, instrucción diferenciada, optimización del tiempo" },
+          { num: 5, title: "D", subtitle: "Develop — Psicosocial", description: "Integrar aprendizaje socioemocional transversalmente" },
+        ]} />
         <p>
           <strong>Reach</strong> (Alcanzar) busca asegurar que cada estudiante regrese al sistema:
           rastrear la matrícula, contactar a las familias de los estudiantes ausentes y remover

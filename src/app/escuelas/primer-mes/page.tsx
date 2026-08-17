@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable, Ref, KeyMessage } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref, KeyMessage, Pyramid, Timeline } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Primer mes",
@@ -60,6 +60,15 @@ export default function PrimerMesPage() {
           semanal de profesionales de salud mental, y el nivel 3 se atiende por derivación.
         </KeyMessage>
 
+        <Pyramid
+          levels={[
+            { label: "Nivel 3", description: "Atención especializada: EMDR, TCC focalizada, NET (psicólogos clínicos)", color: "danger" },
+            { label: "Nivel 2", description: "Intervención grupal: TRT (5 sesiones), CBI (8 sesiones) por docentes capacitados", color: "warning" },
+            { label: "Nivel 1", description: "PAP universal: observar, escuchar, conectar (cualquier persona, 1 día de formación)", color: "success" },
+          ]}
+          caption="Modelo escalonado: la mayoría se beneficia del nivel 1. Solo los síntomas persistentes requieren nivel 3."
+        />
+
         <Callout type="info" title="¿Quién entrega qué?">
           <p>
             Los datos de Laksmita y colaboradores<Ref id="R-003" /> revelan una paradoja aparente. Las personas
@@ -88,6 +97,14 @@ export default function PrimerMesPage() {
           Finalmente, la <strong>fase de reconstrucción</strong> se extiende durante años y marca el
           retorno progresivo a la normalidad.
         </p>
+
+        <Timeline items={[
+          { time: "0 — 72 horas", label: "Fase heroica", description: "Movilización inmediata y solidaridad espontánea" },
+          { time: "1 semana — 6 meses", label: "Fase de luna de miel", description: "Optimismo transitorio sostenido por la ayuda humanitaria" },
+          { time: "2 — 24 meses", label: "Fase de desilusión", description: "La realidad de la pérdida se impone sobre las expectativas" },
+          { time: "Años", label: "Fase de reconstrucción", description: "Retorno progresivo a la normalidad" },
+        ]} />
+
         <p>
           Dentro de este marco temporal, la evidencia señala que la ventana óptima para implementar
           programas estructurados en las escuelas se sitúa entre las{" "}
@@ -107,6 +124,13 @@ export default function PrimerMesPage() {
           que una proporción de niños y niñas desarrolla síntomas tardíos que solo una evaluación
           longitudinal puede detectar.
         </p>
+
+        <Timeline items={[
+          { time: "1 mes", label: "Primera evaluación", description: "Detección inicial con CRIES/CPSS" },
+          { time: "3 meses", label: "Seguimiento temprano", description: "Identificar trayectorias crónicas emergentes" },
+          { time: "6 meses", label: "Evaluación intermedia", description: "Detectar aparición tardía de síntomas" },
+          { time: "12 meses", label: "Evaluación anual", description: "Balance del primer año, decisión de continuidad" },
+        ]} />
       </Section>
 
       <Section title="Capacitación docente">
