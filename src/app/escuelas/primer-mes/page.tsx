@@ -1,0 +1,249 @@
+import type { Metadata } from "next";
+import { PageHero, Section, Callout, DataTable } from "@/components/content";
+
+export const metadata: Metadata = {
+  title: "Primer mes",
+  description:
+    "Modelo escalonado de intervención, capacitación docente, adaptación curricular y evaluación en crisis durante el primer mes post-terremoto.",
+};
+
+export default function PrimerMesPage() {
+  return (
+    <div className="mx-auto max-w-3xl space-y-8">
+      <PageHero
+        title="Primer mes"
+        subtitle="De la emergencia a la estructura: implementar la respuesta psicosocial y educativa"
+        stats={[
+          { value: "2-8 sem", label: "Ventana óptima" },
+          { value: "1 día", label: "Formación PAP" },
+          { value: "3-5 días", label: "Formación TRT/CBI" },
+          { value: "≥6", label: "Sesiones más efectivas" },
+        ]}
+      />
+
+      <Section title="El modelo escalonado">
+        <p>
+          La evidencia converge en que la respuesta psicosocial escolar debe organizarse como un
+          sistema escalonado de tres niveles, donde la intensidad del apoyo se ajusta a la severidad
+          de las necesidades. Este modelo, articulado con claridad por Chen y colaboradores en su
+          revisión de 2026, permite que la mayoría de los estudiantes reciban atención temprana sin
+          saturar los servicios especializados.
+        </p>
+        <p>
+          En el primer nivel se ubican los Primeros Auxilios Psicológicos (PAP), una intervención
+          universal que puede ser entregada por cualquier miembro del personal educativo tras una
+          formación de un día. Los PAP siguen el protocolo de la OMS basado en tres acciones
+          fundamentales —observar, escuchar y conectar— y no constituyen consejería profesional ni
+          intervención terapéutica. Su propósito es estabilizar, ofrecer presencia segura y facilitar
+          la conexión con redes de apoyo.
+        </p>
+        <p>
+          El segundo nivel involucra intervenciones grupales estructuradas, basadas en principios
+          cognitivo-conductuales, que los docentes pueden implementar tras 3 a 5 días de formación
+          supervisada. Los programas Teaching Recovery Techniques (TRT, 5 sesiones grupales) y
+          Classroom-Based Intervention (CBI, 8 sesiones) representan las opciones con mayor
+          evidencia para este nivel. Están diseñados para estudiantes con síntomas moderados que se
+          benefician de un abordaje estructurado sin requerir atención clínica individual.
+        </p>
+        <p>
+          El tercer nivel queda reservado para los estudiantes con síntomas severos o persistentes
+          que no responden a las intervenciones de los niveles anteriores. Aquí intervienen
+          psicólogos clínicos y psiquiatras con modalidades especializadas como EMDR, TCC focalizada
+          en trauma o Terapia Narrativa de Exposición (NET). La derivación oportuna a este nivel
+          depende de la capacidad de los docentes para identificar señales de alerta durante las
+          actividades de los niveles 1 y 2.
+        </p>
+
+        <Callout type="info" title="¿Quién entrega qué?">
+          <p>
+            Los datos de Laksmita y colaboradores (2026) revelan una paradoja aparente. Las personas
+            sin formación en salud mental producen efectos inmediatos sustancialmente mayores que los
+            profesionales de salud (g&nbsp;=&nbsp;−2.60 vs. g&nbsp;=&nbsp;−0.39). Sin embargo, los
+            efectos de los profesionales se sostienen en el seguimiento (g&nbsp;=&nbsp;−0.38,
+            p&nbsp;=&nbsp;0.047), mientras que los de los no especialistas no alcanzan significancia
+            estadística (g&nbsp;=&nbsp;−0.09, p&nbsp;=&nbsp;0.150). El modelo más efectivo, por
+            tanto, es híbrido. Los docentes entregan los niveles 1 y 2 con supervisión semanal de
+            profesionales de salud mental, y el nivel 3 se atiende por derivación.
+          </p>
+        </Callout>
+      </Section>
+
+      <Section title="La ventana de intervención">
+        <p>
+          El protocolo del Ministerio de Salud de Colombia distingue cuatro fases psicológicas tras
+          un desastre. La fase heroica, que abarca las primeras 72 horas, se caracteriza por la
+          movilización inmediata y la solidaridad espontánea. La fase de luna de miel, que puede
+          extenderse de una semana a seis meses, trae consigo un optimismo transitorio sostenido por
+          la ayuda humanitaria. La fase de desilusión, entre los 2 y los 24 meses posteriores,
+          emerge cuando la realidad de la pérdida se impone sobre las expectativas de recuperación
+          rápida. Finalmente, la fase de reconstrucción se extiende durante años y marca el retorno
+          progresivo a la normalidad.
+        </p>
+        <p>
+          Dentro de este marco temporal, la evidencia señala que la ventana óptima para implementar
+          programas estructurados en las escuelas se sitúa entre las 2 y las 8 semanas posteriores
+          al desastre. Las intervenciones iniciadas dentro de los primeros cuatro meses producen los
+          mayores impactos. Los programas con seis o más sesiones distribuidas a lo largo de seis o
+          más semanas se asocian con efectos sustancialmente mayores que los más breves
+          (g&nbsp;=&nbsp;−1.77 vs. g&nbsp;=&nbsp;−0.15), lo que sugiere que la sostenibilidad del
+          contacto importa tanto como la intensidad de cada sesión.
+        </p>
+        <p>
+          El tamizaje con instrumentos estandarizados debe realizarse a los 1, 3, 6 y 12 meses
+          posteriores al evento. Este calendario se alinea con la evidencia sobre trayectorias de
+          recuperación, que muestra que el periodo de mayor dinamismo ocurre durante el primer año y
+          que una proporción de niños y niñas desarrolla síntomas tardíos que solo una evaluación
+          longitudinal puede detectar.
+        </p>
+      </Section>
+
+      <Section title="Capacitación docente">
+        <DataTable
+          caption="Formación requerida por nivel"
+          headers={["Tipo de formación", "Duración", "Quién la recibe", "Contenido"]}
+          rows={[
+            [
+              "Primeros auxilios psicológicos (PAP)",
+              "1 día (8 horas)",
+              "Todo el personal educativo",
+              "Observar, escuchar, conectar + simulaciones",
+            ],
+            [
+              "Formación IASC básica",
+              "1-3 días",
+              "Orientadores y coordinadores",
+              "Pirámide IASC, principio «no hacer daño», derivación",
+            ],
+            [
+              "Programa TRT o CBI",
+              "3-5 días",
+              "Docentes seleccionados",
+              "Manejo de recuerdos intrusivos, activación, evitación + práctica supervisada",
+            ],
+            [
+              "Supervisión continua",
+              "Semanal (permanente)",
+              "Docentes que implementan",
+              "Revisión de audio, retroalimentación, manejo de casos",
+            ],
+          ]}
+        />
+
+        <p>
+          Una revisión de Coombe y colaboradores (2015) identificó 18 intervenciones mediadas por
+          docentes en contextos post-desastre, de las cuales 9 contaban con metodología adecuada
+          para evaluar su efectividad. Los resultados confirman que los docentes pueden entregar
+          intervenciones psicosociales con efectos inmediatos significativos cuando reciben
+          formación específica y supervisión periódica. Los programas TRT y EASE han demostrado ser
+          viables para personas sin formación clínica, siempre que cuenten con la estructura de
+          acompañamiento descrita.
+        </p>
+        <p>
+          No obstante, la evidencia también establece límites claros. El programa ERASE-Stress,
+          entregado por docentes con nivel de evidencia calificado como «alto», no mostró efectos
+          sostenidos en el seguimiento a tres años. Los docentes que confunden la evitación con el
+          funcionamiento normal pueden pasar por alto señales de alerta importantes. Un estudio
+          realizado en Chile tras el terremoto de 2010 encontró que solo 3 de 33 niños evaluados
+          cumplían criterios formales de TEPT, pero el 45% presentaba síntomas activados por el
+          sismo, y los diagnósticos más frecuentes fueron TDAH (33%) y trastornos de ajuste (24%).
+        </p>
+
+        <Callout type="warning" title="Supervisión, no solo formación">
+          <p>
+            Los efectos de las intervenciones entregadas por docentes no se sostienen sin supervisión
+            profesional continua. La formación inicial sin acompañamiento resulta insuficiente. La
+            supervisión semanal, que incluya revisión de grabaciones de audio y retroalimentación
+            sobre el manejo de casos, constituye el factor que marca la diferencia entre una
+            intervención con efectos transitorios y una con impacto duradero.
+          </p>
+        </Callout>
+      </Section>
+
+      <Section title="Adaptación curricular">
+        <p>
+          Adaptar el currículo tras un desastre no significa empobrecerlo. El marco RAPID del Banco
+          Mundial propone priorizar competencias fundamentales en lectura y matemáticas sin
+          sacrificar la riqueza de la experiencia educativa. Esta priorización permite concentrar
+          los recursos pedagógicos en lo esencial mientras se recupera la capacidad plena del
+          sistema.
+        </p>
+        <p>
+          La integración del aprendizaje socioemocional (SEL) en la práctica cotidiana del aula fue
+          identificada como uno de los tres principales factores de éxito en las experiencias
+          post-desastre, presente en el 32% de los casos exitosos documentados, junto con el uso de
+          medios de aprendizaje innovadores y la participación comunitaria. El Cuadernillo GIRE del
+          Ministerio de Educación Nacional, publicado en enero de 2026, ofrece 17 actividades
+          prácticas de SEL organizadas en su Componente 2, que van desde la identificación de
+          emociones hasta la resolución de problemas y la conexión con objetos significativos.
+        </p>
+        <p>
+          La experiencia de Turquía tras el terremoto de 2023 aporta un dato cualitativo relevante.
+          Los docentes describieron un giro espontáneo hacia lo que denominaron «pedagogía del
+          amor», donde el vínculo afectivo, la escucha activa, la presencia estable y un ambiente
+          predecible desplazaron temporalmente la instrucción convencional. Las actividades de
+          juego, arte y movimiento corporal ocuparon el espacio que antes llenaban las lecciones
+          tradicionales. En Chile, enseñar sobre los terremotos a partir de la experiencia vivida
+          demostró facilitar tanto la comprensión científica como el procesamiento emocional del
+          evento.
+        </p>
+      </Section>
+
+      <Section title="Evaluación en la crisis">
+        <p>
+          La primera evaluación tras el retorno a clases debe ser diagnóstica, no calificada. El
+          pilar «Assess» del marco RAPID establece que la evaluación diagnóstica de los niveles
+          reales de aprendizaje es el segundo paso obligatorio después de asegurar que cada
+          estudiante haya regresado. Sin esta línea de base, cualquier decisión pedagógica o
+          curricular operará sobre supuestos en lugar de datos.
+        </p>
+        <p>
+          Durante el periodo de recuperación, la evaluación formativa debe prevalecer sobre la
+          sumativa. Las lecciones de la pandemia sugieren estrategias concretas como la
+          flexibilización de las calificaciones, la promoción condicional automática y la evaluación
+          basada en portafolios. El principio de no penalización debe aplicarse en tres niveles
+          simultáneamente. A nivel individual, con ponderaciones diferentes para las calificaciones
+          del periodo de crisis. A nivel institucional, con indicadores de desempeño contextualizados
+          que reflejen las circunstancias excepcionales. A nivel sistémico, con ajustes en las
+          pruebas estandarizadas como las Pruebas Saber.
+        </p>
+
+        <Callout type="info" title="Calendario escolar 2026">
+          <p>
+            Cali tiene aproximadamente 14 semanas efectivas entre la reapertura del 24 de agosto y
+            el cierre del calendario académico el 4 de diciembre de 2026. Este marco temporal exige
+            priorizar competencias fundamentales y utilizar la evaluación diagnóstica como brújula
+            para focalizar los esfuerzos pedagógicos.
+          </p>
+        </Callout>
+      </Section>
+
+      <Section title="Bienestar del docente">
+        <p>
+          UNICEF posiciona el bienestar docente como un pilar independiente de su marco de salud
+          mental escolar, y no como un subproducto de la atención a los estudiantes. Esta distinción
+          resulta fundamental porque un docente que no ha sido atendido difícilmente puede atender a
+          otros. Las investigaciones realizadas tras el terremoto de Sulawesi en Indonesia (2018)
+          documentaron síntomas recurrentes entre los docentes que regresaron a las aulas, entre
+          ellos cefaleas, dolor de espalda, alteraciones del sueño e irritabilidad persistente.
+        </p>
+        <p>
+          La guía de UNICEF Chile identifica la mentalización como un factor protector fundamental.
+          La capacidad de comprender los propios estados mentales y los de los estudiantes permite
+          al docente responder de manera sensible en lugar de reaccionar impulsivamente ante
+          comportamientos difíciles. Fortalecer esta capacidad requiere espacios seguros de
+          reflexión, no simplemente una charla motivacional antes de volver al aula.
+        </p>
+        <p>
+          Los docentes enfrentan una doble carga que no debe subestimarse. Son simultáneamente
+          implementadores de la respuesta y personas afectadas por el mismo desastre. Deben resolver
+          problemas pedagógicos para los cuales nunca fueron formados, con menos tiempo, menos
+          recursos y una población estudiantil más heterogénea en sus necesidades que antes del
+          sismo. La Semana de Desarrollo Institucional del 18 al 21 de agosto en Cali representa la
+          única ventana de preparación antes de la reapertura, y en apenas cuatro días debe cubrir
+          la preparación emocional del equipo, la evaluación de infraestructura, la reorganización
+          curricular y los protocolos de seguridad.
+        </p>
+      </Section>
+    </div>
+  );
+}
