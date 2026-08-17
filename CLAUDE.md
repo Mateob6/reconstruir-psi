@@ -1,5 +1,8 @@
 # Reconstruir Psi
 
+- **URL:** https://reconstruir-psi.vercel.app
+- **Repo:** https://github.com/Mateob6/reconstruir-psi
+
 ## Qué es
 
 Sitio web de divulgación basado en evidencia para la respuesta psicosocial y educativa en escuelas tras el terremoto M7.4 del 10 de agosto de 2026 en Colombia. Público: tomadores de decisiones, docentes, equipos psicosociales, secretarías de educación.
@@ -53,18 +56,18 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 
 | Fase | Descripción | Estado |
 |------|-------------|--------|
-| W1 | Scaffold, design system, layout, rutas placeholder | En curso |
-| W2 | Contenido Escuelas (transformar síntesis → páginas) | Pendiente |
+| W1 | Scaffold, design system, layout, rutas placeholder | Completada |
+| W2 | Contenido Escuelas (transformar síntesis → páginas) | Completada |
 | W3 | Área Trabajo (revisión + contenido) | Pendiente |
-| W4 | Acerca de + SEO + Open Graph | Pendiente |
-| W5 | Deploy Vercel + pulido responsive | Pendiente |
+| W4 | SEO + Open Graph + favicon | Completada |
+| W5 | Repo GitHub + Deploy Vercel | Completada |
 | W6 | Iteración y contenido adicional | Pendiente |
 
 ## Deploy
 
-```bash
-npm run build    # genera /out
-# Vercel despliega automáticamente desde el repo
-```
+Vercel despliega automáticamente con cada push a `main`.
 
-Repo GitHub: mateob6/reconstruir-psi (pendiente creación)
+```bash
+npm run build    # build local (genera /out)
+git push         # trigger deploy en Vercel
+```
