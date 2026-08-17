@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
 import { StatGrid, Stat } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function AcercaPage() {
           sacudió el occidente de Colombia. Fue el sismo más fuerte registrado en el país en la
           última década. Las cifras preliminares reportaron más de 287 personas fallecidas, 570
           heridas, y un impacto que se extendió a lo largo de varias ciudades del occidente
-          colombiano.
+          colombiano<Ref id="R-111" also={["R-116"]} />.
         </p>
         <p>
           Pereira concentró más de 60 muertes y múltiples edificios colapsados. En Cali, 32
@@ -123,15 +123,15 @@ export default function AcercaPage() {
         <p>
           La guía se centra exclusivamente en intervenciones post-desastre natural y no incorpora la
           evidencia proveniente de intervenciones post-conflicto armado, a pesar de que Colombia
-          dispone de una capacidad instalada significativa a través del PAPSIVI. La transferibilidad
+          dispone de una capacidad instalada significativa a través del PAPSIVI<Ref id="R-039" />. La transferibilidad
           entre estos contextos merece un análisis independiente.
         </p>
         <p>
           Algunos de los meta-análisis incluidos presentan heterogeneidad elevada (I² superior al 90%
           en determinados análisis), lo que obliga a interpretar los tamaños de efecto agregados con
-          cautela. Adicionalmente, no se identificaron estudios de implementación que examinen la
+          cautela<Ref id="R-003" />. Adicionalmente, no se identificaron estudios de implementación que examinen la
           escalabilidad de las intervenciones psicosociales escolares post-desastre, lo que constituye
-          una brecha importante en la literatura.
+          una brecha importante en la literatura<Ref id="R-003" />.
         </p>
       </Section>
 

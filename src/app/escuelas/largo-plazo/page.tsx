@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Largo plazo",
@@ -27,7 +27,7 @@ export default function LargoPlazoPage() {
           2022-2030) constituye la referencia global para integrar la reducción del riesgo de
           desastres en los sistemas educativos. Su estructura se organiza en una fundación de sistemas
           habilitantes sobre la que se articulan tres pilares complementarios, cada uno abordando una
-          dimensión distinta de la seguridad escolar.
+          dimensión distinta de la seguridad escolar<Ref id="R-101" />.
         </p>
         <p>
           La fundación establece las condiciones sistémicas necesarias para que los tres pilares
@@ -79,7 +79,7 @@ export default function LargoPlazoPage() {
           89 instituciones y 214 sedes que reportaron daños en su infraestructura, la evaluación
           determina cuáles espacios pueden habilitarse para el retorno presencial y cuáles requieren
           alternativas temporales como espacios comunitarios, aulas prefabricadas o modalidades
-          remotas.
+          remotas<Ref id="R-111" />.
         </p>
         <p>
           La mitigación del riesgo no estructural merece atención particular. Los terremotos causan
@@ -100,7 +100,7 @@ export default function LargoPlazoPage() {
         <p>
           Colombia cuenta con un marco normativo que ha evolucionado recientemente. Los Planes
           Escolares de Gestión del Riesgo (PEGR), establecidos por la Guía No. 59 del MEN en 2015,
-          fueron ampliados mediante la Resolución 006519 de abril de 2025, que los transformó en
+          fueron ampliados mediante la Resolución 006519 de abril de 2025<Ref id="R-107" />, que los transformó en
           Planes de Gestión Integral del Riesgo Escolar (PGIRE). Este nuevo marco incorpora amenazas
           sociales y antrópicas junto a las amenazas naturales, ampliando el alcance de la gestión del
           riesgo en las instituciones educativas.
@@ -111,7 +111,7 @@ export default function LargoPlazoPage() {
           del riesgo&quot;, facilita la identificación participativa de amenazas y vulnerabilidades.
           El segundo, &quot;Reducción del riesgo&quot;, orienta la implementación de medidas
           preventivas y de mitigación. El tercero, &quot;Manejo de la situación&quot;, guía la
-          respuesta cuando ocurre un evento.
+          respuesta cuando ocurre un evento<Ref id="R-106" />.
         </p>
       </Section>
 
@@ -128,7 +128,7 @@ export default function LargoPlazoPage() {
           partir de la experiencia vivida permite articular simultáneamente la comprensión científica
           del fenómeno y el procesamiento emocional de lo ocurrido. Lejos de retraumatizar, este
           enfoque convierte el desastre en una oportunidad de aprendizaje significativo sobre el
-          territorio, el riesgo y la resiliencia comunitaria.
+          territorio, el riesgo y la resiliencia comunitaria<Ref id="R-001" />.
         </p>
         <p>
           El Componente 1 del Cuadernillo GIRE proporciona actividades concretas para este pilar. El
@@ -136,7 +136,7 @@ export default function LargoPlazoPage() {
           educativa expresar y compartir sus emociones tras el evento. Las &quot;Señales Seguras&quot;
           proponen la señalización participativa de espacios escolares, diseñada para ser accesible
           incluso a la primera infancia. Las &quot;Rutinas que Acompañan&quot; utilizan calendarios
-          visuales para generar anticipación y sensación de seguridad en los estudiantes.
+          visuales para generar anticipación y sensación de seguridad en los estudiantes<Ref id="R-106" />.
         </p>
       </Section>
 
@@ -145,7 +145,7 @@ export default function LargoPlazoPage() {
           El terremoto de Kobe de 1995 destruyó aproximadamente 4,000 escuelas y transformó la
           política pública japonesa de seguridad escolar de manera irreversible. Japón puso en marcha
           un programa nacional de reforzamiento sísmico que llevó la proporción de escuelas
-          sísmica-resistentes del 42.5% en 2002 a cifras cercanas al 100% en la actualidad.
+          sísmica-resistentes del 42.5% en 2002 a cifras cercanas al 100% en la actualidad<Ref id="R-079" />.
         </p>
         <p>
           Esta transformación no fue inmediata ni automática. Requirió compromiso político sostenido
@@ -175,8 +175,8 @@ export default function LargoPlazoPage() {
         <p>
           Colombia dispone de un conjunto de instrumentos normativos que proveen la base para una
           estrategia de largo plazo en seguridad escolar. La Guía No. 59 del MEN establece las
-          directrices para los Planes Escolares de Gestión del Riesgo, mientras que las guías del
-          UNGRD complementan la perspectiva institucional con herramientas operativas para la
+          directrices para los Planes Escolares de Gestión del Riesgo<Ref id="R-105" />, mientras que las guías del
+          UNGRD<Ref id="R-108" /> complementan la perspectiva institucional con herramientas operativas para la
           planificación comunitaria.
         </p>
         <p>
@@ -190,7 +190,7 @@ export default function LargoPlazoPage() {
           48 millones de dólares del Programa de Espacios Educativos hacia la recuperación y
           reconstrucción de infraestructura educativa en las zonas afectadas. Esta decisión señala la
           prioridad que el gobierno central otorga a la continuidad del servicio educativo como
-          componente de la respuesta integral al desastre.
+          componente de la respuesta integral al desastre<Ref id="R-116" />.
         </p>
         <p>
           El principio &quot;Build Back Better&quot; del Marco de Sendai establece que la

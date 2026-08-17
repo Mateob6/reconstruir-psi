@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Recursos",
@@ -47,12 +47,12 @@ export default function RecursosPage() {
           <strong>Teaching Recovery Techniques (TRT)</strong> consiste en cinco sesiones grupales
           basadas en principios de la terapia cognitivo-conductual, diseñadas para niños, niñas y
           adolescentes de 8 a 18 años. Las evaluaciones más recientes le otorgan el nivel más alto
-          de evidencia entre los 25 programas analizados por Avery et al. (2024), resultado
-          confirmado de manera independiente por Cosgrove et al. (2025). El programa enseña
+          de evidencia entre los 25 programas analizados por Avery et al. (2024)<Ref id="R-013" />, resultado
+          confirmado de manera independiente por Cosgrove et al. (2025)<Ref id="R-012" />. El programa enseña
           habilidades específicas para manejar memorias intrusivas, activación fisiológica y
           conductas de evitación. Cuando se combina con un módulo de habilidades parentales, los
           resultados superan a los de TRT solo. El manual está disponible de forma gratuita en
-          childrenandwar.org e incluye un componente de entrenamiento en línea.
+          childrenandwar.org e incluye un componente de entrenamiento en línea<Ref id="R-031" />.
         </p>
 
         <p>
@@ -60,7 +60,7 @@ export default function RecursosPage() {
           Holland, se estructura en ocho sesiones grupales que integran terapia de juego, conciencia
           emocional, resolución de conflictos y aprendizaje cooperativo. Las sesiones oscilan entre
           45 y 120 minutos, y el meta-análisis de Morina et al. (2017) reporta un tamaño de efecto
-          pre-post de g = 0,68 para intervenciones de aula de este tipo.
+          pre-post de g = 0,68 para intervenciones de aula de este tipo<Ref id="R-002" />.
         </p>
 
         <p>
@@ -73,7 +73,7 @@ export default function RecursosPage() {
 
         <p>
           <strong>ERASE-Stress</strong> es un programa entregado por docentes que recibió
-          calificación de evidencia &quot;alta&quot; en la evaluación de Cosgrove et al. (2025). Sin
+          calificación de evidencia &quot;alta&quot; en la evaluación de Cosgrove et al. (2025)<Ref id="R-012" />. Sin
           embargo, un seguimiento a tres años reveló que los efectos no se sostuvieron en el
           tiempo, lo que subraya la necesidad de supervisión y acompañamiento continuos cuando son
           los docentes quienes entregan la intervención.
@@ -116,7 +116,7 @@ export default function RecursosPage() {
           El modelo implementado en Kobe tras el terremoto de 1995 ofrece una referencia valiosa
           para Colombia. Los docentes administraron los instrumentos en el aula con la presencia de
           un psiquiatra durante la primera aplicación, lo que permitió resolver dudas en tiempo real
-          y garantizar la calidad de los datos sin sobrecargar al personal clínico.
+          y garantizar la calidad de los datos sin sobrecargar al personal clínico<Ref id="R-079" />.
         </p>
 
         <Callout type="info" title="Calendario de evaluación recomendado">
@@ -142,37 +142,37 @@ export default function RecursosPage() {
           headers={["Instrumento", "Año", "Alcance"]}
           rows={[
             [
-              "MinSalud — Protocolo atención psicosocial",
+              <><span>MinSalud — Protocolo atención psicosocial</span><Ref id="R-027" /></>,
               "2016",
               "Marco oficial para emergencias (Ley 1523/2012). Tres fases de respuesta, referencias a pueblos indígenas (Paez/Nasas)",
             ],
             [
-              "MinSalud — Guía salud mental en emergencias",
+              <><span>MinSalud — Guía salud mental en emergencias</span><Ref id="R-028" /></>,
               "2016",
               "Guía clínica validada en todas las regiones colombianas",
             ],
             [
-              "MEN — Guía 59 (PEGR)",
+              <><span>MEN — Guía 59 (PEGR)</span><Ref id="R-105" /></>,
               "2015",
               "Planes Escolares de Gestión del Riesgo",
             ],
             [
-              "MEN — Resolución 006519 (GIRE)",
+              <><span>MEN — Resolución 006519 (GIRE)</span><Ref id="R-107" /></>,
               "2025",
               "PEGR se transforma en PGIRE, amplía alcance a amenazas sociales y antrópicas",
             ],
             [
-              "MEN — Cuadernillo GIRE",
+              <><span>MEN — Cuadernillo GIRE</span><Ref id="R-106" /></>,
               "2026",
               "17 actividades socioemocionales + 3 momentos de gestión del riesgo",
             ],
             [
-              "PAPSIVI",
+              <><span>PAPSIVI</span><Ref id="R-039" /></>,
               "2019",
               "Atención psicosocial para víctimas del conflicto — capacidad instalada transferible",
             ],
             [
-              "UNGRD — Plan escolar",
+              <><span>UNGRD — Plan escolar</span><Ref id="R-108" /></>,
               "—",
               "Guía para planes de gestión del riesgo escolar",
             ],
@@ -186,7 +186,7 @@ export default function RecursosPage() {
           atención psicosocial comunitaria, trabajo con poblaciones vulnerables y adaptación
           cultural de intervenciones. Si bien fue diseñado para víctimas del conflicto, sus
           protocolos, su personal capacitado y sus redes territoriales constituyen una capacidad
-          instalada que puede activarse para la respuesta a desastres naturales.
+          instalada que puede activarse para la respuesta a desastres naturales<Ref id="R-039" />.
         </p>
       </Section>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Primer mes",
@@ -26,7 +26,7 @@ export default function PrimerMesPage() {
           La evidencia converge en que la respuesta psicosocial escolar debe organizarse como un
           sistema escalonado de tres niveles, donde la intensidad del apoyo se ajusta a la severidad
           de las necesidades. Este modelo, articulado con claridad por Chen y colaboradores en su
-          revisión de 2026, permite que la mayoría de los estudiantes reciban atención temprana sin
+          revisión de 2026<Ref id="R-019" />, permite que la mayoría de los estudiantes reciban atención temprana sin
           saturar los servicios especializados.
         </p>
         <p>
@@ -56,7 +56,7 @@ export default function PrimerMesPage() {
 
         <Callout type="info" title="¿Quién entrega qué?">
           <p>
-            Los datos de Laksmita y colaboradores (2026) revelan una paradoja aparente. Las personas
+            Los datos de Laksmita y colaboradores<Ref id="R-003" /> revelan una paradoja aparente. Las personas
             sin formación en salud mental producen efectos inmediatos sustancialmente mayores que los
             profesionales de salud (g&nbsp;=&nbsp;−2.60 vs. g&nbsp;=&nbsp;−0.39). Sin embargo, los
             efectos de los profesionales se sostienen en el seguimiento (g&nbsp;=&nbsp;−0.38,
@@ -70,7 +70,7 @@ export default function PrimerMesPage() {
 
       <Section title="La ventana de intervención">
         <p>
-          El protocolo del Ministerio de Salud de Colombia distingue cuatro fases psicológicas tras
+          El protocolo del Ministerio de Salud de Colombia<Ref id="R-027" /> distingue cuatro fases psicológicas tras
           un desastre. La fase heroica, que abarca las primeras 72 horas, se caracteriza por la
           movilización inmediata y la solidaridad espontánea. La fase de luna de miel, que puede
           extenderse de una semana a seis meses, trae consigo un optimismo transitorio sostenido por
@@ -82,10 +82,10 @@ export default function PrimerMesPage() {
         <p>
           Dentro de este marco temporal, la evidencia señala que la ventana óptima para implementar
           programas estructurados en las escuelas se sitúa entre las 2 y las 8 semanas posteriores
-          al desastre. Las intervenciones iniciadas dentro de los primeros cuatro meses producen los
+          al desastre<Ref id="R-019" />. Las intervenciones iniciadas dentro de los primeros cuatro meses producen los
           mayores impactos. Los programas con seis o más sesiones distribuidas a lo largo de seis o
           más semanas se asocian con efectos sustancialmente mayores que los más breves
-          (g&nbsp;=&nbsp;−1.77 vs. g&nbsp;=&nbsp;−0.15), lo que sugiere que la sostenibilidad del
+          (g&nbsp;=&nbsp;−1.77 vs. g&nbsp;=&nbsp;−0.15)<Ref id="R-003" />, lo que sugiere que la sostenibilidad del
           contacto importa tanto como la intensidad de cada sesión.
         </p>
         <p>
@@ -130,22 +130,22 @@ export default function PrimerMesPage() {
         />
 
         <p>
-          Una revisión de Coombe y colaboradores (2015) identificó 18 intervenciones mediadas por
-          docentes en contextos post-desastre, de las cuales 9 contaban con metodología adecuada
+          Una revisión de Coombe y colaboradores identificó 18 intervenciones mediadas por
+          docentes en contextos post-desastre<Ref id="R-021" />, de las cuales 9 contaban con metodología adecuada
           para evaluar su efectividad. Los resultados confirman que los docentes pueden entregar
           intervenciones psicosociales con efectos inmediatos significativos cuando reciben
           formación específica y supervisión periódica. Los programas TRT y EASE han demostrado ser
-          viables para personas sin formación clínica, siempre que cuenten con la estructura de
+          viables para personas sin formación clínica<Ref id="R-013" />, siempre que cuenten con la estructura de
           acompañamiento descrita.
         </p>
         <p>
           No obstante, la evidencia también establece límites claros. El programa ERASE-Stress,
           entregado por docentes con nivel de evidencia calificado como «alto», no mostró efectos
-          sostenidos en el seguimiento a tres años. Los docentes que confunden la evitación con el
+          sostenidos en el seguimiento a tres años<Ref id="R-008" />. Los docentes que confunden la evitación con el
           funcionamiento normal pueden pasar por alto señales de alerta importantes. Un estudio
           realizado en Chile tras el terremoto de 2010 encontró que solo 3 de 33 niños evaluados
           cumplían criterios formales de TEPT, pero el 45% presentaba síntomas activados por el
-          sismo, y los diagnósticos más frecuentes fueron TDAH (33%) y trastornos de ajuste (24%).
+          sismo, y los diagnósticos más frecuentes fueron TDAH (33%) y trastornos de ajuste (24%)<Ref id="R-086" />.
         </p>
 
         <Callout type="warning" title="Supervisión, no solo formación">
@@ -170,11 +170,11 @@ export default function PrimerMesPage() {
         <p>
           La integración del aprendizaje socioemocional (SEL) en la práctica cotidiana del aula fue
           identificada como uno de los tres principales factores de éxito en las experiencias
-          post-desastre, presente en el 32% de los casos exitosos documentados, junto con el uso de
+          post-desastre, presente en el 32% de los casos exitosos documentados<Ref id="R-089" />, junto con el uso de
           medios de aprendizaje innovadores y la participación comunitaria. El Cuadernillo GIRE del
           Ministerio de Educación Nacional, publicado en enero de 2026, ofrece 17 actividades
           prácticas de SEL organizadas en su Componente 2, que van desde la identificación de
-          emociones hasta la resolución de problemas y la conexión con objetos significativos.
+          emociones hasta la resolución de problemas y la conexión con objetos significativos<Ref id="R-106" />.
         </p>
         <p>
           La experiencia de Turquía tras el terremoto de 2023 aporta un dato cualitativo relevante.
@@ -220,14 +220,14 @@ export default function PrimerMesPage() {
       <Section title="Bienestar del docente">
         <p>
           UNICEF posiciona el bienestar docente como un pilar independiente de su marco de salud
-          mental escolar, y no como un subproducto de la atención a los estudiantes. Esta distinción
+          mental escolar<Ref id="R-025" />, y no como un subproducto de la atención a los estudiantes. Esta distinción
           resulta fundamental porque un docente que no ha sido atendido difícilmente puede atender a
           otros. Las investigaciones realizadas tras el terremoto de Sulawesi en Indonesia (2018)
-          documentaron síntomas recurrentes entre los docentes que regresaron a las aulas, entre
+          documentaron síntomas recurrentes entre los docentes que regresaron a las aulas<Ref id="R-021" />, entre
           ellos cefaleas, dolor de espalda, alteraciones del sueño e irritabilidad persistente.
         </p>
         <p>
-          La guía de UNICEF Chile identifica la mentalización como un factor protector fundamental.
+          La guía de UNICEF Chile<Ref id="R-001" /> identifica la mentalización como un factor protector fundamental.
           La capacidad de comprender los propios estados mentales y los de los estudiantes permite
           al docente responder de manera sensible en lugar de reaccionar impulsivamente ante
           comportamientos difíciles. Fortalecer esta capacidad requiere espacios seguros de

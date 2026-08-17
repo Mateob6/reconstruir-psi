@@ -13,6 +13,7 @@ const TITLES: Record<string, string> = {
   "/escuelas/recursos": "Recursos",
   "/escuelas/experiencia": "Experiencia internacional",
   "/trabajo": "Trabajo",
+  "/referencias": "Referencias",
   "/acerca": "Acerca de",
 };
 

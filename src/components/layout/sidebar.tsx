@@ -36,7 +36,10 @@ const NAV: NavSection[] = [
   },
   {
     title: null,
-    items: [{ href: "/acerca", label: "Acerca de" }],
+    items: [
+      { href: "/referencias", label: "Referencias" },
+      { href: "/acerca", label: "Acerca de" },
+    ],
   },
 ];
 

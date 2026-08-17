@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Evidencia",
@@ -35,15 +35,15 @@ export default function EvidenciaPage() {
           intervenciones implementadas en contextos escolares. El efecto inmediato sobre los
           síntomas de TEPT fue grande (g&nbsp;=&nbsp;−1.20), con efectos que se sostuvieron tanto a
           corto plazo (g&nbsp;=&nbsp;−0.25) como a largo plazo (g&nbsp;=&nbsp;−0.45). Para
-          depresión, el efecto inmediato fue pequeño pero significativo (g&nbsp;=&nbsp;−0.34).
+          depresión, el efecto inmediato fue pequeño pero significativo (g&nbsp;=&nbsp;−0.34)<Ref id="R-003" />.
         </p>
         <p>
           Xie y colaboradores (2024) realizaron un meta-análisis en red con 26 ensayos controlados
           y 4,331 participantes, lo que permitió comparar simultáneamente múltiples modalidades
-          terapéuticas y establecer rankings de efectividad. Morina y colaboradores (2017) aportaron
+          terapéuticas y establecer rankings de efectividad<Ref id="R-004" />. Morina y colaboradores (2017) aportaron
           la revisión más amplia con 36 estudios y 4,411 participantes, encontrando un efecto
           pre-post grande (g&nbsp;=&nbsp;1.35) y un efecto moderado cuando se compara contra
-          controles activos (g&nbsp;=&nbsp;0.44).
+          controles activos (g&nbsp;=&nbsp;0.44)<Ref id="R-002" />.
         </p>
 
         <DataTable
@@ -65,21 +65,21 @@ export default function EvidenciaPage() {
           (SUCRA&nbsp;69.6), seguida por la Terapia de Exposición/NET (SUCRA&nbsp;69.6) y la TCC
           (SUCRA&nbsp;66.0). En el seguimiento a largo plazo, EMDR mantuvo el primer lugar
           (SUCRA&nbsp;87.1), con ET/NET en segundo (SUCRA&nbsp;78.9). Para síntomas depresivos,
-          EMDR también lideró (SUCRA&nbsp;88.5), seguida por la Terapia de Juego (SUCRA&nbsp;87.3).
+          EMDR también lideró (SUCRA&nbsp;88.5), seguida por la Terapia de Juego (SUCRA&nbsp;87.3)<Ref id="R-004" />.
         </p>
         <p>
           Los datos pre-post de Morina y colaboradores (2017) complementan esta perspectiva con una
           taxonomía más fina. La Terapia Narrativa de Exposición para niños (KIDNET) mostró el
           tamaño de efecto más alto (g&nbsp;=&nbsp;1.87), aunque con solo dos estudios. EMDR
           obtuvo g&nbsp;=&nbsp;1.46 a partir de diez estudios, la TCC g&nbsp;=&nbsp;1.07 en ocho
-          estudios, y las intervenciones de aula g&nbsp;=&nbsp;0.68 en nueve estudios.
+          estudios, y las intervenciones de aula g&nbsp;=&nbsp;0.68 en nueve estudios<Ref id="R-002" />.
         </p>
 
         <Callout type="info" title="Todas las modalidades son efectivas">
           <p>
             A pesar de las diferencias en los rankings, el análisis formal no encontró diferencias
             estadísticamente significativas entre los tipos de terapia (F&nbsp;=&nbsp;2.49,
-            p&nbsp;=&nbsp;0.062). El mensaje central de la evidencia es que implementar cualquier
+            p&nbsp;=&nbsp;0.062)<Ref id="R-002" />. El mensaje central de la evidencia es que implementar cualquier
             intervención estructurada produce beneficios significativos frente a no intervenir.
           </p>
         </Callout>
@@ -101,7 +101,7 @@ export default function EvidenciaPage() {
           p&nbsp;&lt;&nbsp;0.001). De manera consistente, cuando las intervenciones fueron
           entregadas por personas sin formación en salud mental, los efectos inmediatos fueron
           sustancialmente mayores que cuando las entregaron profesionales de salud
-          (g&nbsp;=&nbsp;−2.60 vs. g&nbsp;=&nbsp;−0.39).
+          (g&nbsp;=&nbsp;−2.60 vs. g&nbsp;=&nbsp;−0.39)<Ref id="R-003" />.
         </p>
 
         <DataTable
@@ -133,7 +133,7 @@ export default function EvidenciaPage() {
           Entre el 34% y el 82% de los participantes mostraron trayectorias resilientes, y entre el
           51% y el 97% fueron clasificados como resilientes o en recuperación espontánea. El
           desarrollo más dinámico ocurre durante los primeros 12 meses, lo que subraya la
-          importancia de intervenir tempranamente.
+          importancia de intervenir tempranamente<Ref id="R-050" />.
         </p>
         <p>
           El estudio longitudinal de Kobe (Uemoto et al., 2012) ofrece la evidencia más granular.
@@ -143,14 +143,14 @@ export default function EvidenciaPage() {
           consistentemente puntuaciones más altas que los niños. Los síntomas persistieron más de
           dos años en las zonas de mayor daño. Un hallazgo inesperado fue la aparición de un tercer
           factor en los cuestionarios, relacionado con la responsabilidad social y la culpa, que
-          no había sido documentado previamente.
+          no había sido documentado previamente<Ref id="R-079" />.
         </p>
       </Section>
 
       <Section title="La pirámide IASC">
         <p>
           Toda respuesta psicosocial en emergencias debe organizarse dentro del marco establecido
-          por el Comité Permanente entre Organismos (IASC, 2007). Este modelo propone una pirámide
+          por el Comité Permanente entre Organismos (IASC, 2007)<Ref id="R-023" />. Este modelo propone una pirámide
           de cuatro niveles que ordena las intervenciones según su alcance y grado de
           especialización.
         </p>
@@ -178,12 +178,12 @@ export default function EvidenciaPage() {
           Este marco resulta especialmente relevante porque posiciona el bienestar docente como un
           pilar independiente. Los datos que presenta son contundentes: por cada dólar invertido en
           programas de salud mental escolar, se genera un retorno de 21.5 dólares a lo largo de 80
-          años.
+          años<Ref id="R-025" />.
         </p>
         <p>
           La Red Interagencial para la Educación en Emergencias (INEE, 2024) establece 19 estándares
           mínimos que cubren desde la seguridad física de las instalaciones hasta la integración de
-          actividades psicosociales en los currículos durante la fase de recuperación.
+          actividades psicosociales en los currículos durante la fase de recuperación<Ref id="R-030" />.
         </p>
         <p>
           A nivel nacional, el Ministerio de Salud de Colombia identifica cuatro fases psicológicas
@@ -192,8 +192,8 @@ export default function EvidenciaPage() {
           optimismo inicial. La fase de desilusión (de dos meses a dos años) emerge cuando la
           realidad de la reconstrucción se impone. Finalmente, la fase de reconstrucción puede
           extenderse durante años. Colombia registra un promedio de 597.7 eventos desastrosos por
-          año en las últimas tres décadas, lo que refuerza la necesidad de marcos de respuesta
-          institucionalizados.
+          año en las últimas tres décadas<Ref id="R-026" />, lo que refuerza la necesidad de marcos de respuesta
+          institucionalizados<Ref id="R-027" />.
         </p>
       </Section>
     </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout } from "@/components/content";
+import { PageHero, Section, Callout, Ref } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Experiencia internacional",
@@ -28,7 +28,7 @@ export default function ExperienciaPage() {
           frecuente en la literatura de emergencias: la mentalización. La guía publicada por UNICEF
           Chile posicionó la capacidad de reflexionar sobre los propios estados mentales y los de
           otras personas como factor protector central y como herramienta terapéutica, desplazando
-          el énfasis habitual en las técnicas conductuales.
+          el énfasis habitual en las técnicas conductuales<Ref id="R-001" />.
         </p>
         <p>
           Un programa escolar rural implementado durante ocho meses evaluó a 33 niños, niñas y
@@ -37,13 +37,13 @@ export default function ExperienciaPage() {
           participantes cumplió criterios formales de trastorno de estrés postraumático. Los
           diagnósticos más frecuentes fueron trastorno por déficit de atención e hiperactividad
           (33%) y trastornos adaptativos (24%), lo que sugiere que las dificultades preexistentes
-          pueden amplificarse tras un sismo sin constituir necesariamente patología traumática.
+          pueden amplificarse tras un sismo sin constituir necesariamente patología traumática<Ref id="R-086" />.
         </p>
         <p>
           La evaluación de los docentes arrojó un dato relevante para la implementación. El 91%
           calificó las técnicas de relajación como &quot;especialmente útiles&quot;, lo que indica
           que las herramientas de regulación fisiológica son las que los docentes adoptan con mayor
-          facilidad y confianza, aun sin formación clínica previa.
+          facilidad y confianza, aun sin formación clínica previa<Ref id="R-086" />.
         </p>
       </Section>
 
@@ -52,7 +52,7 @@ export default function ExperienciaPage() {
           El terremoto de Kobe del 17 de enero de 1995 generó una de las bases de evidencia
           longitudinal más sólidas sobre el impacto psicológico en población infantil. Un estudio
           evaluó a 8,800 estudiantes de los grados 3, 5 y 8 en cuatro momentos sucesivos (a los 4,
-          6, 12 y 24 meses del evento), comparándolos con 1,886 controles de una región no afectada.
+          6, 12 y 24 meses del evento), comparándolos con 1,886 controles de una región no afectada<Ref id="R-079" />.
         </p>
         <p>
           Tres hallazgos resultan especialmente pertinentes para el contexto colombiano. El grupo
@@ -76,14 +76,14 @@ export default function ExperienciaPage() {
           escuelas con resistencia sísmica adecuada pasó del 42,5% en 2002 a prácticamente el 100%
           en la actualidad. Japón exporta ahora este modelo a Perú, El Salvador, Turquía y
           Filipinas, demostrando que la inversión sostenida en infraestructura escolar segura es
-          posible incluso cuando el punto de partida parece abrumador.
+          posible incluso cuando el punto de partida parece abrumador<Ref id="R-079" />.
         </p>
       </Section>
 
       <Section title="Indonesia 2018 — Sulawesi (M7.5)">
         <p>
           El terremoto y tsunami de Sulawesi Central en septiembre de 2018 causó 4,340 muertes y
-          daños en 1,299 escuelas. Un estudio con 40 docentes documentó cómo, ante la insuficiencia
+          daños en 1,299 escuelas<Ref id="R-021" />. Un estudio con 40 docentes documentó cómo, ante la insuficiencia
           de protocolos formales, los maestros recurrieron espontáneamente a prácticas culturales
           locales como mecanismos de afrontamiento colectivo.
         </p>
@@ -101,7 +101,7 @@ export default function ExperienciaPage() {
           articulan con los recursos culturales disponibles en cada comunidad, en lugar de
           reemplazarlos. Para Colombia, esto se traduce en la integración de prácticas como la
           minga, la solidaridad vecinal y las redes parroquiales y comunitarias como vehículos de la
-          respuesta psicosocial.
+          respuesta psicosocial<Ref id="R-021" />.
         </p>
       </Section>
 
@@ -128,7 +128,7 @@ export default function ExperienciaPage() {
           instalada que diferencia a Colombia de otros países afectados por desastres naturales. Los
           profesionales formados en atención psicosocial comunitaria, las redes territoriales y los
           protocolos de adaptación cultural constituyen recursos activables para la respuesta al
-          terremoto de 2026.
+          terremoto de 2026<Ref id="R-039" />.
         </p>
       </Section>
 
@@ -138,7 +138,7 @@ export default function ExperienciaPage() {
           estudiantes, y la respuesta del gobierno se convirtió en referencia internacional por su
           velocidad y pragmatismo. En el plazo de un mes, se desplegaron 15,000 centros de
           aprendizaje transicional (Temporary Learning Spaces, TLS) que permitieron reanudar la
-          actividad educativa mientras la infraestructura permanente seguía siendo inhabitable.
+          actividad educativa mientras la infraestructura permanente seguía siendo inhabitable<Ref id="R-121" />.
         </p>
         <p>
           Los centros transicionales no se limitaron a reproducir las condiciones del aula
@@ -153,7 +153,7 @@ export default function ExperienciaPage() {
           académico cayó un 7% en las zonas afectadas, y las interrupciones prolongadas
           incrementaron significativamente la probabilidad de deserción, especialmente entre las
           niñas y los estudiantes de hogares con menores ingresos. La lección es directa: cada
-          semana de retraso en la reapertura amplía las brechas existentes.
+          semana de retraso en la reapertura amplía las brechas existentes<Ref id="R-121" />.
         </p>
       </Section>
 
@@ -164,7 +164,7 @@ export default function ExperienciaPage() {
           en referencia regional por articular la respuesta inmediata con la recuperación a mediano
           plazo. El plan combinó espacios temporales, turnos diferenciados para compartir la
           infraestructura disponible, kits escolares de emergencia y acompañamiento psicosocial
-          integrado en la actividad educativa.
+          integrado en la actividad educativa<Ref id="R-126" />.
         </p>
         <p>
           La experiencia ecuatoriana demostró que la integración de las dimensiones educativa y
