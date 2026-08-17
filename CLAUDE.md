@@ -11,13 +11,14 @@ Sitio web de divulgación basado en evidencia para la respuesta psicosocial y ed
 
 - Next.js 16 + React 19 + TypeScript (static export)
 - Tailwind CSS v4 (tokens semánticos via `@theme inline`, sin tailwind.config)
-- Vercel (hosting estático)
+- Vercel (hosting estático, deploy automático con cada push a main)
 
 ## Desarrollo
 
 ```bash
 npm run dev      # http://localhost:3000
 npm run build    # genera /out (static export)
+git push         # trigger deploy en Vercel
 ```
 
 ## Estructura
@@ -25,24 +26,50 @@ npm run build    # genera /out (static export)
 ```
 src/
 ├── app/
-│   ├── globals.css              ← tokens de color (teal/cream/stone)
-│   ├── layout.tsx               ← root layout (sidebar + header)
+│   ├── globals.css              ← tokens de color (teal/cream/stone) + .stat-inline
+│   ├── layout.tsx               ← root layout (sidebar + header + metadataBase)
 │   ├── page.tsx                 ← redirect a /escuelas
+│   ├── icon.svg                 ← favicon ψ teal
+│   ├── opengraph-image.tsx      ← OG image 1200×630 (ImageResponse)
+│   ├── sitemap.ts               ← 11 URLs
+│   ├── robots.ts                ← allow all + sitemap
 │   ├── escuelas/
-│   │   ├── page.tsx             ← overview con grid
-│   │   ├── esta-semana/
-│   │   ├── primer-mes/
-│   │   ├── primer-semestre/
-│   │   ├── largo-plazo/
-│   │   ├── evidencia/
-│   │   ├── recursos/
-│   │   └── experiencia/
+│   │   ├── page.tsx             ← overview con grid de cards
+│   │   ├── esta-semana/         ← primeros 7 días
+│   │   ├── primer-mes/          ← modelo escalonado, capacitación
+│   │   ├── primer-semestre/     ← recuperación de aprendizajes
+│   │   ├── largo-plazo/         ← CSSF, escuelas seguras
+│   │   ├── evidencia/           ← meta-análisis, effect sizes
+│   │   ├── recursos/            ← programas, screening, marco normativo
+│   │   └── experiencia/         ← Chile, Japón, Indonesia, Nepal, Ecuador
+│   ├── referencias/             ← 128 recursos con DOI/URL
 │   ├── trabajo/                 ← "Próximamente"
-│   └── acerca/
-└── components/
-    ├── ui/                      ← Card, Badge, Button, cn
-    └── layout/                  ← Sidebar, Header, ThemeToggle
+│   └── acerca/                  ← metodología, autoría
+├── components/
+│   ├── ui/                      ← Card, Badge, Button, cn
+│   ├── layout/                  ← Sidebar, Header, ThemeToggle
+│   └── content/                 ← componentes de contenido (ver abajo)
+└── data/
+    └── references.ts            ← 128 refs extraídas de revision.json
 ```
+
+## Componentes de contenido
+
+| Componente | Uso |
+|-----------|-----|
+| `PageHero` | Hero con título, subtítulo y stats |
+| `Section` | Wrapper con h2 + spacing |
+| `Callout` | Box info/warning/danger/success con icono |
+| `KeyMessage` | Pull quote con borde accent (más ligero que Callout) |
+| `DataTable` | Tabla responsive con header y caption |
+| `DosDonts` | Dos columnas: Sí hacer / No hacer |
+| `StatGrid` + `Stat` | Grid de estadísticas grandes |
+| `Ref` | Cita numerada [N] con link a /referencias + tooltip |
+| `Pyramid` | Pirámide escalonada (IASC, modelo de atención) |
+| `HBar` | Barras horizontales comparativas (effect sizes) |
+| `CaseCard` | Card de caso de estudio (país, magnitud, lección) |
+| `Timeline` | Línea temporal vertical (fases, calendario) |
+| `StepCards` | Cards numerados en grid (RAPID framework) |
 
 ## Design system
 
@@ -50,24 +77,31 @@ Adaptado de ecosistema-estadistica. Paleta warm cream/stone con acento teal (#0d
 
 ## Contenido fuente
 
-Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` alimentan este sitio. El informe ejecutivo y la base de datos (129 recursos) están en el mismo directorio.
+Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` alimentan este sitio. El informe ejecutivo y la base de datos (129 recursos en `revision.json`) están en el mismo directorio.
+
+## SEO
+
+- Metadata por página (title template + description única)
+- Open Graph + Twitter card (imagen 1200×630 auto-generada)
+- Favicon SVG ψ en teal
+- Sitemap XML (11 URLs) + robots.txt
+- keywords, authors, metadataBase configurados
+
+## Sistema de referencias
+
+128 recursos incluidos, extraídos de revision.json. Componente `Ref` renderiza superíndice [N] con link a `/referencias#R-N` y tooltip "Autor (Año)". ~80 citas inline en 8 páginas.
 
 ## Fases
 
 | Fase | Descripción | Estado |
 |------|-------------|--------|
 | W1 | Scaffold, design system, layout, rutas placeholder | Completada |
-| W2 | Contenido Escuelas (transformar síntesis → páginas) | Completada |
-| W3 | Área Trabajo (revisión + contenido) | Pendiente |
-| W4 | SEO + Open Graph + favicon | Completada |
+| W2 | Contenido Escuelas (8 páginas desde 4 fuentes) | Completada |
+| W4 | SEO + Open Graph + favicon + sitemap | Completada |
 | W5 | Repo GitHub + Deploy Vercel | Completada |
-| W6 | Iteración y contenido adicional | Pendiente |
-
-## Deploy
-
-Vercel despliega automáticamente con cada push a `main`.
-
-```bash
-npm run build    # build local (genera /out)
-git push         # trigger deploy en Vercel
-```
+| A | Sistema de referencias (128 refs + ~80 citas inline) | Completada |
+| B1 | Presentación de texto (strong, h3, KeyMessage, stat-inline) | Completada |
+| B2 | Componentes visuales (Pyramid, HBar, CaseCard, Timeline, StepCards) | Completada |
+| C | Enlaces descargables (DOIs + URLs en Recursos) | Pendiente |
+| W3 | Área Trabajo (revisión de literatura + contenido) | Pendiente |
+| W6 | Iteración y pulido | Pendiente |
