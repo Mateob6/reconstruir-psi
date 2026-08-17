@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref, KeyMessage } from "@/components/content";
 import { StatGrid, Stat } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -18,22 +18,24 @@ export default function AcercaPage() {
 
       <Section title="Sobre esta guía">
         <p>
-          El 10 de agosto de 2026, a las 07:34 hora local, un terremoto de magnitud 7.4 con
-          epicentro en San José del Palmar (Chocó) y una profundidad de aproximadamente 107 km
-          sacudió el occidente de Colombia. Fue el sismo más fuerte registrado en el país en la
-          última década. Las cifras preliminares reportaron más de 287 personas fallecidas, 570
-          heridas, y un impacto que se extendió a lo largo de varias ciudades del occidente
-          colombiano<Ref id="R-111" also={["R-116"]} />.
+          El 10 de agosto de 2026, a las 07:34 hora local, un terremoto de magnitud{" "}
+          <span className="stat-inline">7.4</span> con epicentro en San José del Palmar (Chocó) y
+          una profundidad de aproximadamente 107 km sacudió el occidente de Colombia. Fue el sismo
+          más fuerte registrado en el país en la última década. Las cifras preliminares reportaron
+          más de <span className="stat-inline">287</span> personas fallecidas,{" "}
+          <span className="stat-inline">570</span> heridas, y un impacto que se extendió a lo
+          largo de varias ciudades del occidente colombiano<Ref id="R-111" also={["R-116"]} />.
         </p>
         <p>
-          Pereira concentró más de 60 muertes y múltiples edificios colapsados. En Cali, 32
-          edificaciones colapsaron, incluyendo infraestructura hospitalaria. Manizales perdió la torre
+          Pereira concentró más de 60 muertes y múltiples edificios colapsados. En Cali,{" "}
+          <span className="stat-inline">32</span> edificaciones colapsaron, incluyendo
+          infraestructura hospitalaria. Manizales perdió la torre
           de su catedral neogótica. Armenia, Quibdó y otros municipios reportaron daños significativos
           en infraestructura pública y privada. Los aeropuertos fueron cerrados temporalmente y varias
           vías resultaron afectadas.
         </p>
         <p>
-          Esta guía fue producida como una revisión de alcance rápida (rapid scoping review) para
+          Esta guía fue producida como una <strong>revisión de alcance rápida</strong> (rapid scoping review) para
           responder a la necesidad inmediata de orientaciones basadas en evidencia para los contextos
           escolares. Su propósito es traducir la evidencia científica internacional y las experiencias
           de campo documentadas en recomendaciones prácticas para quienes toman decisiones en el
@@ -48,9 +50,11 @@ export default function AcercaPage() {
 
       <Section title="Metodología">
         <p>
-          La revisión fue conducida durante dos días (16 y 17 de agosto de 2026). Se realizaron 39
-          búsquedas en 14 bases de datos y fuentes institucionales, tanto en inglés como en español,
-          con búsquedas específicas para la región latinoamericana en LILACS y SciELO.
+          La revisión fue conducida durante dos días (16 y 17 de agosto de 2026). Se realizaron{" "}
+          <span className="stat-inline">39</span> búsquedas en{" "}
+          <span className="stat-inline">14</span> bases de datos y fuentes institucionales, tanto
+          en inglés como en español, con búsquedas específicas para la región latinoamericana en
+          LILACS y SciELO.
         </p>
 
         <StatGrid>
@@ -67,10 +71,13 @@ export default function AcercaPage() {
           institucionales colombianas e internacionales.
         </p>
         <p>
-          La base de evidencia resultante está compuesta por tres meta-análisis que sintetizan más de
-          11,000 participantes, 18 revisiones sistemáticas, 19 guías y protocolos institucionales, y
-          54 estudios primarios. Un total de 28 textos completos fueron analizados en profundidad (15
-          guías y 13 artículos). A partir de esta base se produjeron 13 síntesis temáticas que
+          La base de evidencia resultante está compuesta por tres meta-análisis que sintetizan más
+          de <span className="stat-inline">11,000</span> participantes,{" "}
+          <span className="stat-inline">18</span> revisiones sistemáticas,{" "}
+          <span className="stat-inline">19</span> guías y protocolos institucionales, y{" "}
+          <span className="stat-inline">54</span> estudios primarios. Un total de{" "}
+          <span className="stat-inline">28</span> textos completos fueron analizados en
+          profundidad (15 guías y 13 artículos). A partir de esta base se produjeron 13 síntesis temáticas que
           abarcan las dimensiones psicosocial (7 síntesis) y educativa (6 síntesis).
         </p>
 
@@ -104,17 +111,28 @@ export default function AcercaPage() {
       </Section>
 
       <Section title="Limitaciones">
+        <KeyMessage>
+          Esta guía fue producida en dos días para responder a una necesidad inmediata. No sustituye
+          una revisión sistemática formal, pero traduce la mejor evidencia disponible en
+          orientaciones prácticas para el terreno.
+        </KeyMessage>
+
         <p>
           Al tratarse de una revisión rápida conducida en dos días, esta guía no alcanza el rigor
           metodológico de una revisión sistemática formal. Algunos estudios relevantes pueden no haber
           sido identificados, particularmente aquellos publicados en repositorios institucionales de
           acceso restringido o en idiomas distintos al inglés y al español.
         </p>
+
+        <h3>Alcance de la búsqueda</h3>
         <p>
-          No se realizaron búsquedas formales en PsycINFO, Scopus ni ERIC, bases que podrían aportar
-          estudios primarios adicionales. Las cadenas de búsqueda para estas bases fueron preparadas y
-          están disponibles para futuras ampliaciones de la revisión.
+          No se realizaron búsquedas formales en <strong>PsycINFO</strong>,{" "}
+          <strong>Scopus</strong> ni <strong>ERIC</strong>, bases que podrían aportar estudios
+          primarios adicionales. Las cadenas de búsqueda para estas bases fueron preparadas y están
+          disponibles para futuras ampliaciones de la revisión.
         </p>
+
+        <h3>Sesgo de idioma</h3>
         <p>
           La revisión priorizó fuentes en inglés y español, lo que introduce un sesgo de idioma que
           podría excluir experiencias documentadas en otros idiomas, particularmente las experiencias
@@ -123,15 +141,19 @@ export default function AcercaPage() {
         <p>
           La guía se centra exclusivamente en intervenciones post-desastre natural y no incorpora la
           evidencia proveniente de intervenciones post-conflicto armado, a pesar de que Colombia
-          dispone de una capacidad instalada significativa a través del PAPSIVI<Ref id="R-039" />. La transferibilidad
-          entre estos contextos merece un análisis independiente.
+          dispone de una capacidad instalada significativa a través del{" "}
+          <strong>PAPSIVI</strong><Ref id="R-039" />. La transferibilidad entre estos contextos merece
+          un análisis independiente.
         </p>
+
+        <h3>Heterogeneidad estadística</h3>
         <p>
-          Algunos de los meta-análisis incluidos presentan heterogeneidad elevada (I² superior al 90%
-          en determinados análisis), lo que obliga a interpretar los tamaños de efecto agregados con
-          cautela<Ref id="R-003" />. Adicionalmente, no se identificaron estudios de implementación que examinen la
-          escalabilidad de las intervenciones psicosociales escolares post-desastre, lo que constituye
-          una brecha importante en la literatura<Ref id="R-003" />.
+          Algunos de los meta-análisis incluidos presentan heterogeneidad elevada
+          (<span className="stat-inline">I² superior al 90%</span> en determinados análisis), lo que
+          obliga a interpretar los tamaños de efecto agregados con cautela<Ref id="R-003" />.
+          Adicionalmente, no se identificaron estudios de implementación que examinen la escalabilidad
+          de las intervenciones psicosociales escolares post-desastre, lo que constituye una brecha
+          importante en la literatura<Ref id="R-003" />.
         </p>
       </Section>
 

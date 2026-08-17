@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable, Ref } from "@/components/content";
+import { PageHero, Section, Callout, DataTable, Ref, KeyMessage } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Recursos",
@@ -60,7 +60,7 @@ export default function RecursosPage() {
           Holland, se estructura en ocho sesiones grupales que integran terapia de juego, conciencia
           emocional, resolución de conflictos y aprendizaje cooperativo. Las sesiones oscilan entre
           45 y 120 minutos, y el meta-análisis de Morina et al. (2017) reporta un tamaño de efecto
-          pre-post de g = 0,68 para intervenciones de aula de este tipo<Ref id="R-002" />.
+          pre-post de <span className="stat-inline">g = 0,68</span> para intervenciones de aula de este tipo<Ref id="R-002" />.
         </p>
 
         <p>
@@ -84,6 +84,11 @@ export default function RecursosPage() {
           &quot;tamizaje y tratamiento&quot; para síntomas moderados. Se encuentra aún en fase
           piloto y su efectividad a gran escala está por evaluarse.
         </p>
+
+        <KeyMessage>
+          TRT y CBI reúnen las condiciones de viabilidad más favorables para Colombia: entrega por
+          no especialistas, 5 a 8 sesiones, materiales accesibles y compatibilidad institucional.
+        </KeyMessage>
 
         <Callout type="success" title="Candidatos más fuertes para Colombia">
           <p>
@@ -122,9 +127,9 @@ export default function RecursosPage() {
         <Callout type="info" title="Calendario de evaluación recomendado">
           <p>
             La evidencia sobre trayectorias de recuperación indica que el desarrollo más dinámico
-            ocurre durante los primeros 12 meses. Las evaluaciones deben realizarse al mes, a los 3
-            meses, a los 6 meses y al año del evento, lo que permite detectar tanto las trayectorias
-            crónicas como las de aparición tardía.
+            ocurre durante los primeros 12 meses. Las evaluaciones deben realizarse al{" "}
+            <span className="stat-inline">1, 3, 6 y 12 meses</span> del evento, lo que permite
+            detectar tanto las trayectorias crónicas como las de aparición tardía.
           </p>
         </Callout>
       </Section>
@@ -179,8 +184,9 @@ export default function RecursosPage() {
           ]}
         />
 
+        <h3>PAPSIVI: capacidad instalada del conflicto armado</h3>
         <p>
-          Un recurso singular del contexto colombiano es la infraestructura del PAPSIVI (Programa
+          Un recurso singular del contexto colombiano es la infraestructura del <strong>PAPSIVI</strong> (Programa
           de Atención Psicosocial y Salud Integral a Víctimas), construida durante décadas de
           conflicto armado. Este programa ha formado redes de profesionales con experiencia en
           atención psicosocial comunitaria, trabajo con poblaciones vulnerables y adaptación
@@ -199,24 +205,24 @@ export default function RecursosPage() {
         </p>
 
         <ul className="list-disc pl-5 space-y-1 text-sm">
-          <li>IASC (2007) — Directrices sobre salud mental y apoyo psicosocial en emergencias</li>
-          <li>OMS (2011) — Primeros auxilios psicológicos: guía para trabajadores de campo</li>
-          <li>UNICEF (2022) — Salud mental y apoyo psicosocial en escuelas</li>
-          <li>OPS/PAHO — Guía de salud mental en desastres para las Américas</li>
+          <li><strong>IASC</strong> (2007) — Directrices sobre salud mental y apoyo psicosocial en emergencias</li>
+          <li><strong>OMS</strong> (2011) — Primeros auxilios psicológicos: guía para trabajadores de campo</li>
+          <li><strong>UNICEF</strong> (2022) — Salud mental y apoyo psicosocial en escuelas</li>
+          <li><strong>OPS/PAHO</strong> — Guía de salud mental en desastres para las Américas</li>
           <li>
-            UNICEF Chile — &quot;Rearmemos la vida de niños y niñas&quot;: guía psicoeducativa
+            <strong>UNICEF Chile</strong> — &quot;Rearmemos la vida de niños y niñas&quot;: guía psicoeducativa
             post-terremoto
           </li>
-          <li>MHPSS Collaborative (2020) — Revisión de intervenciones SMAPS</li>
+          <li><strong>MHPSS Collaborative</strong> (2020) — Revisión de intervenciones SMAPS</li>
           <li>
-            MinSalud Colombia (×2) — Protocolos de atención psicosocial y guía de salud mental en
+            <strong>MinSalud Colombia</strong> (×2) — Protocolos de atención psicosocial y guía de salud mental en
             emergencias
           </li>
-          <li>CSSF (2022–2030) — Marco integral de seguridad escolar</li>
-          <li>AEWG (2017) — Educación acelerada: principios y prácticas</li>
-          <li>MEN — Guía 59: Planes escolares de gestión del riesgo</li>
-          <li>MEN GIRE (×2) — Cuadernillo y Política GIRE 2025</li>
-          <li>UNGRD — Plan escolar de gestión del riesgo</li>
+          <li><strong>CSSF</strong> (2022–2030) — Marco integral de seguridad escolar</li>
+          <li><strong>AEWG</strong> (2017) — Educación acelerada: principios y prácticas</li>
+          <li><strong>MEN</strong> — Guía 59: Planes escolares de gestión del riesgo</li>
+          <li><strong>MEN GIRE</strong> (×2) — Cuadernillo y Política GIRE 2025</li>
+          <li><strong>UNGRD</strong> — Plan escolar de gestión del riesgo</li>
         </ul>
       </Section>
     </div>

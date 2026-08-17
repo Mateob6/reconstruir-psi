@@ -93,6 +93,19 @@ body {
   outline-offset: 2px;
 }
 
+.space-y-4 h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 0.5rem;
+}
+
+.stat-inline {
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
