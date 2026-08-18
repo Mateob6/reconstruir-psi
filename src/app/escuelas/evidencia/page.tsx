@@ -303,35 +303,7 @@ export default function EvidenciaPage() {
           </EffectBarList>
         </section>
 
-        {/* ═══════════════════════════════════════════════════
-            COLOMBIA
-        ═══════════════════════════════════════════════════ */}
-        <section id="colombia" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
-          <div className="relative overflow-hidden rounded-2xl border border-amber-300/40 bg-amber-50 dark:bg-amber-900/10 dark:border-amber-700/30 p-8 sm:p-10">
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <div className="flex items-center justify-center w-[52px] h-[52px] rounded-full bg-amber-500 text-white shrink-0">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12l4 4L19 6" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[var(--foreground)] mb-3">
-                  Colombia cumple los moderadores favorables
-                </h3>
-                <p className="text-[var(--muted)] text-[15px] leading-relaxed mb-4">
-                  Como país en desarrollo con una amplia red de docentes capacitables, Colombia se
-                  ubica en la intersección de los cuatro moderadores que amplifican la efectividad.
-                  Las intervenciones de sesiones breves, entregadas por docentes formados, en un
-                  contexto de desarrollo, representan exactamente el perfil con mayores tamaños de efecto.
-                </p>
-                <p className="text-[12.5px] text-[var(--muted)] italic opacity-70">
-                  Esta es una interpretación del conjunto de moderadores citado, no una prueba de que
-                  una intervención funcionará necesariamente mejor en Colombia.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Sección Colombia removida: interpretación de moderadores no suficientemente respaldada */}
 
         {/* ═══════════════════════════════════════════════════
             TRAYECTORIAS DE RECUPERACIÓN
