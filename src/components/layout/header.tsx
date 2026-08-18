@@ -5,11 +5,12 @@ import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
 import { cn, Badge } from "@/components/ui";
 
-const SECONDARY_LINKS = [
+type NavLink = { href: string; label: string; badge?: string };
+
+const SECONDARY_LINKS: NavLink[] = [
   { href: "/escuelas/evidencia", label: "Evidencia" },
   { href: "/escuelas/recursos", label: "Recursos" },
   { href: "/escuelas/experiencia", label: "Experiencia int." },
-  { href: "/trabajo", label: "Trabajo", badge: "Pronto" },
   { href: "/referencias", label: "Referencias" },
   { href: "/acerca", label: "Acerca de" },
 ];

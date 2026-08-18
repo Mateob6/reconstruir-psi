@@ -226,7 +226,7 @@ export default function AcercaPage() {
         <div className="mt-8">
           <Callout type="info" title="Cita APA 7">
             <p className="font-serif">
-              Belalcázar Correa, M. (2026). <em>Respuesta psicosocial y educativa en contextos
+              Belalcázar, M. (2026). <em>Respuesta psicosocial y educativa en contextos
               escolares post-terremoto: Guía basada en evidencia</em>. CIDEAS, Facultad de Psicología,
               Universidad del Valle. https://reconstruir-psi.vercel.app
             </p>
