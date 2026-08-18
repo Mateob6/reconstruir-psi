@@ -1,5 +1,22 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable, Ref, KeyMessage, Pyramid, HBar } from "@/components/content";
+import {
+  SectionHeader,
+  InsightCard,
+  InsightGrid,
+  EvidenceCard,
+  EvidenceGrid,
+  EffectBar,
+  EffectBarList,
+  ComparisonCard,
+  ComparisonGrid,
+  IASCPyramid,
+  StickySectionNav,
+  Callout,
+  DataTable,
+  Ref,
+  Stat,
+  StatGrid,
+} from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Evidencia",
@@ -7,290 +24,363 @@ export const metadata: Metadata = {
     "Tres meta-análisis, tamaños de efecto, moderadores y trayectorias de recuperación de intervenciones psicosociales escolares post-desastre.",
 };
 
+const SECTION_NAV_ITEMS = [
+  { id: "impacto", label: "Impacto" },
+  { id: "resumen", label: "Resumen" },
+  { id: "meta-analisis", label: "Meta-análisis" },
+  { id: "terapias", label: "Terapias" },
+  { id: "moderadores", label: "Moderadores" },
+  { id: "colombia", label: "Colombia" },
+  { id: "trayectorias", label: "Trayectorias" },
+  { id: "piramide", label: "Pirámide IASC" },
+  { id: "marcos", label: "Marcos" },
+];
+
+/* ── SVG Icons (inline, no emoji) ─────────────────────── */
+const CheckIcon = (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M5 12l4 4L19 6" />
+  </svg>
+);
+const ClockIcon = (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <circle cx="12" cy="12" r="8" />
+    <path d="M12 8v4l3 2" />
+  </svg>
+);
+const SchoolIcon = (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+    <path d="M4 21V9l8-5 8 5v12" />
+    <path d="M9 21v-7h6v7" />
+  </svg>
+);
+
 export default function EvidenciaPage() {
   return (
-    <div className="mx-auto max-w-3xl space-y-8">
-      <PageHero
-        title="Evidencia"
-        subtitle="Qué dice la investigación sobre las intervenciones psicosociales escolares post-desastre"
-        stats={[
-          { value: "75", label: "Estudios analizados" },
-          { value: "11,000+", label: "Participantes" },
-          { value: "3", label: "Meta-análisis clave" },
-          { value: "g = −1.20", label: "Efecto en TEPT" },
-        ]}
-      />
+    <>
+      <StickySectionNav items={SECTION_NAV_ITEMS} />
 
-      <Section title="Tres meta-análisis clave">
-        <p>
-          La base de evidencia sobre intervenciones psicosociales escolares post-desastre descansa
-          en tres <strong>revisiones sistemáticas con meta-análisis</strong> que, en conjunto,
-          sintetizan <span className="stat-inline">75</span> estudios con más de{" "}
-          <span className="stat-inline">11,000</span> participantes. Estas revisiones permiten
-          identificar no solo si las intervenciones funcionan, sino bajo qué condiciones y para qué
-          poblaciones producen los mayores efectos.
-        </p>
-        <p>
-          La revisión más reciente, conducida por Laksmita y colaboradores en 2026, analizó{" "}
-          <span className="stat-inline">13</span> ensayos controlados aleatorizados con 2,418
-          participantes, restringidos exclusivamente a intervenciones implementadas en contextos
-          escolares. El efecto inmediato sobre los síntomas de TEPT fue grande
-          (<span className="stat-inline">g&nbsp;=&nbsp;−1.20</span>), con efectos que se
-          sostuvieron tanto a corto plazo
-          (<span className="stat-inline">g&nbsp;=&nbsp;−0.25</span>) como a largo plazo
-          (<span className="stat-inline">g&nbsp;=&nbsp;−0.45</span>). Para depresión, el efecto
-          inmediato fue pequeño pero significativo
-          (<span className="stat-inline">g&nbsp;=&nbsp;−0.34</span>)<Ref id="R-003" />.
-        </p>
-        <p>
-          Xie y colaboradores (2024) realizaron un <strong>meta-análisis en red</strong> con{" "}
-          <span className="stat-inline">26</span> ensayos controlados y 4,331 participantes, lo
-          que permitió comparar simultáneamente múltiples modalidades terapéuticas y establecer
-          rankings de efectividad<Ref id="R-004" />. Morina y colaboradores (2017) aportaron la
-          revisión más amplia con <span className="stat-inline">36</span> estudios y 4,411
-          participantes, encontrando un efecto pre-post grande
-          (<span className="stat-inline">g&nbsp;=&nbsp;1.35</span>) y un efecto moderado cuando
-          se compara contra controles activos
-          (<span className="stat-inline">g&nbsp;=&nbsp;0.44</span>)<Ref id="R-002" />.
-        </p>
-
-        <DataTable
-          caption="Tamaños de efecto por revisión"
-          headers={["Revisión", "k", "N", "Efecto TEPT", "Efecto depresión"]}
-          rows={[
-            ["Laksmita et al. (2026)", "13", "2,418", "g = −1.20", "g = −0.34"],
-            ["Xie et al. (2024)", "26", "4,331", "SMD = −0.67 (EMDR)", "SMD = −0.40 (EMDR)"],
-            ["Morina et al. (2017)", "36", "4,411", "g = 0.44 (vs. control)", "No reportado"],
-          ]}
-        />
-      </Section>
-
-      <Section title="¿Qué terapia funciona mejor?">
-        <p>
-          El meta-análisis en red de Xie y colaboradores (2024) permitió clasificar diez modalidades
-          terapéuticas según su probabilidad de ser la más efectiva, utilizando el estadístico
-          SUCRA. Para los síntomas de TEPT tras la intervención, <strong>EMDR</strong> ocupó la
-          primera posición (SUCRA&nbsp;<span className="stat-inline">69.6</span>), seguida por la
-          Terapia de Exposición/NET (SUCRA&nbsp;69.6) y la <strong>TCC</strong>
-          (SUCRA&nbsp;66.0). En el seguimiento a largo plazo, EMDR mantuvo el primer lugar
-          (SUCRA&nbsp;<span className="stat-inline">87.1</span>), con ET/NET en segundo
-          (SUCRA&nbsp;78.9). Para síntomas depresivos, EMDR también lideró
-          (SUCRA&nbsp;<span className="stat-inline">88.5</span>), seguida por la Terapia de Juego
-          (SUCRA&nbsp;87.3)<Ref id="R-004" />.
-        </p>
-        <p>
-          Los datos pre-post de Morina y colaboradores (2017) complementan esta perspectiva con una
-          taxonomía más fina. La <strong>Terapia Narrativa de Exposición para niños (KIDNET)</strong>{" "}
-          mostró el tamaño de efecto más alto
-          (<span className="stat-inline">g&nbsp;=&nbsp;1.87</span>), aunque con solo dos estudios.
-          EMDR obtuvo <span className="stat-inline">g&nbsp;=&nbsp;1.46</span> a partir de diez
-          estudios, la TCC <span className="stat-inline">g&nbsp;=&nbsp;1.07</span> en ocho
-          estudios, y las intervenciones de aula{" "}
-          <span className="stat-inline">g&nbsp;=&nbsp;0.68</span> en nueve estudios<Ref id="R-002" />.
-        </p>
-
-        <HBar
-          title="Tamaño de efecto pre-post por terapia (Morina et al., 2017)"
-          items={[
-            { label: "KIDNET/NET", value: 1.87 },
-            { label: "EMDR", value: 1.46 },
-            { label: "TCC", value: 1.07 },
-            { label: "Aula", value: 0.68 },
-          ]}
-          unit="g"
-        />
-
-        <KeyMessage>
-          Implementar cualquier intervención estructurada produce beneficios significativos frente a
-          no intervenir. No hay diferencia estadísticamente significativa entre las modalidades
-          terapéuticas.
-        </KeyMessage>
-
-        <Callout type="info" title="Todas las modalidades son efectivas">
-          <p>
-            A pesar de las diferencias en los rankings, el análisis formal no encontró diferencias
-            estadísticamente significativas entre los tipos de terapia
-            (<span className="stat-inline">F&nbsp;=&nbsp;2.49</span>,{" "}
-            <span className="stat-inline">p&nbsp;=&nbsp;0.062</span>)<Ref id="R-002" />. El mensaje
-            central de la evidencia es que implementar cualquier intervención estructurada produce
-            beneficios significativos frente a no intervenir.
+      <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
+        {/* ═══════════════════════════════════════════════════
+            HERO
+        ═══════════════════════════════════════════════════ */}
+        <section className="pt-12 pb-6 sm:pt-16 sm:pb-8" style={{ scrollMarginTop: "160px" }}>
+          <div className="flex items-center gap-3 text-xs font-mono font-medium tracking-wider uppercase text-[var(--accent)] mb-5">
+            <span className="w-6 h-[2px] bg-[var(--accent)] rounded-full" />
+            <span>Evidencia científica</span>
+          </div>
+          <h1 className="font-sans font-extrabold tracking-tight text-[var(--foreground)] text-[clamp(28px,4.2vw,48px)] leading-[1.1] max-w-[20ch] mb-5">
+            Qué dice la investigación sobre las intervenciones psicosociales escolares post-desastre
+          </h1>
+          <p className="text-[var(--muted)] text-base sm:text-lg leading-relaxed max-w-[62ch]">
+            Tres meta-análisis, 75 estudios y más de 11.000 participantes sintetizan qué funciona,
+            bajo qué condiciones y para quién — la base para decisiones informadas en la respuesta
+            psicosocial escolar tras el terremoto de agosto 2026 en Colombia.
           </p>
-        </Callout>
-      </Section>
+        </section>
 
-      <Section title="Moderadores: qué amplifica el efecto">
-        <p>
-          El análisis de moderadores de Laksmita y colaboradores (2026) revela cuatro factores que
-          amplifican sustancialmente la efectividad de las intervenciones escolares. Las sesiones de
-          60 minutos o menos produjeron efectos significativamente mayores que las sesiones más
-          prolongadas (<span className="stat-inline">g&nbsp;=&nbsp;−1.60</span> vs.{" "}
-          <span className="stat-inline">g&nbsp;=&nbsp;−0.16</span>), y los programas con seis o
-          más sesiones superaron ampliamente a los más breves
-          (<span className="stat-inline">g&nbsp;=&nbsp;−1.77</span> vs.{" "}
-          <span className="stat-inline">g&nbsp;=&nbsp;−0.15</span>).
-        </p>
-        <p>
-          El <strong>contexto geográfico</strong> emergió como un moderador poderoso. Las
-          intervenciones en países en desarrollo obtuvieron efectos notablemente más grandes que en
-          países desarrollados (<span className="stat-inline">g&nbsp;=&nbsp;−1.77</span> vs.{" "}
-          <span className="stat-inline">g&nbsp;=&nbsp;−0.15</span>, diferencia entre grupos
-          p&nbsp;&lt;&nbsp;0.001). De manera consistente, cuando las intervenciones fueron
-          entregadas por personas sin formación en salud mental, los efectos inmediatos fueron
-          sustancialmente mayores que cuando las entregaron profesionales de salud
-          (<span className="stat-inline">g&nbsp;=&nbsp;−2.60</span> vs.{" "}
-          <span className="stat-inline">g&nbsp;=&nbsp;−0.39</span>)<Ref id="R-003" />.
-        </p>
+        {/* ═══════════════════════════════════════════════════
+            KPIs
+        ═══════════════════════════════════════════════════ */}
+        <section id="impacto" className="pb-16" style={{ scrollMarginTop: "160px" }}>
+          <StatGrid>
+            <Stat value="75" label="Estudios analizados" />
+            <Stat value="11,000+" label="Participantes" />
+            <Stat value="3" label="Meta-análisis clave" />
+            <Stat value="g = −1.20" label="Efecto en TEPT" />
+          </StatGrid>
+        </section>
 
-        <DataTable
-          caption="Efectos por moderador (Laksmita et al., 2026)"
-          headers={["Moderador", "Condición favorable", "Condición desfavorable"]}
-          rows={[
-            ["Duración de sesión", "≤60 min: g = −1.60", ">60 min: g = −0.16"],
-            ["Número de sesiones", "≥6 sesiones: g = −1.77", "<6 sesiones: g = −0.15"],
-            ["Contexto país", "En desarrollo: g = −1.77", "Desarrollado: g = −0.15"],
-            ["Quién entrega", "No especialistas: g = −2.60", "Prof. salud: g = −0.39"],
-          ]}
-        />
+        {/* ═══════════════════════════════════════════════════
+            RESUMEN EJECUTIVO
+        ═══════════════════════════════════════════════════ */}
+        <section id="resumen" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="Resumen ejecutivo"
+            title="Tres conclusiones antes de entrar al detalle"
+            className="mb-10"
+          />
+          <InsightGrid>
+            <InsightCard
+              icon={CheckIcon}
+              title="Las intervenciones estructuradas ayudan"
+              description="Implementar cualquier intervención estructurada produce beneficios significativos frente a no intervenir, sin diferencias estadísticamente significativas entre modalidades terapéuticas."
+            />
+            <InsightCard
+              icon={ClockIcon}
+              title="Sesiones cortas, programas sostenidos"
+              description="Las sesiones de 60 minutos o menos y los programas con seis o más sesiones presentan los mejores efectos en la revisión de Laksmita et al. (2026)."
+            />
+            <InsightCard
+              icon={SchoolIcon}
+              title="Las escuelas son escenarios clave"
+              description="Son las primeras instituciones en reanudar operaciones tras un desastre y sostienen los niveles 1 a 3 de apoyo psicosocial de la pirámide IASC."
+            />
+          </InsightGrid>
+        </section>
 
-        <HBar
-          title="Efecto en TEPT por condición del moderador"
-          items={[
-            { label: "No especialistas", value: 2.60 },
-            { label: "Países en desarrollo", value: 1.77 },
-            { label: "≥6 sesiones", value: 1.77 },
-            { label: "≤60 min/sesión", value: 1.60 },
-            { label: "Prof. salud", value: 0.39 },
-            { label: "Países desarrollados", value: 0.15 },
-            { label: "<6 sesiones", value: 0.15 },
-            { label: ">60 min/sesión", value: 0.16 },
-          ]}
-          unit="g"
-        />
+        {/* ═══════════════════════════════════════════════════
+            TRES META-ANÁLISIS
+        ═══════════════════════════════════════════════════ */}
+        <section id="meta-analisis" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="La base de evidencia"
+            title="Tres meta-análisis clave"
+            description="Tres revisiones sistemáticas con meta-análisis sintetizan 75 estudios con más de 11,000 participantes, permitiendo identificar no solo si las intervenciones funcionan, sino bajo qué condiciones y para qué poblaciones producen los mayores efectos."
+            className="mb-10"
+          />
 
-        <Callout type="success" title="Colombia cumple todos los moderadores favorables">
-          <p>
-            Como país en desarrollo con una amplia red de docentes capacitables, Colombia se ubica
-            en la intersección de los cuatro moderadores que amplifican la efectividad. Las
-            intervenciones de sesiones breves, entregadas por docentes formados, en un contexto de
-            desarrollo, representan exactamente el perfil con mayores tamaños de efecto.
-          </p>
-        </Callout>
-      </Section>
+          <EvidenceGrid className="mb-10">
+            <EvidenceCard
+              year="2026 · Escuelas exclusivamente"
+              title="Laksmita et al."
+              meta={{ k: "13", n: "2,418" }}
+              description="13 ensayos controlados aleatorizados. Efecto inmediato grande sobre TEPT (g = −1.20), sostenido a corto (g = −0.25) y largo plazo (g = −0.45). Efecto pequeño pero significativo en depresión (g = −0.34)."
+              href="/referencias#R-003"
+              linkLabel="Ver referencia [3] →"
+            />
+            <EvidenceCard
+              year="2024 · Meta-análisis en red"
+              title="Xie et al."
+              meta={{ k: "26", n: "4,331" }}
+              description="26 ensayos controlados. Permite comparar simultáneamente múltiples modalidades terapéuticas y establecer rankings de efectividad mediante el estadístico SUCRA."
+              href="/referencias#R-004"
+              linkLabel="Ver referencia [4] →"
+            />
+            <EvidenceCard
+              year="2017 · La revisión más amplia"
+              title="Morina et al."
+              meta={{ k: "36", n: "4,411" }}
+              description="36 estudios. Efecto pre-post grande (g = 1.35) y efecto moderado frente a controles activos (g = 0.44). Base de la taxonomía fina por tipo de terapia."
+              href="/referencias#R-002"
+              linkLabel="Ver referencia [2] →"
+            />
+          </EvidenceGrid>
 
-      <Section title="Trayectorias de recuperación">
-        <p>
-          No todos los niños y niñas necesitan intervención clínica. La revisión de Witt y
-          colaboradores (2024), que sintetizó <span className="stat-inline">15</span> estudios
-          longitudinales con <span className="stat-inline">11,519</span> participantes menores de
-          edad, identificó cuatro trayectorias predominantes tras un desastre natural. Entre el{" "}
-          <span className="stat-inline">34%</span> y el{" "}
-          <span className="stat-inline">82%</span> de los participantes mostraron{" "}
-          <strong>trayectorias resilientes</strong>, y entre el{" "}
-          <span className="stat-inline">51%</span> y el{" "}
-          <span className="stat-inline">97%</span> fueron clasificados como resilientes o en
-          recuperación espontánea. El desarrollo más dinámico ocurre durante los primeros 12 meses,
-          lo que subraya la importancia de intervenir tempranamente<Ref id="R-050" />.
-        </p>
+          <DataTable
+            caption="Tamaños de efecto por revisión"
+            headers={["Revisión", "k", "N", "Efecto TEPT", "Efecto depresión"]}
+            rows={[
+              ["Laksmita et al. (2026)", "13", "2,418", "g = −1.20", "g = −0.34"],
+              ["Xie et al. (2024)", "26", "4,331", "SMD = −0.67 (EMDR)", "SMD = −0.40 (EMDR)"],
+              ["Morina et al. (2017)", "36", "4,411", "g = 0.44 (vs. control)", "No reportado"],
+            ]}
+          />
+        </section>
 
-        <h3>El estudio de Kobe</h3>
-        <p>
-          El estudio longitudinal de Kobe (Uemoto et al., 2012) ofrece la evidencia más granular.
-          Tras el terremoto de 1995, <span className="stat-inline">8,800</span> estudiantes de los
-          grados 3, 5 y 8 fueron evaluados en cuatro momentos (4, 6, 12 y 24 meses) junto con{" "}
-          <span className="stat-inline">1,886</span> controles de áreas no afectadas. Los más
-          jóvenes (grado 3) resultaron los más afectados. Las niñas presentaron consistentemente
-          puntuaciones más altas que los niños.
-        </p>
-        <p>
-          Los síntomas persistieron más de dos años en las zonas de mayor daño. Un hallazgo
-          inesperado fue la aparición de un tercer factor en los cuestionarios, relacionado con la{" "}
-          <strong>responsabilidad social y la culpa</strong>, que no había sido documentado
-          previamente<Ref id="R-079" />.
-        </p>
-      </Section>
+        {/* ═══════════════════════════════════════════════════
+            TERAPIAS
+        ═══════════════════════════════════════════════════ */}
+        <section id="terapias" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="Comparación de modalidades"
+            title="¿Qué terapia funciona mejor?"
+            description="El meta-análisis en red de Xie y colaboradores (2024) clasificó diez modalidades mediante SUCRA. Para TEPT, EMDR ocupó la primera posición (69.6), seguida por ET/NET (69.6) y TCC (66.0). Los datos pre-post de Morina et al. (2017) complementan esta imagen con una taxonomía más fina."
+            className="mb-10"
+          />
 
-      <Section title="La pirámide IASC">
-        <p>
-          Toda respuesta psicosocial en emergencias debe organizarse dentro del marco establecido
-          por el Comité Permanente entre Organismos (IASC, 2007)<Ref id="R-023" />. Este modelo propone una{" "}
-          <strong>pirámide de cuatro niveles</strong> que ordena las intervenciones según su alcance
-          y grado de especialización.
-        </p>
+          <EffectBarList title="Tamaño de efecto pre-post por terapia — Morina et al. (2017)" className="mb-8">
+            <EffectBar label="KIDNET / NET" value={1.87} maxValue={2.0} unit=" g" />
+            <EffectBar label="EMDR" value={1.46} maxValue={2.0} unit=" g" />
+            <EffectBar label="TCC" value={1.07} maxValue={2.0} unit=" g" />
+            <EffectBar label="Intervenciones de aula" value={0.68} maxValue={2.0} unit=" g" />
+          </EffectBarList>
 
-        <h3>Nivel 1: Servicios básicos y seguridad</h3>
-        <p>
-          En la base se ubican los <strong>servicios básicos y la seguridad</strong>, que incluyen
-          alimentación, agua, refugio y protección física.
-        </p>
+          <Callout type="info" title="Todas las modalidades son efectivas">
+            <p>
+              El análisis formal no encontró diferencias estadísticamente significativas entre
+              tipos de terapia (<span className="stat-inline">F&nbsp;=&nbsp;2.49</span>,{" "}
+              <span className="stat-inline">p&nbsp;=&nbsp;0.062</span>)<Ref id="R-002" />. El
+              mensaje central: implementar cualquier intervención estructurada produce beneficios
+              significativos frente a no intervenir. El ranking no implica diferencia estadísticamente
+              significativa entre modalidades según la evidencia citada.
+            </p>
+          </Callout>
+        </section>
 
-        <h3>Nivel 2: Apoyos comunitarios y familiares</h3>
-        <p>
-          El segundo nivel corresponde a los <strong>apoyos comunitarios y familiares</strong>,
-          como la activación de redes sociales y los espacios seguros para la niñez.
-        </p>
+        {/* ═══════════════════════════════════════════════════
+            MODERADORES
+        ═══════════════════════════════════════════════════ */}
+        <section id="moderadores" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="Qué amplifica el efecto"
+            title="Moderadores"
+            description="El análisis de moderadores de Laksmita y colaboradores (2026) revela cuatro factores que amplifican sustancialmente la efectividad de las intervenciones escolares."
+            className="mb-10"
+          />
 
-        <h3>Nivel 3: Apoyos focalizados no especializados</h3>
-        <p>
-          El tercer nivel comprende los <strong>apoyos focalizados no especializados</strong>,
-          donde se incluyen los primeros auxilios psicológicos (PAP) y las actividades
-          psicosociales estructuradas en escuelas.
-        </p>
+          <ComparisonGrid className="mb-10">
+            <ComparisonCard
+              title="Duración de sesión"
+              favorable={{ value: "≤ 60 min", stat: "g = −1.60" }}
+              unfavorable={{ value: "> 60 min", stat: "g = −0.16" }}
+            />
+            <ComparisonCard
+              title="Número de sesiones"
+              favorable={{ value: "≥ 6 sesiones", stat: "g = −1.77" }}
+              unfavorable={{ value: "< 6 sesiones", stat: "g = −0.15" }}
+            />
+            <ComparisonCard
+              title="Contexto del país"
+              favorable={{ value: "En desarrollo", stat: "g = −1.77" }}
+              unfavorable={{ value: "Desarrollado", stat: "g = −0.15" }}
+            />
+            <ComparisonCard
+              title="Quién entrega la intervención"
+              favorable={{ value: "No especialistas", stat: "g = −2.60" }}
+              unfavorable={{ value: "Prof. de salud", stat: "g = −0.39" }}
+            />
+          </ComparisonGrid>
 
-        <h3>Nivel 4: Servicios especializados</h3>
-        <p>
-          Solo el cuarto nivel, reservado para una minoría de personas con afectaciones severas,
-          involucra <strong>servicios especializados</strong> de psicología y psiquiatría. El
-          principio fundamental de este modelo es que la mayoría de las personas se recuperan con
-          apoyo de los niveles 1 y 2, sin requerir intervención clínica. Las escuelas constituyen
-          escenarios privilegiados para los niveles 1 a 3, dado que son las primeras instituciones
-          en reanudar operaciones y ofrecen estructura, rutina y contacto con pares.
-        </p>
+          <EffectBarList title="Efecto en TEPT por condición del moderador — Laksmita et al. (2026)" className="mb-6">
+            <EffectBar label="No especialistas" value={2.60} maxValue={2.8} unit=" g" variant="favor" />
+            <EffectBar label="Países en desarrollo" value={1.77} maxValue={2.8} unit=" g" variant="favor" />
+            <EffectBar label="≥6 sesiones" value={1.77} maxValue={2.8} unit=" g" variant="favor" />
+            <EffectBar label="≤60 min / sesión" value={1.60} maxValue={2.8} unit=" g" variant="favor" />
+            <EffectBar label="Prof. de salud" value={0.39} maxValue={2.8} unit=" g" variant="unfavor" />
+            <EffectBar label="Países desarrollados" value={0.15} maxValue={2.8} unit=" g" variant="unfavor" />
+            <EffectBar label="<6 sesiones" value={0.15} maxValue={2.8} unit=" g" variant="unfavor" />
+            <EffectBar label=">60 min / sesión" value={0.16} maxValue={2.8} unit=" g" variant="unfavor" />
+          </EffectBarList>
+        </section>
 
-        <Pyramid
-          levels={[
-            { label: "Nivel 4", description: "Servicios especializados de psicología y psiquiatría", color: "danger" },
-            { label: "Nivel 3", description: "Apoyos focalizados no especializados (PAP, actividades psicosociales en escuelas)", color: "warning" },
-            { label: "Nivel 2", description: "Apoyos comunitarios y familiares", color: "accent" },
-            { label: "Nivel 1", description: "Servicios básicos y seguridad", color: "success" },
-          ]}
-          caption="Pirámide IASC: la mayoría se recupera con los niveles 1 y 2. Las escuelas operan en los niveles 1 a 3."
-        />
-      </Section>
+        {/* ═══════════════════════════════════════════════════
+            COLOMBIA
+        ═══════════════════════════════════════════════════ */}
+        <section id="colombia" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <div className="relative overflow-hidden rounded-2xl border border-amber-300/40 bg-amber-50 dark:bg-amber-900/10 dark:border-amber-700/30 p-8 sm:p-10">
+            <div className="flex flex-col sm:flex-row gap-6 items-start">
+              <div className="flex items-center justify-center w-[52px] h-[52px] rounded-full bg-amber-500 text-white shrink-0">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12l4 4L19 6" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[var(--foreground)] mb-3">
+                  Colombia cumple los moderadores favorables
+                </h3>
+                <p className="text-[var(--muted)] text-[15px] leading-relaxed mb-4">
+                  Como país en desarrollo con una amplia red de docentes capacitables, Colombia se
+                  ubica en la intersección de los cuatro moderadores que amplifican la efectividad.
+                  Las intervenciones de sesiones breves, entregadas por docentes formados, en un
+                  contexto de desarrollo, representan exactamente el perfil con mayores tamaños de efecto.
+                </p>
+                <p className="text-[12.5px] text-[var(--muted)] italic opacity-70">
+                  Esta es una interpretación del conjunto de moderadores citado, no una prueba de que
+                  una intervención funcionará necesariamente mejor en Colombia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <Section title="Marcos complementarios">
-        <h3>UNICEF: cinco pilares para la salud mental escolar</h3>
-        <p>
-          <strong>UNICEF</strong> (2022) articula cinco pilares para la salud mental en entornos
-          escolares, que van desde la creación de ambientes propicios hasta la colaboración
-          escuela-familia-comunidad. Este marco resulta especialmente relevante porque posiciona el{" "}
-          <strong>bienestar docente</strong> como un pilar independiente. Los datos que presenta son
-          contundentes: por cada dólar invertido en programas de salud mental escolar, se genera un
-          retorno de <span className="stat-inline">$21.5</span> dólares a lo largo de 80
-          años<Ref id="R-025" />.
-        </p>
+        {/* ═══════════════════════════════════════════════════
+            TRAYECTORIAS DE RECUPERACIÓN
+        ═══════════════════════════════════════════════════ */}
+        <section id="trayectorias" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="No todos necesitan lo mismo"
+            title="Trayectorias de recuperación"
+            description="No todos los niños y niñas necesitan intervención clínica. La revisión de Witt et al. (2024) sintetizó 15 estudios longitudinales con 11,519 participantes menores de edad, identificando cuatro trayectorias predominantes tras un desastre natural. Entre el 34% y el 82% mostraron trayectorias resilientes; entre el 51% y el 97% fueron resilientes o en recuperación espontánea."
+            className="mb-10"
+          />
 
-        <h3>INEE: estándares mínimos para educación en emergencias</h3>
-        <p>
-          La Red Interagencial para la Educación en Emergencias (<strong>INEE</strong>, 2024)
-          establece <span className="stat-inline">19 estándares</span> mínimos que cubren desde la
-          seguridad física de las instalaciones hasta la integración de actividades psicosociales en
-          los currículos durante la fase de recuperación<Ref id="R-030" />.
-        </p>
+          {/* Timeline visual */}
+          <div className="relative pl-2 sm:pl-4 ml-4 sm:ml-8 border-l-2 border-[var(--border)] space-y-8 mb-10">
+            {[
+              { month: "0 m", title: "Evento disruptivo", desc: "Punto de partida de las cuatro trayectorias: resiliente, recuperación espontánea, recuperación tardía y síntomas persistentes.", key: true },
+              { month: "4–6 m", title: "Primeras mediciones", desc: "El estudio de Kobe evaluó a 8,800 estudiantes a los 4 y 6 meses, junto con 1,886 controles de áreas no afectadas.", key: false },
+              { month: "12 m", title: "Ventana de mayor desarrollo", desc: "El desarrollo más dinámico de las trayectorias ocurre durante los primeros 12 meses — la ventana donde intervenir temprano tiene más peso.", key: true },
+              { month: "24 m", title: "Persistencia en zonas de mayor daño", desc: "Los síntomas persistieron más de dos años en las zonas más afectadas; un tercer factor no documentado antes, ligado a responsabilidad social y culpa, apareció en los cuestionarios.", key: false },
+            ].map((item) => (
+              <div key={item.month} className="relative pl-8 sm:pl-10">
+                <div className={`absolute -left-[11px] top-1 w-[20px] h-[20px] rounded-full border-[3px] ${item.key ? "border-amber-500 bg-amber-500" : "border-[var(--accent)] bg-[var(--surface)]"}`} />
+                <div className="text-xs font-mono font-semibold text-[var(--accent)] mb-1 uppercase tracking-wide">
+                  {item.month}
+                </div>
+                <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-4 sm:p-5">
+                  <h4 className="font-bold text-[var(--foreground)] text-[15px] mb-1">{item.title}</h4>
+                  <p className="text-[13.5px] text-[var(--muted)] leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-        <h3>MinSalud Colombia: las cuatro fases del desastre</h3>
-        <p>
-          A nivel nacional, el <strong>Ministerio de Salud de Colombia</strong> identifica cuatro
-          fases psicológicas tras un desastre. La <strong>fase heroica</strong> (primeras 72 horas)
-          se caracteriza por la solidaridad y la acción inmediata. La <strong>fase de luna de
-          miel</strong> (de una semana a seis meses) trae un optimismo inicial. La{" "}
-          <strong>fase de desilusión</strong> (de dos meses a dos años) emerge cuando la realidad
-          de la reconstrucción se impone. Finalmente, la <strong>fase de reconstrucción</strong>{" "}
-          puede extenderse durante años. Colombia registra un promedio de{" "}
-          <span className="stat-inline">597.7</span> eventos desastrosos por año en las últimas
-          tres décadas<Ref id="R-026" />, lo que refuerza la necesidad de marcos de respuesta
-          institucionalizados<Ref id="R-027" />.
-        </p>
-      </Section>
-    </div>
+          {/* Estudio de Kobe */}
+          <EvidenceGrid>
+            <EvidenceCard
+              year="2012 · Estudio longitudinal de Kobe"
+              title="Uemoto et al."
+              meta={{ k: "1", n: "8,800" }}
+              description="Evaluados en cuatro momentos (4, 6, 12 y 24 meses) tras el terremoto de 1995. Los más jóvenes (grado 3) resultaron los más afectados; las niñas presentaron consistentemente puntuaciones más altas que los niños."
+              href="/referencias#R-079"
+              linkLabel="Ver referencia [79] →"
+            />
+          </EvidenceGrid>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════
+            PIRÁMIDE IASC
+        ═══════════════════════════════════════════════════ */}
+        <section id="piramide" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="Marco organizador"
+            title="La pirámide IASC"
+            description="El Comité Permanente entre Organismos (IASC, 2007) propone cuatro niveles que ordenan las intervenciones según su alcance y grado de especialización. La mayoría de las personas se recupera con los niveles 1 y 2, sin requerir intervención clínica."
+            centered
+            className="mb-10"
+          />
+          <IASCPyramid caption="Las escuelas operan en los niveles 1 a 3, dado que son las primeras instituciones en reanudar operaciones y ofrecen estructura, rutina y contacto con pares." />
+        </section>
+
+        {/* ═══════════════════════════════════════════════════
+            MARCOS COMPLEMENTARIOS
+        ═══════════════════════════════════════════════════ */}
+        <section id="marcos" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+          <SectionHeader
+            eyebrow="Otros marcos de referencia"
+            title="Marcos complementarios"
+            className="mb-10"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6">
+              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3">UNICEF · 2022</div>
+              <h3 className="font-bold text-[16.5px] text-[var(--foreground)] mb-3 leading-tight">
+                Cinco pilares para la salud mental escolar
+              </h3>
+              <p className="text-[13.5px] text-[var(--muted)] leading-relaxed">
+                Van desde la creación de ambientes propicios hasta la colaboración escuela-familia-comunidad,
+                posicionando el bienestar docente como pilar independiente. Retorno estimado de $21.5 por
+                cada dólar invertido a lo largo de 80 años<Ref id="R-025" />.
+              </p>
+            </div>
+            <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6">
+              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3">INEE · 2024</div>
+              <h3 className="font-bold text-[16.5px] text-[var(--foreground)] mb-3 leading-tight">
+                Estándares mínimos para educación en emergencias
+              </h3>
+              <p className="text-[13.5px] text-[var(--muted)] leading-relaxed">
+                19 estándares que cubren desde la seguridad física de las instalaciones hasta la integración
+                de actividades psicosociales en los currículos durante la fase de recuperación<Ref id="R-030" />.
+              </p>
+            </div>
+            <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6">
+              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3">MinSalud Colombia</div>
+              <h3 className="font-bold text-[16.5px] text-[var(--foreground)] mb-3 leading-tight">
+                Las cuatro fases psicológicas del desastre
+              </h3>
+              <p className="text-[13.5px] text-[var(--muted)] leading-relaxed">
+                Heroica (72 h) · Luna de miel (1 semana–6 meses) · Desilusión (2 meses–2 años) ·
+                Reconstrucción (años). Colombia registra un promedio de 597.7 eventos desastrosos
+                al año en las últimas tres décadas<Ref id="R-026" /><Ref id="R-027" />.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Spacer final */}
+        <div className="h-16" />
+      </div>
+    </>
   );
 }
