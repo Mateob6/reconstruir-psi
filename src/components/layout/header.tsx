@@ -11,6 +11,7 @@ const SECONDARY_LINKS = [
   { href: "/escuelas/experiencia", label: "Experiencia int." },
   { href: "/trabajo", label: "Trabajo", badge: "Pronto" },
   { href: "/referencias", label: "Referencias" },
+  { href: "/acerca", label: "Acerca de" },
 ];
 
 export function Header() {
