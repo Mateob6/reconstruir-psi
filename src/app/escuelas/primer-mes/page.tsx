@@ -42,6 +42,7 @@ export default function PrimerMesPage() {
           { id: 'escalonado', label: 'Modelo escalonado' },
           { id: 'ventana', label: 'Ventana' },
           { id: 'capacitacion', label: 'Capacitación' },
+          { id: 'por-nivel', label: 'Por nivel' },
           { id: 'adaptacion', label: 'Adaptación' },
           { id: 'evaluacion', label: 'Evaluación' },
           { id: 'bienestar', label: 'Bienestar docente' },
@@ -257,6 +258,50 @@ export default function PrimerMesPage() {
                 supervisión semanal, que incluya revisión de grabaciones de audio y retroalimentación
                 sobre el manejo de casos, constituye el factor que marca la diferencia entre una
                 intervención con efectos transitorios y una con impacto duradero.
+              </p>
+            </Callout>
+          </div>
+        </section>
+
+        <section id="por-nivel" className="scroll-mt-[120px] border-t border-border py-16">
+          <SectionHeader eyebrow="Por edad" title="Programas por nivel educativo" />
+          <div className="space-y-6 max-w-3xl">
+            <p>
+              Los programas de intervención psicosocial cubren rangos de edad distintos, y el tipo de
+              tamizaje debe adaptarse a la etapa del desarrollo. La siguiente tabla orienta la selección
+              del programa según el nivel educativo de la población a atender.
+            </p>
+
+            <DataTable
+              caption="Programas de intervención por nivel educativo"
+              headers={["Programa", "Edad", "Nivel", "Tamizaje recomendado"]}
+              rows={[
+                ["CPRT", "0–5", "Preescolar", "Observación conductual por cuidadores"],
+                ["CBI", "6–12", "Primaria", "CRIES/CPSS aplicado por docente"],
+                ["ERASE-Stress", "6–12", "Primaria", "CRIES/CPSS aplicado por docente"],
+                ["TRT", "8–18", "Primaria + Secundaria", "CRIES/CPSS + auto-reporte en secundaria"],
+                ["CBITS", "10–15", "Primaria alta + Secundaria", "UCLA PTSD-RI por clínico"],
+                ["SOLAR-Teens", "12–18", "Secundaria", "Auto-reporte + entrevista breve"],
+              ]}
+            />
+
+            <p>
+              Para <strong>preescolar</strong>, el tamizaje depende de la observación conductual del
+              cuidador y el docente, dado que los instrumentos estandarizados requieren auto-reporte
+              verbal que los menores de 6 años no pueden ofrecer. En <strong>primaria</strong>, los
+              docentes pueden administrar instrumentos como el CRIES o el CPSS con presencia de un
+              profesional de salud mental en la primera aplicación, siguiendo el modelo implementado en
+              Kobe<Ref id="R-079" />. En <strong>secundaria</strong>, el auto-reporte adquiere mayor
+              validez, y los instrumentos pueden complementarse con entrevistas breves que aborden
+              conductas de riesgo específicas de la adolescencia.
+            </p>
+
+            <Callout type="info" title="Misma evidencia, diferente aplicación">
+              <p>
+                El meta-análisis de Morina et al. testeó la edad como moderador y no encontró diferencias
+                significativas de efectividad<Ref id="R-002" />. Las intervenciones funcionan en todos los
+                niveles. Lo que cambia es la presentación de síntomas, la forma de comunicar y el tipo de
+                programa disponible.
               </p>
             </Callout>
           </div>

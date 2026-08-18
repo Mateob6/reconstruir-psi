@@ -20,3 +20,4 @@ export { EffectBar, EffectBarList } from "./effect-bar";
 export { ComparisonCard, ComparisonGrid } from "./comparison-card";
 export { IASCPyramid } from "./iasc-pyramid";
 export { StickySectionNav } from "./sticky-section-nav";
+export { LevelTabs } from "./level-tabs";

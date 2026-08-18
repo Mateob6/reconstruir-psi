@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { 
-  SectionHeader, 
-  Callout, 
-  DosDonts, 
-  DataTable, 
-  Ref, 
-  KeyMessage, 
-  Accordion, 
+import {
+  SectionHeader,
+  Callout,
+  DosDonts,
+  DataTable,
+  Ref,
+  KeyMessage,
+  Accordion,
   GridCards,
   StatGrid,
   Stat,
-  StickySectionNav
+  StickySectionNav,
+  LevelTabs
 } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function EstaSemanaPage() {
     { id: 'alertas', label: 'Alertas' },
     { id: 'directivos', label: 'Directivos' },
     { id: 'docentes', label: 'Docentes' },
+    { id: 'niveles', label: 'Por nivel' },
     { id: 'continuidad', label: 'Continuidad' },
     { id: 'senales', label: 'Señales' },
     { id: 'cuidador', label: 'Cuidador' },
@@ -178,6 +180,111 @@ export default function EstaSemanaPage() {
                 "No descuidar el propio bienestar — un docente agotado no puede contener",
               ]}
             />
+          </div>
+        </section>
+
+        <section id="niveles" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
+          <SectionHeader eyebrow="Adaptación" title="Por nivel educativo" />
+          <div className="space-y-6">
+            <p>
+              Las intervenciones psicosociales funcionan en todos los niveles educativos, sin diferencias
+              significativas de efectividad por edad<Ref id="R-002" />. Lo que sí varía es la forma de comunicar,
+              los síntomas a observar y las acciones concretas según la etapa del desarrollo<Ref id="R-001" />.
+            </p>
+
+            <LevelTabs>
+              {/* Preescolar */}
+              <div className="space-y-4">
+                <h3 className="font-semibold">Cómo se manifiesta el estrés</h3>
+                <p>
+                  Los más pequeños expresan la angustia a través del cuerpo y la conducta, no con palabras.
+                  Las manifestaciones más frecuentes incluyen <strong>regresión</strong> (mojar la cama,
+                  chuparse el dedo, perder habilidades ya adquiridas), llanto excesivo, <strong>apego
+                  intenso</strong> al cuidador, trastornos del sueño y miedo a la separación.
+                </p>
+                <h3 className="font-semibold">Cómo comunicarse</h3>
+                <p>
+                  Usar lenguaje concreto y breve: &quot;la tierra se movió fuerte, ya pasó, estamos seguros
+                  aquí&quot;. Evitar explicaciones abstractas sobre placas tectónicas o magnitudes. El
+                  <strong> contacto físico</strong> (abrazar, cargar, estar cerca) comunica más seguridad que
+                  cualquier palabra.
+                </p>
+                <h3 className="font-semibold">Qué hacer</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Mantener <strong>rutinas</strong> de alimentación, siesta y juego como anclas de seguridad</li>
+                  <li>Permitir objetos de apego (cobija, juguete favorito)</li>
+                  <li>El <strong>juego libre</strong> ES el procesamiento emocional — no hay que &quot;hablar del terremoto&quot;</li>
+                  <li>Presencia física constante — no forzar separación del cuidador</li>
+                  <li>Herramienta GIRE: <strong>&quot;Señales Seguras&quot;</strong> — señalización participativa accesible a primera infancia<Ref id="R-106" /></li>
+                </ul>
+                <Callout type="warning" title="Señales de alerta">
+                  <p>Regresión persistente por más de 4 semanas, rechazo completo a separarse del cuidador, o pérdida sostenida de habilidades ya adquiridas.</p>
+                </Callout>
+              </div>
+
+              {/* Primaria */}
+              <div className="space-y-4">
+                <h3 className="font-semibold">Cómo se manifiesta el estrés</h3>
+                <p>
+                  El estudio de Kobe encontró que los estudiantes de <strong>grado 3</strong> (~8 años) fueron
+                  los más afectados, y las niñas registraron puntuaciones consistentemente más altas en todos
+                  los momentos de evaluación<Ref id="R-079" />. Los síntomas típicos incluyen sentimientos de
+                  <strong> culpa</strong> (&quot;debí haber hecho algo&quot;), quejas somáticas (dolor de cabeza,
+                  dolor de estómago), dificultades de concentración y re-escenificación del evento en el juego.
+                </p>
+                <h3 className="font-semibold">Cómo comunicarse</h3>
+                <p>
+                  Explicaciones honestas y adaptadas a la edad. Permitir preguntas y responderlas con
+                  sinceridad. Usar dibujos, modelos o experimentos sencillos para explicar qué son los
+                  terremotos. Normalizar las emociones: &quot;es normal sentir miedo, muchos adultos también lo
+                  sienten&quot;.
+                </p>
+                <h3 className="font-semibold">Qué hacer</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Espacio diario de expresión (<span className="stat-inline">15-20 minutos</span>): dibujo, escritura, conversación grupal</li>
+                  <li><strong>Técnicas de relajación</strong>: el <span className="stat-inline">91%</span> de docentes las valoraron como &quot;especialmente útiles&quot;<Ref id="R-086" /></li>
+                  <li>Involucrar en acciones solidarias (empodera sin exponer)</li>
+                  <li>Enseñar sobre los sismos desde la experiencia vivida — oportunidad de aprendizaje, no retraumatización</li>
+                </ul>
+                <p>
+                  <strong>Programas disponibles:</strong> TRT (8-18 años), CBI (6-12 años), ERASE-Stress (6-12 años)
+                  — este rango concentra el grueso de la base de evidencia.
+                </p>
+                <Callout type="warning" title="Señales de alerta">
+                  <p>Caída sostenida en el rendimiento, agresividad persistente, aislamiento social o quejas físicas recurrentes sin causa médica.</p>
+                </Callout>
+              </div>
+
+              {/* Secundaria */}
+              <div className="space-y-4">
+                <h3 className="font-semibold">Cómo se manifiesta el estrés</h3>
+                <p>
+                  Los adolescentes pueden expresar la angustia a través de <strong>conductas de riesgo</strong>
+                  (consumo de sustancias, conducta sexual), ira y desafío, aislamiento social pronunciado y
+                  ansiedad sobre el futuro. En casos severos, puede presentarse ideación suicida.
+                </p>
+                <h3 className="font-semibold">Cómo comunicarse</h3>
+                <p>
+                  <strong>Respetar la autonomía</strong> es central. No infantilizar. Los adolescentes necesitan
+                  sentirse tomados en serio. Escuchar sin juzgar. Permitir la expresión de rabia — es una
+                  respuesta adaptativa, no un problema de conducta. Favorecer la discusión abierta sobre lo que
+                  pasó y sobre el futuro, no solo sobre el pasado.
+                </p>
+                <h3 className="font-semibold">Qué hacer</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong>Involucrar en la reconstrucción comunitaria</strong> — sentido de agencia y propósito</li>
+                  <li>Facilitar grupos de pares y proyectos colaborativos</li>
+                  <li>Hablar del futuro: planes, metas, lo que viene — no solo de lo que se perdió</li>
+                  <li>Los formatos más cognitivos y estructurados funcionan bien con este grupo</li>
+                </ul>
+                <p>
+                  <strong>Programas disponibles:</strong> TRT (8-18 años), CBITS (10-15 años), SOLAR-Teens (12-18 años).
+                </p>
+                <Callout type="danger" title="Señales de alerta">
+                  <p>Aislamiento prolongado, conductas autolesivas, consumo de sustancias, abandono escolar o cambios drásticos de personalidad. Derivación inmediata a profesional de salud mental.</p>
+                </Callout>
+              </div>
+            </LevelTabs>
           </div>
         </section>
 
