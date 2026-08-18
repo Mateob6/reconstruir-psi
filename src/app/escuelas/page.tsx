@@ -23,9 +23,31 @@ export default function EscuelasPage() {
           Marco de acción basado en evidencia para la recuperación psicosocial y educativa tras el sismo de agosto de 2026 en el suroccidente de Colombia.
         </p>
         <div className="pt-4 max-w-3xl">
-          <p className="text-[15px] leading-relaxed text-[var(--foreground)] opacity-90 p-5 rounded-xl bg-[var(--surface-raised)] border border-[var(--border)]">
-            <strong>¿Cómo leer esta guía?</strong> Esta herramienta no está diseñada para leerse de forma lineal. Funciona como un manual de respuesta rápida organizado cronológicamente. Identifica en qué momento de la emergencia te encuentras (p. ej. <em>"Esta semana"</em>) y dirígete directamente a esa sección. Usa los apartados de soporte al final para profundizar en la evidencia, descargar recursos técnicos o conocer cómo actuaron otros países.
-          </p>
+          <div className="p-6 rounded-2xl bg-[var(--surface-raised)] border border-[var(--border)] shadow-sm">
+            <h2 className="font-bold text-[16px] text-[var(--foreground)] mb-3 flex items-center gap-2">
+              <svg className="w-5 h-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              ¿Cómo navegar esta guía?
+            </h2>
+            <p className="text-[14.5px] text-[var(--muted)] mb-4">
+              Esta herramienta <strong>no</strong> está diseñada para leerse de forma lineal como un texto académico. Funciona como un manual de respuesta rápida:
+            </p>
+            <ul className="space-y-3 text-[14px] text-[var(--muted)]">
+              <li className="flex items-start gap-2.5">
+                <span className="flex items-center justify-center w-5 h-5 rounded bg-[var(--foreground)] text-[var(--background)] text-xs font-bold shrink-0 mt-0.5">1</span>
+                <span><strong>Ubica tu fase temporal:</strong> Identifica en qué momento de la emergencia escolar te encuentras en la línea de tiempo de abajo.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="flex items-center justify-center w-5 h-5 rounded bg-[var(--foreground)] text-[var(--background)] text-xs font-bold shrink-0 mt-0.5">2</span>
+                <span><strong>Ve a lo accionable:</strong> Accede a recomendaciones directas, qué hacer y qué evitar sin tener que leer toda la justificación clínica.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="flex items-center justify-center w-5 h-5 rounded bg-[var(--foreground)] text-[var(--background)] text-xs font-bold shrink-0 mt-0.5">3</span>
+                <span><strong>Profundiza en el soporte:</strong> Utiliza los tres módulos finales para consultar la evidencia base, descargar recursos o ver casos de otros países.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
