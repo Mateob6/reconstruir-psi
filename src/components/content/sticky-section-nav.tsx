@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/components/ui/cn";
 
 export interface StickySectionNavProps {
@@ -12,6 +13,8 @@ export function StickySectionNav({ items, className }: StickySectionNavProps) {
   const [activeId, setActiveId] = useState<string>("");
   const navRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
+  const pathname = usePathname();
+  const hasTimeline = pathname.startsWith("/escuelas");
 
   // Set up intersection observer for scroll spy
   useEffect(() => {
@@ -78,7 +81,8 @@ export function StickySectionNav({ items, className }: StickySectionNavProps) {
   return (
     <div
       className={cn(
-        "sticky top-[101px] z-10 w-full border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-md",
+        "sticky z-10 w-full border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-md",
+        hasTimeline ? "top-[101px]" : "top-[60px]",
         className
       )}
     >
