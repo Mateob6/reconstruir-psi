@@ -253,21 +253,41 @@ export default function EvidenciaPage() {
               title="Duración de sesión"
               favorable={{ value: "60 min o menos", stat: "g = −1.60" }}
               unfavorable={{ value: "Más de 60 min", stat: "g = −0.16" }}
+              explanation={
+                <>
+                  Sesiones breves mantienen mejor la atención y evitan la fatiga cognitiva o emocional en poblaciones infantiles que están lidiando con estrés agudo post-desastre.
+                </>
+              }
             />
             <ComparisonCard
               title="Número de sesiones"
               favorable={{ value: "6 sesiones o más", stat: "g = −1.77" }}
               unfavorable={{ value: "Menos de 6 sesiones", stat: "g = −0.15" }}
+              explanation={
+                <>
+                  Un programa requiere una <em>&quot;dosis terapéutica&quot;</em> mínima para consolidar el aprendizaje de herramientas de afrontamiento y observar cambios duraderos en los síntomas.
+                </>
+              }
             />
             <ComparisonCard
               title="Contexto del país"
               favorable={{ value: "En desarrollo", stat: "g = −1.77" }}
               unfavorable={{ value: "Desarrollado", stat: "g = −0.15" }}
+              explanation={
+                <>
+                  En países donde el acceso a servicios clínicos es bajo, llevar las intervenciones a la escuela cubre un vacío crítico, generando un impacto relativo mucho mayor que en países con redes de salud consolidadas.
+                </>
+              }
             />
             <ComparisonCard
               title="Quién entrega la intervención"
               favorable={{ value: "No especialistas", stat: "g = −2.60" }}
               unfavorable={{ value: "Prof. de salud", stat: "g = −0.39" }}
+              explanation={
+                <>
+                  Docentes y paraprofesionales, al ser figuras familiares, reducen el estigma y la ansiedad. Su presencia diaria facilita la adherencia y naturaliza la recuperación en el aula.
+                </>
+              }
             />
           </ComparisonGrid>
 

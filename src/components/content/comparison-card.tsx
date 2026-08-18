@@ -5,6 +5,7 @@ export interface ComparisonCardProps {
   title: string;
   favorable: { value: string; stat: string };
   unfavorable: { value: string; stat: string };
+  explanation?: ReactNode;
   className?: string;
 }
 
@@ -12,6 +13,7 @@ export function ComparisonCard({
   title,
   favorable,
   unfavorable,
+  explanation,
   className,
 }: ComparisonCardProps) {
   return (
@@ -46,6 +48,11 @@ export function ComparisonCard({
           </div>
         </div>
       </div>
+      {explanation && (
+        <div className="p-4 border-t border-[var(--border)] bg-[var(--background)] text-[13px] text-[var(--muted)] leading-relaxed">
+          {explanation}
+        </div>
+      )}
     </div>
   );
 }
