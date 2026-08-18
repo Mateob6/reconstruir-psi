@@ -11,3 +11,5 @@ export { Ref } from "./source-tag";
 export { Stat, StatGrid } from "./stat";
 export { StepCards } from "./step-cards";
 export { Timeline } from "./timeline";
+export { Accordion } from "./accordion";
+export { GridCards } from "./grid-cards";

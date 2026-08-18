@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DosDonts, DataTable, Ref, KeyMessage } from "@/components/content";
+import { PageHero, Section, Callout, DosDonts, DataTable, Ref, KeyMessage, Accordion, GridCards } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Esta semana",
@@ -62,22 +62,31 @@ export default function EstaSemanaPage() {
           deberán tomar en las semanas siguientes.
         </p>
 
-        <h3>Autocuidado docente</h3>
-        <p>
-          Un paso que suele omitirse en la urgencia de reabrir consiste en organizar una jornada de
-          autocuidado docente antes de que los estudiantes regresen. Los docentes son simultáneamente
-          implementadores de la respuesta y personas afectadas por el desastre. Si llegan al primer
-          día sin haber procesado su propia experiencia, la calidad de su contención emocional se
-          verá comprometida.
-        </p>
-
-        <h3>Equipo de respuesta</h3>
-        <p>
-          También conviene designar un <strong>equipo interno de respuesta</strong> que sirva como
-          punto de contacto para derivaciones, articulación con servicios externos y seguimiento de
-          casos. Este equipo debe incluir al menos un orientador escolar, un directivo y un docente
-          de confianza para los estudiantes.
-        </p>
+        <Accordion items={[
+          {
+            title: "Autocuidado docente",
+            content: (
+              <p>
+                Un paso que suele omitirse en la urgencia de reabrir consiste en organizar una jornada de
+                autocuidado docente antes de que los estudiantes regresen. Los docentes son simultáneamente
+                implementadores de la respuesta y personas afectadas por el desastre. Si llegan al primer
+                día sin haber procesado su propia experiencia, la calidad de su contención emocional se
+                verá comprometida.
+              </p>
+            )
+          },
+          {
+            title: "Equipo de respuesta",
+            content: (
+              <p>
+                También conviene designar un <strong>equipo interno de respuesta</strong> que sirva como
+                punto de contacto para derivaciones, articulación con servicios externos y seguimiento de
+                casos. Este equipo debe incluir al menos un orientador escolar, un directivo y un docente
+                de confianza para los estudiantes.
+              </p>
+            )
+          }
+        ]} />
 
         <Callout type="info" title="Reapertura en Cali">
           <p>
@@ -179,14 +188,41 @@ export default function EstaSemanaPage() {
           observación docente, aunque valiosa, no es suficiente por sí sola para identificar con
           precisión a quienes necesitan apoyo adicional.
         </p>
-        <ul className="list-disc space-y-1 pl-5 text-sm">
-          <li><strong>Revivir el evento</strong> de forma repetida (pesadillas, juego repetitivo sobre el sismo)</li>
-          <li><strong>Evitación sistemática</strong> de lugares, conversaciones o actividades relacionadas</li>
-          <li><strong>Disminución marcada del interés</strong> en actividades que antes disfrutaba</li>
-          <li><strong>Agresividad persistente</strong> o desregulación emocional que no cede</li>
-          <li><strong>Síntomas físicos</strong> sin causa médica identificable (dolores de cabeza, de estómago)</li>
-          <li><strong>Interferencia sostenida</strong> con el rendimiento escolar</li>
-        </ul>
+        <GridCards
+          columns={2}
+          items={[
+            {
+              title: "Revivir el evento",
+              description: "De forma repetida (pesadillas, juego repetitivo sobre el sismo)",
+              icon: "🔄"
+            },
+            {
+              title: "Evitación sistemática",
+              description: "De lugares, conversaciones o actividades relacionadas",
+              icon: "🚫"
+            },
+            {
+              title: "Disminución del interés",
+              description: "Pérdida marcada del interés en actividades que antes disfrutaba",
+              icon: "📉"
+            },
+            {
+              title: "Agresividad persistente",
+              description: "O desregulación emocional que no cede fácilmente",
+              icon: "💢"
+            },
+            {
+              title: "Síntomas físicos",
+              description: "Sin causa médica identificable (dolores de cabeza, de estómago)",
+              icon: "🤒"
+            },
+            {
+              title: "Interferencia escolar",
+              description: "Dificultad sostenida y caída en el rendimiento académico",
+              icon: "📚"
+            }
+          ]}
+        />
 
         <Callout type="info" title="Evaluación con instrumentos estandarizados">
           <p>

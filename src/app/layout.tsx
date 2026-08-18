@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Sidebar } from "@/components/layout/sidebar";
 import { Header } from "@/components/layout/header";
+import { TopTimeline } from "@/components/layout/top-timeline";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -51,15 +51,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="flex h-full font-sans">
-        <Sidebar />
-        <div className="flex flex-1 flex-col">
-          <Header />
-          <main className="flex-1 overflow-y-auto p-4 md:p-6">{children}</main>
-        </div>
+      <body className="flex min-h-screen flex-col font-sans">
+        <Header />
+        <TopTimeline />
+        <main className="flex-1 w-full mx-auto p-4 md:p-6 lg:p-8">{children}</main>
       </body>
     </html>
   );
