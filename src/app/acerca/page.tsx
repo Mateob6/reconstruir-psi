@@ -43,36 +43,30 @@ export default function AcercaPage() {
             Esta guía fue desarrollada como una iniciativa académica de respuesta rápida por el Instituto de Investigación en Ciencias del Desarrollo, del Aprendizaje y Subjetividades (CIDEAS), en el marco de la Facultad de Psicología de la Universidad del Valle.
           </p>
 
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 hover:opacity-100 transition-opacity">
-            {/* Logo Univalle Abstract/Placeholder */}
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-20 h-24 bg-accent/10 flex items-center justify-center rounded-lg border border-accent/20">
-                <div className="w-6 h-10 bg-accent/40 rounded-sm"></div>
-              </div>
-              <span className="text-sm font-bold uppercase tracking-wider text-foreground">Universidad<br/>del Valle</span>
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-12 opacity-90 hover:opacity-100 transition-opacity">
+            {/* Logo Univalle */}
+            <a href="https://www.univalle.edu.co/" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-4 hover:scale-105 transition-transform">
+              <img src="/logos/logo1.png" alt="Universidad del Valle" className="h-20 object-contain drop-shadow-sm" />
+              <span className="text-sm font-bold uppercase tracking-wider text-foreground text-center">Universidad<br/>del Valle</span>
+            </a>
             
             <div className="hidden md:block w-px h-16 bg-border"></div>
             
             {/* Logo Facultad */}
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-20 h-24 bg-surface-raised flex items-center justify-center rounded-lg border border-border">
-                <svg className="w-8 h-8 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <span className="text-sm font-bold uppercase tracking-wider text-foreground">Facultad de<br/>Psicología</span>
-            </div>
+            <a href="https://psicologia.univalle.edu.co/" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-4 hover:scale-105 transition-transform">
+              <img src="/logos/logo2.png" alt="Facultad de Psicología" className="h-20 object-contain drop-shadow-sm" />
+              <span className="text-sm font-bold uppercase tracking-wider text-foreground text-center">Facultad de<br/>Psicología</span>
+            </a>
 
             <div className="hidden md:block w-px h-16 bg-border"></div>
             
             {/* Logo CIDEAS */}
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-32 h-24 bg-surface-raised flex items-center justify-center rounded-lg border border-border">
-                <span className="font-bold text-xl tracking-widest text-muted">CIDEAS</span>
+            <a href="https://psicologia.univalle.edu.co/?id=834" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-4 hover:scale-105 transition-transform">
+              <div className="h-20 flex items-center justify-center">
+                <span className="font-bold text-3xl tracking-widest text-primary drop-shadow-sm">CIDEAS</span>
               </div>
-              <span className="text-sm font-bold uppercase tracking-wider text-foreground">Instituto de<br/>Investigación</span>
-            </div>
+              <span className="text-sm font-bold uppercase tracking-wider text-foreground text-center">Instituto de<br/>Investigación</span>
+            </a>
           </div>
         </div>
       </section>
