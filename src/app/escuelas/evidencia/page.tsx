@@ -232,9 +232,21 @@ export default function EvidenciaPage() {
           <SectionHeader
             eyebrow="Qué amplifica el efecto"
             title="Moderadores"
-            description="El análisis de moderadores de Laksmita y colaboradores (2026) revela cuatro factores que amplifican sustancialmente la efectividad de las intervenciones escolares."
-            className="mb-10"
+            description="El análisis de Laksmita y colaboradores (2026) revela cuatro factores que amplifican sustancialmente la efectividad de las intervenciones escolares."
+            className="mb-6"
           />
+
+          <div className="bg-[var(--surface-raised)] border border-[var(--border)] p-5 rounded-xl mb-10 max-w-3xl">
+            <h4 className="font-bold text-[var(--foreground)] text-[14px] flex items-center gap-2 mb-1">
+              <svg className="w-4 h-4 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              ¿Qué es un moderador?
+            </h4>
+            <p className="text-[13px] text-[var(--muted)] leading-relaxed ml-6">
+              En investigación, un moderador es una variable que afecta la dirección o la fuerza de la relación entre la intervención y su resultado. En otras palabras, nos dice <strong>bajo qué condiciones</strong> o <strong>para quién</strong> funciona mejor una terapia.
+            </p>
+          </div>
 
           <ComparisonGrid className="mb-10">
             <ComparisonCard
