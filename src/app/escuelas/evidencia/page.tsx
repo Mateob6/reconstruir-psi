@@ -251,13 +251,13 @@ export default function EvidenciaPage() {
           <ComparisonGrid className="mb-10">
             <ComparisonCard
               title="Duración de sesión"
-              favorable={{ value: "≤ 60 min", stat: "g = −1.60" }}
-              unfavorable={{ value: "> 60 min", stat: "g = −0.16" }}
+              favorable={{ value: "60 min o menos", stat: "g = −1.60" }}
+              unfavorable={{ value: "Más de 60 min", stat: "g = −0.16" }}
             />
             <ComparisonCard
               title="Número de sesiones"
-              favorable={{ value: "≥ 6 sesiones", stat: "g = −1.77" }}
-              unfavorable={{ value: "< 6 sesiones", stat: "g = −0.15" }}
+              favorable={{ value: "6 sesiones o más", stat: "g = −1.77" }}
+              unfavorable={{ value: "Menos de 6 sesiones", stat: "g = −0.15" }}
             />
             <ComparisonCard
               title="Contexto del país"
@@ -274,12 +274,12 @@ export default function EvidenciaPage() {
           <EffectBarList title="Efecto en TEPT por condición del moderador — Laksmita et al. (2026)" className="mb-6">
             <EffectBar label="No especialistas" value={2.60} maxValue={2.8} unit=" g" variant="favor" />
             <EffectBar label="Países en desarrollo" value={1.77} maxValue={2.8} unit=" g" variant="favor" />
-            <EffectBar label="≥6 sesiones" value={1.77} maxValue={2.8} unit=" g" variant="favor" />
-            <EffectBar label="≤60 min / sesión" value={1.60} maxValue={2.8} unit=" g" variant="favor" />
+            <EffectBar label="6 sesiones o más" value={1.77} maxValue={2.8} unit=" g" variant="favor" />
+            <EffectBar label="60 min o menos / sesión" value={1.60} maxValue={2.8} unit=" g" variant="favor" />
             <EffectBar label="Prof. de salud" value={0.39} maxValue={2.8} unit=" g" variant="unfavor" />
             <EffectBar label="Países desarrollados" value={0.15} maxValue={2.8} unit=" g" variant="unfavor" />
-            <EffectBar label="<6 sesiones" value={0.15} maxValue={2.8} unit=" g" variant="unfavor" />
-            <EffectBar label=">60 min / sesión" value={0.16} maxValue={2.8} unit=" g" variant="unfavor" />
+            <EffectBar label="Menos de 6 sesiones" value={0.15} maxValue={2.8} unit=" g" variant="unfavor" />
+            <EffectBar label="Más de 60 min / sesión" value={0.16} maxValue={2.8} unit=" g" variant="unfavor" />
           </EffectBarList>
         </section>
 
