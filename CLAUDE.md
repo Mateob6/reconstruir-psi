@@ -43,8 +43,7 @@ src/
 │   │   ├── recursos/            ← programas, screening, marco normativo
 │   │   └── experiencia/         ← Chile, Japón, Indonesia, Nepal, Ecuador
 │   ├── referencias/             ← 128 recursos con DOI/URL
-│   ├── trabajo/                 ← "Próximamente"
-│   └── acerca/                  ← metodología, autoría
+│   └── acerca/                  ← metodología (revisión y desarrollo), autoría
 ├── components/
 │   ├── ui/                      ← Card, Badge, Button, cn
 │   ├── layout/                  ← Sidebar, Header, ThemeToggle
@@ -102,6 +101,6 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 | A | Sistema de referencias (128 refs + ~80 citas inline) | Completada |
 | B1 | Presentación de texto (strong, h3, KeyMessage, stat-inline) | Completada |
 | B2 | Componentes visuales (Pyramid, HBar, CaseCard, Timeline, StepCards) | Completada |
-| C | Enlaces descargables (DOIs + URLs en Recursos) | Pendiente |
-| W3 | Área Trabajo (revisión de literatura + contenido) | Pendiente |
-| W6 | Iteración y pulido | Pendiente |
+| C | Enlaces descargables (DOIs + URLs en Recursos) | Completada |
+| W3 | Área Trabajo (revisión de literatura + contenido) | Descartada |
+| W6 | Iteración y pulido (Accesibilidad, logos, copy, pedagogía) | Completada |
