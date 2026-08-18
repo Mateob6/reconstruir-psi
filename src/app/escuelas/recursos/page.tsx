@@ -244,7 +244,10 @@ export default function RecursosPage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-            {REFERENCES.filter(r => r.type === 'guideline' || r.type === 'protocol').map((ref) => (
+            {["R-023", "R-024", "R-025", "R-026", "R-001", "R-041", "R-029", "R-027", "R-028", "R-101", "R-103", "R-105", "R-106", "R-107", "R-108"]
+              .map(id => REFERENCES.find(r => r.id === id))
+              .filter((ref): ref is NonNullable<typeof ref> => ref !== undefined)
+              .map((ref) => (
               <a
                 key={ref.id}
                 href={ref.url || "#"}

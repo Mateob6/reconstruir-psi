@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { TopTimeline } from "@/components/layout/top-timeline";
+import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <TopTimeline />
         <main className="flex-1 w-full mx-auto p-4 md:p-6 lg:p-8">{children}</main>
+        <Footer />
       </body>
     </html>
   );

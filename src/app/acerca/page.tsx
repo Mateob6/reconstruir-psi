@@ -1,179 +1,213 @@
 import type { Metadata } from "next";
-import { PageHero, Section, Callout, DataTable, Ref, KeyMessage } from "@/components/content";
-import { StatGrid, Stat } from "@/components/content";
+import { SectionHeader, Callout, DataTable, KeyMessage, Stat, StatGrid, StickySectionNav } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Acerca de",
-  description:
-    "Metodología de la revisión de alcance rápida: 129 recursos, 39 búsquedas, 14 bases de datos. Autoría y limitaciones.",
+  title: "Créditos y Metodología",
+  description: "Metodología de la revisión, alcance, limitaciones y créditos institucionales.",
 };
 
 export default function AcercaPage() {
   return (
-    <div className="mx-auto max-w-3xl space-y-8">
-      <PageHero
-        title="Acerca de"
-        subtitle="Metodología, alcance y autoría de esta guía"
+    <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <header className="mb-16">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-px w-8 bg-accent"></div>
+          <span className="font-mono text-sm font-bold tracking-widest text-accent uppercase">
+            Acerca de la Guía
+          </span>
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight font-sans">
+          Metodología y Créditos
+        </h1>
+        <p className="text-xl text-muted leading-relaxed max-w-3xl mb-12">
+          Conoce cómo se construyó esta guía de respuesta rápida, las bases de evidencia que la sustentan y el equipo institucional detrás del proyecto.
+        </p>
+      </header>
+
+      <StickySectionNav
+        items={[
+          { id: "institucional", label: "Institucional" },
+          { id: "autoria", label: "Autoría" },
+          { id: "metodologia", label: "Metodología" },
+          { id: "limitaciones", label: "Limitaciones" },
+          { id: "citar", label: "Cómo citar" },
+        ]}
       />
 
-      <Section title="Sobre esta guía">
-        <p>
-          El 10 de agosto de 2026, a las 07:34 hora local, un terremoto de magnitud{" "}
-          <span className="stat-inline">7.4</span> con epicentro en San José del Palmar (Chocó) y
-          una profundidad de aproximadamente 107 km sacudió el occidente de Colombia. Fue el sismo
-          más fuerte registrado en el país en la última década. Las cifras preliminares reportaron
-          más de <span className="stat-inline">287</span> personas fallecidas,{" "}
-          <span className="stat-inline">570</span> heridas, y un impacto que se extendió a lo
-          largo de varias ciudades del occidente colombiano<Ref id="R-111" also={["R-116"]} />.
-        </p>
-        <p>
-          Pereira concentró más de 60 muertes y múltiples edificios colapsados. En Cali,{" "}
-          <span className="stat-inline">32</span> edificaciones colapsaron, incluyendo
-          infraestructura hospitalaria. Manizales perdió la torre
-          de su catedral neogótica. Armenia, Quibdó y otros municipios reportaron daños significativos
-          en infraestructura pública y privada. Los aeropuertos fueron cerrados temporalmente y varias
-          vías resultaron afectadas.
-        </p>
-        <p>
-          Esta guía fue producida como una <strong>revisión de alcance rápida</strong> (rapid scoping review) para
-          responder a la necesidad inmediata de orientaciones basadas en evidencia para los contextos
-          escolares. Su propósito es traducir la evidencia científica internacional y las experiencias
-          de campo documentadas en recomendaciones prácticas para quienes toman decisiones en el
-          terreno educativo.
-        </p>
-        <p>
-          El público al que se dirige incluye directivos escolares, docentes, equipos psicosociales
-          de las secretarías de educación, coordinadores de bienestar estudiantil y responsables de
-          política educativa a nivel territorial y nacional.
-        </p>
-      </Section>
-
-      <Section title="Metodología">
-        <p>
-          La revisión fue conducida durante dos días (16 y 17 de agosto de 2026). Se realizaron{" "}
-          <span className="stat-inline">39</span> búsquedas en{" "}
-          <span className="stat-inline">14</span> bases de datos y fuentes institucionales, tanto
-          en inglés como en español, con búsquedas específicas para la región latinoamericana en
-          LILACS y SciELO.
-        </p>
-
-        <StatGrid>
-          <Stat value="129" label="Recursos identificados" />
-          <Stat value="128" label="Incluidos (1 excluido)" />
-          <Stat value="39" label="Búsquedas realizadas" />
-          <Stat value="14" label="Bases de datos" />
-        </StatGrid>
-
-        <p>
-          Las bases de datos consultadas incluyeron PubMed, Cochrane Library, Campbell Collaboration,
-          3ie/UNICEF Innocenti, Google Scholar, LILACS, SciELO, EBSCOhost (Psychology and Behavioral
-          Sciences Collection), INEE, Banco Mundial, UNESCO, y búsquedas web dirigidas a fuentes
-          institucionales colombianas e internacionales.
-        </p>
-        <p>
-          La base de evidencia resultante está compuesta por tres meta-análisis que sintetizan más
-          de <span className="stat-inline">11,000</span> participantes,{" "}
-          <span className="stat-inline">18</span> revisiones sistemáticas,{" "}
-          <span className="stat-inline">19</span> guías y protocolos institucionales, y{" "}
-          <span className="stat-inline">54</span> estudios primarios. Un total de{" "}
-          <span className="stat-inline">28</span> textos completos fueron analizados en
-          profundidad (15 guías y 13 artículos). A partir de esta base se produjeron 13 síntesis temáticas que
-          abarcan las dimensiones psicosocial (7 síntesis) y educativa (6 síntesis).
-        </p>
-
-        <DataTable
-          caption="Composición de la base de evidencia"
-          headers={["Tipo de recurso", "Cantidad"]}
-          rows={[
-            ["Meta-análisis", "9"],
-            ["Revisiones sistemáticas", "26"],
-            ["Guías y protocolos institucionales", "24"],
-            ["Estudios primarios (cuasi-experimentales + cualitativos)", "52"],
-            ["Reportes", "5"],
-            ["Kits de herramientas", "2"],
-          ]}
-        />
-
-        <p>
-          Los recursos fueron clasificados en tres niveles de prioridad para la revisión. El Nivel 1
-          (esencial, 50 recursos) incluye las fuentes con mayor relevancia directa para la respuesta
-          escolar post-terremoto. El Nivel 2 (importante, 48 recursos) comprende fuentes que aportan
-          evidencia complementaria o contexto valioso. El Nivel 3 (contexto, 30 recursos) reúne
-          fuentes que proporcionan antecedentes generales o experiencias de referencia.
-        </p>
-        <p>
-          La revisión abarcó dos dimensiones. La dimensión psicosocial reunió 83 recursos centrados
-          en intervenciones de salud mental, primeros auxilios psicológicos, programas escolares y
-          marcos normativos internacionales. La dimensión educativa compiló 42 recursos sobre
-          continuidad educativa, recuperación de aprendizajes, adaptación curricular, evaluación en
-          crisis y escuelas seguras. Cuatro recursos abarcaron ambas dimensiones.
-        </p>
-      </Section>
-
-      <Section title="Limitaciones">
-        <KeyMessage>
-          Esta guía fue producida en dos días para responder a una necesidad inmediata. No sustituye
-          una revisión sistemática formal, pero traduce la mejor evidencia disponible en
-          orientaciones prácticas para el terreno.
-        </KeyMessage>
-
-        <p>
-          Al tratarse de una revisión rápida conducida en dos días, esta guía no alcanza el rigor
-          metodológico de una revisión sistemática formal. Algunos estudios relevantes pueden no haber
-          sido identificados, particularmente aquellos publicados en repositorios institucionales de
-          acceso restringido o en idiomas distintos al inglés y al español.
-        </p>
-
-        <h3>Alcance de la búsqueda</h3>
-        <p>
-          No se realizaron búsquedas formales en <strong>PsycINFO</strong>,{" "}
-          <strong>Scopus</strong> ni <strong>ERIC</strong>, bases que podrían aportar estudios
-          primarios adicionales. Las cadenas de búsqueda para estas bases fueron preparadas y están
-          disponibles para futuras ampliaciones de la revisión.
-        </p>
-
-        <h3>Sesgo de idioma</h3>
-        <p>
-          La revisión priorizó fuentes en inglés y español, lo que introduce un sesgo de idioma que
-          podría excluir experiencias documentadas en otros idiomas, particularmente las experiencias
-          turcas, nepalíes y japonesas que solo tienen versiones en sus lenguas originales.
-        </p>
-        <p>
-          La guía se centra exclusivamente en intervenciones post-desastre natural y no incorpora la
-          evidencia proveniente de intervenciones post-conflicto armado, a pesar de que Colombia
-          dispone de una capacidad instalada significativa a través del{" "}
-          <strong>PAPSIVI</strong><Ref id="R-039" />. La transferibilidad entre estos contextos merece
-          un análisis independiente.
-        </p>
-
-        <h3>Heterogeneidad estadística</h3>
-        <p>
-          Algunos de los meta-análisis incluidos presentan heterogeneidad elevada
-          (<span className="stat-inline">I² superior al 90%</span> en determinados análisis), lo que
-          obliga a interpretar los tamaños de efecto agregados con cautela<Ref id="R-003" />.
-          Adicionalmente, no se identificaron estudios de implementación que examinen la escalabilidad
-          de las intervenciones psicosociales escolares post-desastre, lo que constituye una brecha
-          importante en la literatura<Ref id="R-003" />.
-        </p>
-      </Section>
-
-      <Section title="Autoría">
-        <p>
-          Mateo Belalcázar Correa, MSc. Centro de Investigaciones y Estudios Avanzados en Psicología,
-          Cognición y Cultura (CIDEAS), Facultad de Psicología, Universidad del Valle. Colombia,
-          agosto de 2026.
-        </p>
-      </Section>
-
-      <Section title="Cómo citar">
-        <Callout type="info" title="Referencia sugerida (APA 7)">
-          <p>
-            Belalcázar Correa, M. (2026). <em>Respuesta psicosocial y educativa en contextos
-            escolares post-terremoto: Guía basada en evidencia</em>. CIDEAS, Facultad de Psicología,
-            Universidad del Valle. https://reconstruir-psi.vercel.app
+      {/* Nivel 1: Respaldo y Créditos */}
+      <section id="institucional" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
+        <SectionHeader eyebrow="Institucional" title="Respaldo Académico" />
+        
+        <div className="mt-8 p-10 rounded-2xl bg-surface border border-border flex flex-col justify-center items-center text-center">
+          <p className="text-muted max-w-2xl mx-auto mb-10 leading-relaxed text-[15px]">
+            Esta guía fue desarrollada como una iniciativa académica de respuesta rápida por el Instituto de Investigación en Ciencias del Desarrollo, del Aprendizaje y Subjetividades (CIDEAS), en el marco de la Facultad de Psicología de la Universidad del Valle.
           </p>
-        </Callout>
-      </Section>
+
+          <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 hover:opacity-100 transition-opacity">
+            {/* Logo Univalle Abstract/Placeholder */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-20 h-24 bg-accent/10 flex items-center justify-center rounded-lg border border-accent/20">
+                <div className="w-6 h-10 bg-accent/40 rounded-sm"></div>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-wider text-foreground">Universidad<br/>del Valle</span>
+            </div>
+            
+            <div className="hidden md:block w-px h-16 bg-border"></div>
+            
+            {/* Logo Facultad */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-20 h-24 bg-surface-raised flex items-center justify-center rounded-lg border border-border">
+                <svg className="w-8 h-8 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-wider text-foreground">Facultad de<br/>Psicología</span>
+            </div>
+
+            <div className="hidden md:block w-px h-16 bg-border"></div>
+            
+            {/* Logo CIDEAS */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-24 bg-surface-raised flex items-center justify-center rounded-lg border border-border">
+                <span className="font-bold text-xl tracking-widest text-muted">CIDEAS</span>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-wider text-foreground">Instituto de<br/>Investigación</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="autoria" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
+        <SectionHeader eyebrow="Autoría" title="Autor y Compilador" />
+        
+        <div className="mt-8 p-8 md:p-10 rounded-2xl bg-surface border border-border flex flex-col md:flex-row items-start gap-8">
+          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-surface-raised border-4 border-surface shadow-sm shrink-0">
+            <img src="https://mateob6.github.io/photo.jpg" alt="Mateo Belalcázar Correa" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex-1">
+            <h4 className="text-2xl font-bold text-foreground mb-1">Mateo Belalcázar Correa</h4>
+            <p className="text-sm font-mono text-accent uppercase tracking-wider mb-4">Investigador Doctoral en Psicología</p>
+            <p className="text-[15px] text-muted leading-relaxed mb-6">
+              Investigador en el Instituto CIDEAS, Universidad del Valle. Su trabajo se enfoca en el desarrollo cognitivo, la neuropsicología, la medición psicológica y los métodos computacionales aplicados a contextos educativos y comunitarios.
+            </p>
+            
+            <div className="flex flex-wrap gap-3">
+              <a href="mailto:mateo.belalcazar6@gmail.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface-raised px-4 py-2 rounded-full hover:bg-accent hover:text-white transition-colors border border-border text-foreground">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                Email
+              </a>
+              <a href="https://mateob6.github.io/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface-raised px-4 py-2 rounded-full hover:bg-accent hover:text-white transition-colors border border-border text-foreground">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                Sitio web
+              </a>
+              <a href="https://scholar.google.com/citations?hl=es&authuser=1&user=RoI0VQ8AAAAJ" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface-raised px-4 py-2 rounded-full hover:bg-accent hover:text-white transition-colors border border-border text-foreground">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+                Google Scholar
+              </a>
+              <a href="https://github.com/Mateob6" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface-raised px-4 py-2 rounded-full hover:bg-accent hover:text-white transition-colors border border-border text-foreground">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nivel 2: Metodología */}
+      <section id="metodologia" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
+        <SectionHeader eyebrow="Evidencia" title="Metodología de la revisión" />
+        
+        <div className="space-y-6 text-[15px] leading-relaxed text-muted mt-8">
+          <p>
+            Esta guía fue producida como una <strong>revisión de alcance rápida</strong> (rapid scoping review) para responder a la necesidad inmediata de orientaciones basadas en evidencia para los contextos escolares tras el sismo de agosto de 2026. Su propósito es traducir la evidencia científica internacional y las experiencias de campo documentadas en recomendaciones prácticas para quienes toman decisiones en el terreno educativo.
+          </p>
+
+          <StatGrid>
+            <Stat value="129" label="Recursos identificados" />
+            <Stat value="128" label="Incluidos en la síntesis" />
+            <Stat value="39" label="Búsquedas realizadas" />
+            <Stat value="14" label="Bases de datos" />
+          </StatGrid>
+
+          <p>
+            La revisión fue conducida durante dos días (16 y 17 de agosto de 2026). Se realizaron búsquedas en inglés y español en bases de datos como PubMed, Cochrane Library, Campbell Collaboration, 3ie/UNICEF Innocenti, Google Scholar, LILACS, SciELO, EBSCOhost, y fuentes institucionales (Banco Mundial, UNESCO, INEE).
+          </p>
+          
+          <p>
+            La base de evidencia resultante está compuesta por tres meta-análisis que sintetizan más de <span className="stat-inline">11,000</span> participantes, 18 revisiones sistemáticas, 19 guías institucionales, y 54 estudios primarios. Un total de 28 textos completos fueron analizados en profundidad (15 guías y 13 artículos).
+          </p>
+
+          <DataTable
+            caption="Composición de la base de evidencia"
+            headers={["Tipo de recurso", "Cantidad"]}
+            rows={[
+              ["Meta-análisis", "9"],
+              ["Revisiones sistemáticas", "26"],
+              ["Guías y protocolos institucionales", "24"],
+              ["Estudios primarios (cuasi-experimentales + cualitativos)", "52"],
+              ["Reportes y herramientas", "7"],
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Nivel 3: Limitaciones */}
+      <section id="limitaciones" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
+        <SectionHeader eyebrow="Transparencia" title="Limitaciones del estudio" />
+        
+        <div className="space-y-6 text-[15px] leading-relaxed text-muted mt-8">
+          <KeyMessage>
+            Al tratarse de una revisión rápida conducida en dos días, esta guía no alcanza el rigor metodológico de una revisión sistemática formal. No sustituye un análisis clínico exhaustivo, pero ofrece la mejor evidencia disponible para orientar la respuesta inicial.
+          </KeyMessage>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div className="p-6 bg-surface border border-border rounded-xl shadow-sm">
+              <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" /></svg>
+                Sesgo de idioma
+              </h4>
+              <p className="text-sm">La revisión priorizó fuentes en inglés y español, excluyendo posibles experiencias locales documentadas en otros idiomas (japonés, turco, nepalí) que no han sido traducidas o indexadas internacionalmente.</p>
+            </div>
+            
+            <div className="p-6 bg-surface border border-border rounded-xl shadow-sm">
+              <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                Alcance de búsqueda
+              </h4>
+              <p className="text-sm">No se realizaron búsquedas formales exhaustivas en PsycINFO, Scopus ni ERIC debido a la restricción de tiempo. Las cadenas de búsqueda para estas bases fueron preparadas y están disponibles para futuras iteraciones.</p>
+            </div>
+            
+            <div className="p-6 bg-surface border border-border rounded-xl shadow-sm">
+              <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                Heterogeneidad
+              </h4>
+              <p className="text-sm">Algunos meta-análisis incluidos presentan heterogeneidad elevada (I² superior al 90%), lo que obliga a interpretar los tamaños de efecto agregados con cautela extrema y adaptarlos siempre al contexto particular.</p>
+            </div>
+            
+            <div className="p-6 bg-surface border border-border rounded-xl shadow-sm">
+              <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                Transferibilidad
+              </h4>
+              <p className="text-sm">Se requiere un análisis empírico independiente para evaluar cómo la enorme capacidad instalada en Colombia por décadas de conflicto armado (ej. PAPSIVI) se transfiere eficientemente a la atención psicosocial post-desastre natural.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="citar" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
+        <SectionHeader eyebrow="Referencia" title="Cómo citar" />
+        <div className="mt-8">
+          <Callout type="info" title="Cita APA 7">
+            <p className="font-serif">
+              Belalcázar Correa, M. (2026). <em>Respuesta psicosocial y educativa en contextos
+              escolares post-terremoto: Guía basada en evidencia</em>. CIDEAS, Facultad de Psicología,
+              Universidad del Valle. https://reconstruir-psi.vercel.app
+            </p>
+          </Callout>
+        </div>
+      </section>
     </div>
   );
 }
