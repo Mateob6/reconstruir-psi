@@ -75,9 +75,12 @@ export default function ReferenciasPage() {
                       href={`https://doi.org/${ref.doi}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-accent hover:underline"
+                      className="inline-flex items-center gap-1.5 rounded-md bg-teal-500/10 px-2.5 py-1 text-[11px] font-semibold text-teal-700 hover:bg-teal-500 hover:text-white transition-colors dark:text-teal-400"
                     >
-                      DOI ↗
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                      </svg>
+                      DOI
                     </a>
                   )}
                   {ref.url && (
@@ -85,9 +88,12 @@ export default function ReferenciasPage() {
                       href={ref.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-muted hover:text-foreground hover:underline"
+                      className="inline-flex items-center gap-1.5 rounded-md bg-surface-raised border border-border px-2.5 py-1 text-[11px] font-medium text-foreground hover:bg-border transition-colors"
                     >
-                      URL ↗
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      Ver documento
                     </a>
                   )}
                 </div>

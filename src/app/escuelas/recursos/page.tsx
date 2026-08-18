@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, Section, Callout, DataTable, Ref, KeyMessage } from "@/components/content";
+import { REFERENCES } from "@/data/references";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Recursos",
@@ -204,26 +206,32 @@ export default function RecursosPage() {
           escolar a largo plazo, y están disponibles en español e inglés.
         </p>
 
-        <ul className="list-disc pl-5 space-y-1 text-sm">
-          <li><strong>IASC</strong> (2007) — Directrices sobre salud mental y apoyo psicosocial en emergencias</li>
-          <li><strong>OMS</strong> (2011) — Primeros auxilios psicológicos: guía para trabajadores de campo</li>
-          <li><strong>UNICEF</strong> (2022) — Salud mental y apoyo psicosocial en escuelas</li>
-          <li><strong>OPS/PAHO</strong> — Guía de salud mental en desastres para las Américas</li>
-          <li>
-            <strong>UNICEF Chile</strong> — &quot;Rearmemos la vida de niños y niñas&quot;: guía psicoeducativa
-            post-terremoto
-          </li>
-          <li><strong>MHPSS Collaborative</strong> (2020) — Revisión de intervenciones SMAPS</li>
-          <li>
-            <strong>MinSalud Colombia</strong> (×2) — Protocolos de atención psicosocial y guía de salud mental en
-            emergencias
-          </li>
-          <li><strong>CSSF</strong> (2022–2030) — Marco integral de seguridad escolar</li>
-          <li><strong>AEWG</strong> (2017) — Educación acelerada: principios y prácticas</li>
-          <li><strong>MEN</strong> — Guía 59: Planes escolares de gestión del riesgo</li>
-          <li><strong>MEN GIRE</strong> (×2) — Cuadernillo y Política GIRE 2025</li>
-          <li><strong>UNGRD</strong> — Plan escolar de gestión del riesgo</li>
-        </ul>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          {REFERENCES.filter(r => r.type === 'guideline' || r.type === 'protocol').map((ref) => (
+            <a
+              key={ref.id}
+              href={ref.url || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col p-4 rounded-xl border border-border bg-surface hover:bg-surface-raised hover:border-accent/40 transition-colors group"
+            >
+              <div className="flex items-start justify-between gap-2 mb-3">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-accent bg-accent-subtle px-2 py-0.5 rounded-sm">
+                  {ref.shortAuthor} {ref.year ? `(${ref.year})` : ""}
+                </span>
+                <svg className="w-4 h-4 text-muted group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </div>
+              <h4 className="text-sm font-semibold text-foreground line-clamp-3 mb-1">
+                {ref.title}
+              </h4>
+              <p className="text-[12px] text-muted line-clamp-1 mt-auto">
+                {ref.authors[0]}
+              </p>
+            </a>
+          ))}
+        </div>
       </Section>
     </div>
   );

@@ -78,7 +78,7 @@ export function StickySectionNav({ items, className }: StickySectionNavProps) {
   return (
     <div
       className={cn(
-        "sticky top-[60px] z-20 w-full border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-md",
+        "sticky top-[101px] z-10 w-full border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-md",
         className
       )}
     >

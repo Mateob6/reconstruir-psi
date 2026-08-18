@@ -18,19 +18,9 @@ export function TopTimeline() {
   // Ocultar la línea de tiempo si no estamos en la sección de escuelas
   if (!pathname.startsWith("/escuelas")) return null;
 
-  // Ocultar si estamos en una página que tiene StickySectionNav (Nivel 2 ocupado)
-  const hideOnPaths = [
-    "/escuelas/evidencia",
-    "/escuelas/esta-semana",
-    "/escuelas/primer-mes",
-    "/escuelas/primer-semestre",
-    "/escuelas/largo-plazo"
-  ];
-  if (hideOnPaths.includes(pathname)) return null;
-
   return (
-    <div className="w-full border-b border-border bg-surface/80 backdrop-blur-md sticky top-[60px] z-10">
-      <div className="flex w-full overflow-x-auto p-3 no-scrollbar scroll-smooth">
+    <div className="w-full border-b border-border bg-surface/80 backdrop-blur-md sticky top-[60px] z-20">
+      <div className="flex w-full overflow-x-auto py-2 px-3 no-scrollbar scroll-smooth">
         <div className="flex mx-auto items-center gap-2 min-w-max px-4">
           {TIMELINE_STEPS.map((step, index) => {
             const isActive = step.exact 
