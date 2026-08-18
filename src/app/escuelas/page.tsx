@@ -22,6 +22,11 @@ export default function EscuelasPage() {
         <p className="text-xl md:text-2xl text-[var(--muted)] leading-relaxed max-w-3xl">
           Marco de acción basado en evidencia para la recuperación psicosocial y educativa tras el sismo de agosto de 2026 en el suroccidente de Colombia.
         </p>
+        <div className="pt-4 max-w-3xl">
+          <p className="text-[15px] leading-relaxed text-[var(--foreground)] opacity-90 p-5 rounded-xl bg-[var(--surface-raised)] border border-[var(--border)]">
+            <strong>¿Cómo leer esta guía?</strong> Esta herramienta no está diseñada para leerse de forma lineal. Funciona como un manual de respuesta rápida organizado cronológicamente. Identifica en qué momento de la emergencia te encuentras (p. ej. <em>"Esta semana"</em>) y dirígete directamente a esa sección. Usa los apartados de soporte al final para profundizar en la evidencia, descargar recursos técnicos o conocer cómo actuaron otros países.
+          </p>
+        </div>
       </section>
 
       {/* Context KPIs */}

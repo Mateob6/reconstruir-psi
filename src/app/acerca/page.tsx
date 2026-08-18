@@ -182,7 +182,7 @@ export default function AcercaPage() {
         
         <div className="space-y-6 text-[15px] leading-relaxed text-muted mt-8">
           <KeyMessage>
-            Al tratarse de una revisión rápida conducida en dos días, esta guía no alcanza el rigor metodológico de una revisión sistemática formal. No sustituye un análisis clínico exhaustivo, pero ofrece la mejor evidencia disponible para orientar la respuesta inicial.
+            Esta guía de respuesta rápida no sustituye un análisis clínico exhaustivo, pero condensa y traduce la mejor evidencia disponible en el corto plazo para orientar la toma de decisiones inicial ante la emergencia.
           </KeyMessage>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
