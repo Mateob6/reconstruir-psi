@@ -49,7 +49,7 @@ export default function PrimerMesPage() {
       />
 
       <div className="space-y-0">
-        <section id="escalonado" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="escalonado" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Respuesta organizada" title="El modelo escalonado" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -124,7 +124,7 @@ export default function PrimerMesPage() {
           </div>
         </section>
 
-        <section id="ventana" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="ventana" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Timing crítico" title="La ventana de intervención" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -184,7 +184,7 @@ export default function PrimerMesPage() {
           </div>
         </section>
 
-        <section id="capacitacion" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="capacitacion" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Formación docente" title="Capacitación docente" />
           
           <div className="max-w-4xl my-8">
@@ -262,7 +262,7 @@ export default function PrimerMesPage() {
           </div>
         </section>
 
-        <section id="adaptacion" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="adaptacion" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Currículo" title="Adaptación curricular" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -300,7 +300,7 @@ export default function PrimerMesPage() {
           </div>
         </section>
 
-        <section id="evaluacion" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="evaluacion" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Valoración en crisis" title="Evaluación en la crisis" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -334,7 +334,7 @@ export default function PrimerMesPage() {
           </div>
         </section>
 
-        <section id="bienestar" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="bienestar" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Cuidar al cuidador" title="Bienestar del docente" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>

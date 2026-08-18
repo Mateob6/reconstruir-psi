@@ -64,7 +64,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             HERO
         ═══════════════════════════════════════════════════ */}
-        <section className="pt-12 pb-6 sm:pt-16 sm:pb-8" style={{ scrollMarginTop: "160px" }}>
+        <section className="pt-12 pb-6 sm:pt-16 sm:pb-8" style={{ scrollMarginTop: "120px" }}>
           <div className="flex items-center gap-3 text-xs font-mono font-medium tracking-wider uppercase text-[var(--accent)] mb-5">
             <span className="w-6 h-[2px] bg-[var(--accent)] rounded-full" />
             <span>Evidencia científica</span>
@@ -82,7 +82,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             KPIs
         ═══════════════════════════════════════════════════ */}
-        <section id="impacto" className="pb-16" style={{ scrollMarginTop: "160px" }}>
+        <section id="impacto" className="pb-16" style={{ scrollMarginTop: "120px" }}>
           <StatGrid>
             <Stat value="75" label="Estudios analizados" />
             <Stat value="11,000+" label="Participantes" />
@@ -94,7 +94,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             RESUMEN EJECUTIVO
         ═══════════════════════════════════════════════════ */}
-        <section id="resumen" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="resumen" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="Resumen ejecutivo"
             title="Tres conclusiones antes de entrar al detalle"
@@ -122,7 +122,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             TRES META-ANÁLISIS
         ═══════════════════════════════════════════════════ */}
-        <section id="meta-analisis" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="meta-analisis" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="La base de evidencia"
             title="Tres meta-análisis clave"
@@ -171,7 +171,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             TERAPIAS
         ═══════════════════════════════════════════════════ */}
-        <section id="terapias" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="terapias" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="Comparación de modalidades"
             title="¿Qué terapia funciona mejor?"
@@ -201,7 +201,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             MODERADORES
         ═══════════════════════════════════════════════════ */}
-        <section id="moderadores" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="moderadores" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="Qué amplifica el efecto"
             title="Moderadores"
@@ -247,7 +247,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             COLOMBIA
         ═══════════════════════════════════════════════════ */}
-        <section id="colombia" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="colombia" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <div className="relative overflow-hidden rounded-2xl border border-amber-300/40 bg-amber-50 dark:bg-amber-900/10 dark:border-amber-700/30 p-8 sm:p-10">
             <div className="flex flex-col sm:flex-row gap-6 items-start">
               <div className="flex items-center justify-center w-[52px] h-[52px] rounded-full bg-amber-500 text-white shrink-0">
@@ -277,7 +277,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             TRAYECTORIAS DE RECUPERACIÓN
         ═══════════════════════════════════════════════════ */}
-        <section id="trayectorias" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="trayectorias" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="No todos necesitan lo mismo"
             title="Trayectorias de recuperación"
@@ -322,7 +322,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             PIRÁMIDE IASC
         ═══════════════════════════════════════════════════ */}
-        <section id="piramide" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="piramide" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="Marco organizador"
             title="La pirámide IASC"
@@ -336,7 +336,7 @@ export default function EvidenciaPage() {
         {/* ═══════════════════════════════════════════════════
             MARCOS COMPLEMENTARIOS
         ═══════════════════════════════════════════════════ */}
-        <section id="marcos" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "160px" }}>
+        <section id="marcos" className="py-16 border-t border-[var(--border)]" style={{ scrollMarginTop: "120px" }}>
           <SectionHeader
             eyebrow="Otros marcos de referencia"
             title="Marcos complementarios"

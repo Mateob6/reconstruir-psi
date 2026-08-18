@@ -17,7 +17,7 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-20 flex h-[60px] w-full items-center justify-between border-b border-border bg-surface/80 px-4 py-2 backdrop-blur-md md:px-6">
+    <header className="sticky top-0 z-30 flex h-[60px] w-full items-center justify-between border-b border-border bg-surface/80 px-4 py-2 backdrop-blur-md md:px-6">
       <div className="flex items-center gap-6">
         <Link href="/escuelas" className="flex items-center gap-2 transition-opacity hover:opacity-80">
           {/* Un ícono simple o el nombre del proyecto */}

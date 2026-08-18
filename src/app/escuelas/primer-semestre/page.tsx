@@ -47,7 +47,7 @@ export default function PrimerSemestrePage() {
       />
 
       <div className="space-y-0">
-        <section id="magnitud" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="magnitud" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="El costo de la interrupción" title="La magnitud de la pérdida" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -93,7 +93,7 @@ export default function PrimerSemestrePage() {
           </div>
         </section>
 
-        <section id="tutoria" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="tutoria" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Estrategia de recuperación" title="Tutoría de alta dosis" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -124,7 +124,7 @@ export default function PrimerSemestrePage() {
           </div>
         </section>
 
-        <section id="rapid" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="rapid" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Marco del Banco Mundial" title="Marco RAPID" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -176,7 +176,7 @@ export default function PrimerSemestrePage() {
           </div>
         </section>
 
-        <section id="acelerada" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="acelerada" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Programa AEWG" title="Educación acelerada" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -195,7 +195,7 @@ export default function PrimerSemestrePage() {
           </div>
         </section>
 
-        <section id="adaptacion" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="adaptacion" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Currículo transformado" title="Adaptación curricular profunda" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
@@ -224,7 +224,7 @@ export default function PrimerSemestrePage() {
           </div>
         </section>
 
-        <section id="evaluacion" className="scroll-mt-[160px] border-t border-border py-16">
+        <section id="evaluacion" className="scroll-mt-[120px] border-t border-border py-16">
           <SectionHeader eyebrow="Valoración formativa" title="Evaluación formativa" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>

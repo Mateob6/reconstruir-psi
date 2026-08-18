@@ -56,7 +56,7 @@ export default function LargoPlazoPage() {
 
       <div className="space-y-0">
         {/* CSSF */}
-        <section id="cssf" style={{ scrollMarginTop: "160px" }} className="py-16 border-t border-[var(--border)]">
+        <section id="cssf" style={{ scrollMarginTop: "120px" }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader
             eyebrow="Marco global 2022-2030"
             title="Marco Integral de Seguridad Escolar"
@@ -143,7 +143,7 @@ export default function LargoPlazoPage() {
         </section>
 
         {/* Instalaciones */}
-        <section id="instalaciones" style={{ scrollMarginTop: "160px" }} className="py-16 border-t border-[var(--border)]">
+        <section id="instalaciones" style={{ scrollMarginTop: "120px" }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader
             eyebrow="Pilar 1"
             title="Instalaciones seguras"
@@ -174,7 +174,7 @@ export default function LargoPlazoPage() {
         </section>
 
         {/* Gestión y continuidad */}
-        <section id="gestion" style={{ scrollMarginTop: "160px" }} className="py-16 border-t border-[var(--border)]">
+        <section id="gestion" style={{ scrollMarginTop: "120px" }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader
             eyebrow="Pilar 2"
             title="Gestión y continuidad"
@@ -208,7 +208,7 @@ export default function LargoPlazoPage() {
         </section>
 
         {/* Educación DRR */}
-        <section id="educacion-drr" style={{ scrollMarginTop: "160px" }} className="py-16 border-t border-[var(--border)]">
+        <section id="educacion-drr" style={{ scrollMarginTop: "120px" }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader
             eyebrow="Pilar 3"
             title="Educación en reducción del riesgo"
@@ -239,7 +239,7 @@ export default function LargoPlazoPage() {
         </section>
 
         {/* Japón */}
-        <section id="japon" style={{ scrollMarginTop: "160px" }} className="py-16 border-t border-[var(--border)]">
+        <section id="japon" style={{ scrollMarginTop: "120px" }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader
             eyebrow="Caso de estudio"
             title="La lección de Japón"
@@ -283,7 +283,7 @@ export default function LargoPlazoPage() {
         </section>
 
         {/* Marco colombiano */}
-        <section id="colombia" style={{ scrollMarginTop: "160px" }} className="py-16 border-t border-[var(--border)]">
+        <section id="colombia" style={{ scrollMarginTop: "120px" }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader
             eyebrow="Contexto nacional"
             title="Marco colombiano"

@@ -61,7 +61,7 @@ export default function EstaSemanaPage() {
           </div>
         </section>
 
-        <section id="alertas" style={{ scrollMarginTop: '160px' }} className="py-16">
+        <section id="alertas" style={{ scrollMarginTop: '120px' }} className="py-16">
           <SectionHeader eyebrow="Acción inmediata" title="Lo que NO debe hacerse" />
           <Callout type="danger" title="Lo que NO debe hacerse">
             <ul className="list-disc space-y-1 pl-5">
@@ -86,7 +86,7 @@ export default function EstaSemanaPage() {
           </Callout>
         </section>
 
-        <section id="directivos" style={{ scrollMarginTop: '160px' }} className="py-16 border-t border-[var(--border)]">
+        <section id="directivos" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader eyebrow="Gestión institucional" title="Para directivos escolares" />
           <div className="space-y-6">
             <p>
@@ -146,7 +146,7 @@ export default function EstaSemanaPage() {
           </div>
         </section>
 
-        <section id="docentes" style={{ scrollMarginTop: '160px' }} className="py-16 border-t border-[var(--border)]">
+        <section id="docentes" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader eyebrow="En el aula" title="Para docentes en el aula" />
           <div className="space-y-6">
             <KeyMessage>
@@ -181,7 +181,7 @@ export default function EstaSemanaPage() {
           </div>
         </section>
 
-        <section id="continuidad" style={{ scrollMarginTop: '160px' }} className="py-16 border-t border-[var(--border)]">
+        <section id="continuidad" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader eyebrow="Reapertura escolar" title="Continuidad educativa" />
           <div className="space-y-6">
             <p>
@@ -231,7 +231,7 @@ export default function EstaSemanaPage() {
           </div>
         </section>
 
-        <section id="senales" style={{ scrollMarginTop: '160px' }} className="py-16 border-t border-[var(--border)]">
+        <section id="senales" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader eyebrow="Observación y tamizaje" title="Señales de alerta" />
           <div className="space-y-6">
             <p>
@@ -290,7 +290,7 @@ export default function EstaSemanaPage() {
           </div>
         </section>
 
-        <section id="cuidador" style={{ scrollMarginTop: '160px' }} className="py-16 border-t border-[var(--border)]">
+        <section id="cuidador" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader eyebrow="Bienestar docente" title="Cuidar al cuidador" />
           <div className="space-y-6">
             <p>
@@ -325,7 +325,7 @@ export default function EstaSemanaPage() {
           </div>
         </section>
 
-        <section id="marco" style={{ scrollMarginTop: '160px' }} className="py-16 border-t border-[var(--border)]">
+        <section id="marco" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
           <SectionHeader eyebrow="Normatividad" title="Marco normativo aplicable" />
           <div className="space-y-6">
             <p>
