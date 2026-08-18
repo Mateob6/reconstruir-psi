@@ -109,39 +109,70 @@ export default function AcercaPage() {
 
       {/* Nivel 2: Metodología */}
       <section id="metodologia" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
-        <SectionHeader eyebrow="Evidencia" title="Metodología de la revisión" />
+        <SectionHeader eyebrow="Metodología" title="Construcción de la guía" />
         
-        <div className="space-y-6 text-[15px] leading-relaxed text-muted mt-8">
-          <p>
-            Esta guía fue producida como una <strong>revisión de alcance rápida</strong> (rapid scoping review) para responder a la necesidad inmediata de orientaciones basadas en evidencia para los contextos escolares tras el sismo de agosto de 2026. Su propósito es traducir la evidencia científica internacional y las experiencias de campo documentadas en recomendaciones prácticas para quienes toman decisiones en el terreno educativo.
-          </p>
+        <div className="space-y-12 mt-8">
+          {/* Pilar A: Revisión de Evidencia */}
+          <div className="space-y-6 text-[15px] leading-relaxed text-muted">
+            <h3 className="text-xl font-bold text-foreground">Fase 1: Revisión Científica (Rapid Scoping Review)</h3>
+            <p>
+              El proceso inició con una revisión de alcance rápida para responder a la necesidad inmediata de orientaciones basadas en evidencia para contextos escolares tras el sismo de agosto de 2026.
+            </p>
 
-          <StatGrid>
-            <Stat value="129" label="Recursos identificados" />
-            <Stat value="128" label="Incluidos en la síntesis" />
-            <Stat value="39" label="Búsquedas realizadas" />
-            <Stat value="14" label="Bases de datos" />
-          </StatGrid>
+            <StatGrid>
+              <Stat value="129" label="Recursos identificados" />
+              <Stat value="128" label="Incluidos en la síntesis" />
+              <Stat value="39" label="Búsquedas realizadas" />
+              <Stat value="14" label="Bases de datos" />
+            </StatGrid>
 
-          <p>
-            La revisión fue conducida durante dos días (16 y 17 de agosto de 2026). Se realizaron búsquedas en inglés y español en bases de datos como PubMed, Cochrane Library, Campbell Collaboration, 3ie/UNICEF Innocenti, Google Scholar, LILACS, SciELO, EBSCOhost, y fuentes institucionales (Banco Mundial, UNESCO, INEE).
-          </p>
-          
-          <p>
-            La base de evidencia resultante está compuesta por tres meta-análisis que sintetizan más de <span className="stat-inline">11,000</span> participantes, 18 revisiones sistemáticas, 19 guías institucionales, y 54 estudios primarios. Un total de 28 textos completos fueron analizados en profundidad (15 guías y 13 artículos).
-          </p>
+            <p>
+              La revisión fue conducida durante 48 horas (16 y 17 de agosto). Se interrogaron en inglés y español 14 bases de datos, incluyendo PubMed, Cochrane Library, Campbell Collaboration, 3ie/UNICEF Innocenti, Google Scholar, LILACS, SciELO y EBSCOhost.
+            </p>
 
-          <DataTable
-            caption="Composición de la base de evidencia"
-            headers={["Tipo de recurso", "Cantidad"]}
-            rows={[
-              ["Meta-análisis", "9"],
-              ["Revisiones sistemáticas", "26"],
-              ["Guías y protocolos institucionales", "24"],
-              ["Estudios primarios (cuasi-experimentales + cualitativos)", "52"],
-              ["Reportes y herramientas", "7"],
-            ]}
-          />
+            <DataTable
+              caption="Composición de la base de evidencia"
+              headers={["Tipo de recurso", "Cantidad"]}
+              rows={[
+                ["Meta-análisis", "9"],
+                ["Revisiones sistemáticas", "26"],
+                ["Guías y protocolos institucionales", "24"],
+                ["Estudios primarios (cuasi-experimentales + cualitativos)", "52"],
+                ["Reportes y herramientas", "7"],
+              ]}
+            />
+          </div>
+
+          {/* Pilar B: Traducción y Desarrollo */}
+          <div className="space-y-6 text-[15px] leading-relaxed text-muted">
+            <h3 className="text-xl font-bold text-foreground">Fase 2: Traducción del Conocimiento y Desarrollo Tecnológico</h3>
+            <p>
+              La evidencia cruda se procesó en <strong>13 síntesis temáticas</strong> que sirvieron de puente entre la literatura académica y las necesidades prácticas del terreno. Para transformar este material en una herramienta accionable en tiempo récord, se implementó una metodología de desarrollo acelerado con inteligencia artificial:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <div className="p-5 border border-border bg-surface rounded-xl">
+                <span className="flex items-center justify-center w-8 h-8 rounded bg-accent/10 text-accent mb-3 font-bold">1</span>
+                <h4 className="font-bold text-foreground mb-1">Diseño de Información</h4>
+                <p className="text-[13px]">Los datos estadísticos y modelos complejos se tradujeron a componentes visuales interactivos (ej. barras de tamaño de efecto y pirámides de intervención) para reducir la carga cognitiva de los usuarios bajo estrés.</p>
+              </div>
+              <div className="p-5 border border-border bg-surface rounded-xl">
+                <span className="flex items-center justify-center w-8 h-8 rounded bg-accent/10 text-accent mb-3 font-bold">2</span>
+                <h4 className="font-bold text-foreground mb-1">Extracción Automatizada</h4>
+                <p className="text-[13px]">Las 128 referencias y metadatos (incluyendo DOIs y URLs) fueron procesadas y formateadas programáticamente usando agentes de IA para garantizar trazabilidad científica total.</p>
+              </div>
+              <div className="p-5 border border-border bg-surface rounded-xl">
+                <span className="flex items-center justify-center w-8 h-8 rounded bg-accent/10 text-accent mb-3 font-bold">3</span>
+                <h4 className="font-bold text-foreground mb-1">Desarrollo Acelerado</h4>
+                <p className="text-[13px]">El sitio web fue construido modularmente utilizando Next.js 16 y React 19, con un diseño iterativo asistido por IA (Antigravity CLI) que permitió estructurar y desplegar la guía completa en apenas unas horas.</p>
+              </div>
+              <div className="p-5 border border-border bg-surface rounded-xl">
+                <span className="flex items-center justify-center w-8 h-8 rounded bg-accent/10 text-accent mb-3 font-bold">4</span>
+                <h4 className="font-bold text-foreground mb-1">Despliegue de Alta Disponibilidad</h4>
+                <p className="text-[13px]">La guía se pre-renderizó estáticamente y se alojó en Vercel, garantizando un rendimiento extremo y alta disponibilidad incluso en zonas post-sismo con conectividad a internet intermitente o lenta.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
