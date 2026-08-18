@@ -226,11 +226,11 @@ export default function PrimerMesPage() {
             <p>
               Una revisión de Coombe y colaboradores identificó{" "}
               <span className="stat-inline">18</span> intervenciones mediadas por docentes en contextos
-              post-desastre<Ref id="R-021" />, de las cuales <span className="stat-inline">9</span>{" "}
-              contaban con metodología adecuada para evaluar su efectividad. Los resultados confirman que
+              post-desastre<Ref id="R-008" />, de las cuales <span className="stat-inline">9</span>{" "}
+              contaban con metodología adecuada para evaluar su efectividad. Los resultados sugieren que
               los docentes pueden entregar intervenciones psicosociales con efectos inmediatos
               significativos cuando reciben formación específica y supervisión periódica. Los
-              programas <strong>TRT</strong> y <strong>EASE</strong> han demostrado ser viables para
+              programas <strong>TRT</strong> y <strong>EASE</strong> han mostrado resultados favorables para
               personas sin formación clínica<Ref id="R-013" />, siempre que cuenten con la estructura de
               acompañamiento descrita.
             </p>
@@ -248,7 +248,7 @@ export default function PrimerMesPage() {
               evaluados cumplían criterios formales de TEPT, pero el{" "}
               <span className="stat-inline">45%</span> presentaba síntomas activados por el sismo, y los
               diagnósticos más frecuentes fueron TDAH (<span className="stat-inline">33%</span>) y
-              trastornos de ajuste (<span className="stat-inline">24%</span>)<Ref id="R-086" />.
+              trastornos de ajuste (<span className="stat-inline">24%</span>)<Ref id="R-021" />.
             </p>
 
             <Callout type="warning" title="Supervisión, no solo formación">
@@ -388,7 +388,7 @@ export default function PrimerMesPage() {
               estudiantes. Esta distinción resulta fundamental porque un docente que no ha sido atendido
               difícilmente puede atender a otros. Las investigaciones realizadas tras el terremoto de
               Sulawesi en Indonesia (2018) documentaron síntomas recurrentes entre los docentes que
-              regresaron a las aulas<Ref id="R-021" />, entre ellos cefaleas, dolor de espalda, alteraciones del
+              regresaron a las aulas<Ref id="R-086" />, entre ellos cefaleas, dolor de espalda, alteraciones del
               sueño e irritabilidad persistente.
             </p>
             <p>

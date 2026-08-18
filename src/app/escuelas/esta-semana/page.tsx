@@ -93,7 +93,7 @@ export default function EstaSemanaPage() {
           <div className="space-y-6">
             <p>
               La primera responsabilidad de un directivo escolar en la semana posterior al sismo es
-              garantizar que ningún estudiante regrese a un espacio físicamente inseguro. Antes de
+              procurar que ningún estudiante regrese a un espacio físicamente inseguro. Antes de
               cualquier reapertura, los equipos de ingeniería estructural deben haber evaluado cada
               sede. En Cali, la Secretaría de Educación desplegó{" "}
               <span className="font-mono text-[var(--accent)] bg-[var(--accent-subtle)] px-1 py-0.5 rounded text-sm">10 equipos</span> para
@@ -242,7 +242,7 @@ export default function EstaSemanaPage() {
                 <h3 className="font-semibold">Qué hacer</h3>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Espacio diario de expresión (<span className="stat-inline">15-20 minutos</span>): dibujo, escritura, conversación grupal</li>
-                  <li><strong>Técnicas de relajación</strong>: el <span className="stat-inline">91%</span> de docentes las valoraron como &quot;especialmente útiles&quot;<Ref id="R-086" /></li>
+                  <li><strong>Técnicas de relajación</strong>: el <span className="stat-inline">91%</span> de docentes las valoraron como &quot;útiles&quot;<Ref id="R-021" /></li>
                   <li>Involucrar en acciones solidarias (empodera sin exponer)</li>
                   <li>Enseñar sobre los sismos desde la experiencia vivida — oportunidad de aprendizaje, no retraumatización</li>
                 </ul>

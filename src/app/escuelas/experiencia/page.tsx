@@ -73,14 +73,14 @@ export default function ExperienciaPage() {
             déficit de atención e hiperactividad (<span className="stat-inline">33%</span>) y
             trastornos adaptativos (<span className="stat-inline">24%</span>), lo que sugiere que las
             dificultades preexistentes pueden amplificarse tras un sismo sin constituir necesariamente
-            patología traumática<Ref id="R-086" />.
+            patología traumática<Ref id="R-021" />.
           </p>
           <p>
             La evaluación de los docentes arrojó un dato relevante para la implementación:
             el <span className="stat-inline">91%</span> calificó las técnicas de relajación
-            como &quot;especialmente útiles&quot;, lo que indica que las herramientas de regulación
+            como &quot;útiles&quot;, lo que indica que las herramientas de regulación
             fisiológica son las que los docentes adoptan con mayor facilidad y confianza, aun sin
-            formación clínica previa<Ref id="R-086" />.
+            formación clínica previa<Ref id="R-021" />.
           </p>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function ExperienciaPage() {
           <p>
             El terremoto y tsunami de Sulawesi Central en septiembre de 2018
             causó <span className="stat-inline">4,340</span> muertes y daños
-            en <span className="stat-inline">1,299</span> escuelas<Ref id="R-021" />. Un estudio con 40
+            en <span className="stat-inline">1,299</span> escuelas<Ref id="R-086" />. Un estudio con 40
             docentes documentó cómo, ante la insuficiencia de protocolos formales, los maestros
             recurrieron espontáneamente a prácticas culturales locales como mecanismos de
             afrontamiento colectivo.
@@ -174,7 +174,7 @@ export default function ExperienciaPage() {
             articulan con los recursos culturales disponibles en cada comunidad, en lugar de
             reemplazarlos. Para Colombia, esto se traduce en la integración de prácticas como
             la <strong>minga</strong>, la solidaridad vecinal y las redes parroquiales y comunitarias
-            como vehículos de la respuesta psicosocial<Ref id="R-021" />.
+            como vehículos de la respuesta psicosocial<Ref id="R-086" />.
           </p>
         </div>
       </section>
@@ -248,7 +248,7 @@ export default function ExperienciaPage() {
             académico cayó un <span className="stat-inline">7%</span> en las zonas afectadas, y las
             interrupciones prolongadas incrementaron significativamente la probabilidad de deserción,
             especialmente entre las niñas y los estudiantes de hogares con menores
-            ingresos<Ref id="R-121" />.
+            ingresos<Ref id="R-113" also={["R-121"]} />.
           </p>
         </div>
       </section>

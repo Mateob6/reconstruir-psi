@@ -76,7 +76,7 @@ export default function PrimerSemestrePage() {
               Los terremotos producen patrones similares. Tras el sismo de 2015 en Nepal, las
               evaluaciones documentaron una caída
               del <span className="stat-inline">7%</span> en el rendimiento académico en las zonas más
-              afectadas<Ref id="R-121" />. Datos provenientes de Perú muestran que la exposición al
+              afectadas<Ref id="R-113" />. Datos provenientes de Perú muestran que la exposición al
               terremoto de Ancash en 1970 se asoció con niveles inferiores de logro educativo décadas
               después, lo que sugiere que sin intervención oportuna, las consecuencias pueden extenderse
               a lo largo de toda la trayectoria de vida<Ref id="R-115" />.

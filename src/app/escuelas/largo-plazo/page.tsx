@@ -276,7 +276,7 @@ export default function LargoPlazoPage() {
             </p>
 
             <KeyMessage>
-              La experiencia japonesa demuestra que la seguridad escolar sísmica es alcanzable cuando
+              La experiencia japonesa ilustra que la seguridad escolar sísmica es alcanzable cuando
               existe voluntad política sostenida y estándares técnicos aplicados sistemáticamente.
             </KeyMessage>
           </div>
