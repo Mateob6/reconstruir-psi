@@ -38,14 +38,14 @@ export function TopTimeline() {
                   className={cn(
                     "flex items-center justify-center rounded-full px-4 py-1.5 text-sm transition-all duration-300 relative group",
                     isActive
-                      ? "bg-teal-500/10 text-teal-600 font-semibold shadow-sm ring-1 ring-teal-500/20 dark:bg-teal-500/20 dark:text-teal-300"
+                      ? "bg-rose-700/10 text-accent font-semibold shadow-sm ring-1 ring-rose-700/20 dark:bg-rose-700/20 dark:text-rose-300"
                       : isPast
                         ? "text-muted hover:text-foreground"
                         : "text-muted/70 hover:text-foreground"
                   )}
                 >
                   {isPast && !isActive && (
-                    <svg className="w-4 h-4 mr-1.5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="w-4 h-4 mr-1.5 text-rose-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   )}
@@ -58,7 +58,7 @@ export function TopTimeline() {
                 {index < TIMELINE_STEPS.length - 1 && (
                   <div className={cn(
                     "h-px w-6 mx-2 transition-colors duration-300",
-                    isPast || isActive ? "bg-teal-500/30" : "bg-border"
+                    isPast || isActive ? "bg-rose-700/30" : "bg-border"
                   )} />
                 )}
               </div>

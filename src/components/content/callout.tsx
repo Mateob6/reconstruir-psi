@@ -5,7 +5,7 @@ type CalloutType = "info" | "warning" | "danger" | "success";
 
 const styles: Record<CalloutType, { box: string; icon: string }> = {
   info: {
-    box: "border-teal-500/30 bg-teal-500/5 dark:bg-teal-500/10 text-teal-800 dark:text-teal-200",
+    box: "border-rose-700/30 bg-rose-500/5 dark:bg-rose-500/10 text-rose-800 dark:text-rose-200",
     icon: "ℹ",
   },
   warning: {

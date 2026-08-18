@@ -23,7 +23,7 @@ export function Header() {
       <div className="flex items-center gap-6">
         <Link href="/escuelas" className="flex items-center gap-2 transition-opacity hover:opacity-80">
           {/* Un ícono simple o el nombre del proyecto */}
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500 text-white font-bold text-lg shadow-sm">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-white font-bold text-lg shadow-sm">
             ψ
           </div>
           <div className="hidden sm:block">
