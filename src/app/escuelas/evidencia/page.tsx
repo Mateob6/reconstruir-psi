@@ -186,6 +186,33 @@ export default function EvidenciaPage() {
             <EffectBar label="Intervenciones de aula" value={0.68} maxValue={2.0} unit=" g" />
           </EffectBarList>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
+              <h4 className="font-bold text-[var(--foreground)] text-[14px] mb-2">KIDNET / NET</h4>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                <strong>Terapia de Exposición Narrativa.</strong> El estudiante construye una narración cronológica de su vida, enfocándose en procesar las experiencias traumáticas para integrarlas en su memoria biográfica en lugar de revivirlas como fragmentos emocionales.
+              </p>
+            </div>
+            <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
+              <h4 className="font-bold text-[var(--foreground)] text-[14px] mb-2">EMDR</h4>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                <strong>Desensibilización y Reprocesamiento por Movimientos Oculares.</strong> Utiliza estimulación bilateral (como movimientos oculares guiados) mientras el paciente se enfoca en el recuerdo traumático, ayudando al cerebro a reprocesarlo y reducir su carga emocional.
+              </p>
+            </div>
+            <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
+              <h4 className="font-bold text-[var(--foreground)] text-[14px] mb-2">TCC</h4>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                <strong>Terapia Cognitivo-Conductual.</strong> Se centra en identificar y modificar patrones de pensamiento negativos o distorsionados tras el trauma, enseñando habilidades de afrontamiento prácticas y reduciendo los comportamientos evitativos.
+              </p>
+            </div>
+            <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
+              <h4 className="font-bold text-[var(--foreground)] text-[14px] mb-2">Intervenciones de aula</h4>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                <strong>Programas grupales preventivos.</strong> Incluyen psicoeducación, arteterapia, juego y técnicas de relajación/mindfulness. Frecuentemente lideradas por docentes para normalizar síntomas y fomentar la regulación emocional a gran escala.
+              </p>
+            </div>
+          </div>
+
           <Callout type="info" title="Todas las modalidades son efectivas">
             <p>
               El análisis formal no encontró diferencias estadísticamente significativas entre
