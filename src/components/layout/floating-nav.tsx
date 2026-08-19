@@ -19,7 +19,7 @@ const ESCUELAS_NAV: NavItem[] = [
 ];
 
 function getItems(pathname: string): NavItem[] {
-  if (pathname.startsWith("/escuelas")) return ESCUELAS_NAV;
+  if (pathname.startsWith("/escuelas") || pathname === "/referencias") return ESCUELAS_NAV;
   return [];
 }
 
