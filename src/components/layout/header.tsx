@@ -56,11 +56,11 @@ export function Header() {
         {/* Logos institucionales constantes */}
         <div className="hidden lg:flex items-center gap-3 mr-2 opacity-80 hover:opacity-100 transition-opacity">
           <a href="https://www.univalle.edu.co/" target="_blank" rel="noreferrer" title="Universidad del Valle">
-            <img src="/logos/logo1.png" alt="Univalle" className="h-7 w-auto object-contain drop-shadow-sm" />
+            <img src="/logos/logo1.png" alt="Univalle" className="h-10 w-auto object-contain drop-shadow-sm" />
           </a>
           <div className="h-5 w-px bg-border"></div>
           <a href="https://psicologia.univalle.edu.co/" target="_blank" rel="noreferrer" title="Facultad de Psicología">
-            <img src="/logos/logo2.png" alt="Facultad de Psicología" className="h-7 w-auto object-contain drop-shadow-sm" />
+            <img src="/logos/logo2.png" alt="Facultad de Psicología" className="h-10 w-auto object-contain drop-shadow-sm" />
           </a>
         </div>
         
