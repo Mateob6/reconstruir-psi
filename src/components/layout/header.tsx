@@ -7,11 +7,8 @@ import { cn, Badge } from "@/components/ui";
 
 type NavLink = { href: string; label: string; badge?: string };
 
-const SECONDARY_LINKS: NavLink[] = [
-  { href: "/escuelas/evidencia", label: "Evidencia" },
-  { href: "/escuelas/recursos", label: "Recursos" },
-  { href: "/escuelas/experiencia", label: "Experiencia int." },
-  { href: "/referencias", label: "Referencias" },
+const NAV_LINKS: NavLink[] = [
+  { href: "/escuelas", label: "Escuelas" },
   { href: "/acerca", label: "Acerca de" },
 ];
 
@@ -34,7 +31,7 @@ export function Header() {
 
         {/* Secondary Navigation (Desktop) */}
         <nav className="hidden md:flex items-center gap-1 ml-4">
-          {SECONDARY_LINKS.map((link) => {
+          {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
             return (
               <Link
