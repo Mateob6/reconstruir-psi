@@ -104,7 +104,16 @@ export default function HomePage() {
       </section>
 
       {/* Autoría */}
-      <section className="max-w-3xl border-t border-[var(--border)] pt-10">
+      <section className="max-w-3xl border-t border-[var(--border)] pt-10 space-y-6">
+        <div className="flex items-center gap-6">
+          <a href="https://www.univalle.edu.co/" target="_blank" rel="noreferrer" title="Universidad del Valle">
+            <img src="/logos/logo1.png" alt="Universidad del Valle" className="h-16 w-auto object-contain" />
+          </a>
+          <div className="h-10 w-px bg-[var(--border)]" />
+          <a href="https://psicologia.univalle.edu.co/" target="_blank" rel="noreferrer" title="Facultad de Psicología">
+            <img src="/logos/logo2.png" alt="Facultad de Psicología" className="h-16 w-auto object-contain" />
+          </a>
+        </div>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
           Elaborado por <strong className="text-[var(--foreground)]">Mateo Belalcázar Correa</strong> (MSc),
           CIDEAS, Facultad de Psicología, Universidad del Valle. Revisión de alcance rápida conducida
