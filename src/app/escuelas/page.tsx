@@ -20,7 +20,7 @@ export default function EscuelasPage() {
           Reconstruir Psi
         </h1>
         <p className="text-xl md:text-2xl text-[var(--muted)] leading-relaxed max-w-3xl">
-          Marco de acción basado en evidencia para la recuperación psicosocial y educativa tras el sismo de agosto de 2026 en el suroccidente de Colombia.
+          Marco de acción basado en evidencia para la respuesta psicosocial, la recuperación educativa y la seguridad escolar tras el sismo de agosto de 2026 en el suroccidente de Colombia.
         </p>
         <div className="pt-4 max-w-3xl">
           <div className="p-6 rounded-2xl bg-[var(--surface-raised)] border border-[var(--border)] shadow-sm">
@@ -40,7 +40,7 @@ export default function EscuelasPage() {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="flex items-center justify-center w-5 h-5 rounded bg-[var(--foreground)] text-[var(--background)] text-xs font-bold shrink-0 mt-0.5">2</span>
-                <span><strong>Ve a lo accionable:</strong> Accede a recomendaciones directas, qué hacer y qué evitar sin tener que leer toda la justificación clínica.</span>
+                <span><strong>Ve a lo accionable:</strong> Accede a recomendaciones directas, qué hacer y qué evitar sin tener que leer toda la justificación técnica.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="flex items-center justify-center w-5 h-5 rounded bg-[var(--foreground)] text-[var(--background)] text-xs font-bold shrink-0 mt-0.5">3</span>
@@ -59,13 +59,16 @@ export default function EscuelasPage() {
           <Stat value="$48M" label="USD redirigidos" />
           <Stat value="24 ago" label="Reapertura escolar" />
         </StatGrid>
+        <p className="text-[11px] text-[var(--muted)] text-center mt-3 opacity-70">
+          Fuentes: reportes institucionales MEN, Secretaría de Educación de Cali, prensa nacional. Datos al 17 de agosto de 2026.
+        </p>
       </section>
 
       {/* Timeline Section */}
       <section id="fases" className="space-y-12">
-        <SectionHeader 
-          eyebrow="Línea de tiempo" 
-          title="Fases de la respuesta" 
+        <SectionHeader
+          eyebrow="¿Dónde está tu escuela ahora?"
+          title="Selecciona la fase de recuperación"
           className="mb-8"
         />
         
