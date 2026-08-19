@@ -12,14 +12,14 @@ interface NavItem {
 }
 
 const ESCUELAS_NAV: NavItem[] = [
-  { href: "/escuelas/evidencia", label: "Evidencia", icon: "📊" },
-  { href: "/escuelas/recursos", label: "Recursos", icon: "📁" },
-  { href: "/escuelas/experiencia", label: "Experiencia", icon: "🌍" },
+  { href: "/educacion/evidencia", label: "Evidencia", icon: "📊" },
+  { href: "/educacion/recursos", label: "Recursos", icon: "📁" },
+  { href: "/educacion/experiencia", label: "Experiencia", icon: "🌍" },
   { href: "/referencias", label: "Referencias", icon: "📚" },
 ];
 
 function getItems(pathname: string): NavItem[] {
-  if (pathname.startsWith("/escuelas") || pathname === "/referencias") return ESCUELAS_NAV;
+  if (pathname.startsWith("/educacion") || pathname === "/referencias") return ESCUELAS_NAV;
   return [];
 }
 

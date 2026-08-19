@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/escuelas", "destination": "/educacion", "permanent": true },
+    { "source": "/escuelas/:path*", "destination": "/educacion/:path*", "permanent": true }
+  ]
+}

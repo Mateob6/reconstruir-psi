@@ -8,7 +8,7 @@ import { cn, Badge } from "@/components/ui";
 type NavLink = { href: string; label: string; badge?: string };
 
 const NAV_LINKS: NavLink[] = [
-  { href: "/escuelas", label: "Escuelas" },
+  { href: "/educacion", label: "Educación" },
   { href: "/acerca", label: "Acerca de" },
 ];
 

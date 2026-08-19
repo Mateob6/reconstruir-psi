@@ -4,11 +4,11 @@ import { SectionHeader, Stat, StatGrid } from '@/components/content';
 
 
 export const metadata: Metadata = {
-  title: 'Reconstruir Psi | Guía para Escuelas',
+  title: 'Reconstruir Psi | Guía para la Educación',
   description: 'Guía basada en evidencia para la recuperación escolar tras el sismo de agosto de 2026 en Colombia.',
 };
 
-export default function EscuelasPage() {
+export default function EducacionPage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 space-y-24">
       {/* Hero Section */}
@@ -85,28 +85,28 @@ export default function EscuelasPage() {
                 title: 'Esta semana',
                 time: 'Días 1-7',
                 desc: 'Estabilización, primeros auxilios psicológicos (PAP), seguridad física, reapertura',
-                href: '/escuelas/esta-semana'
+                href: '/educacion/esta-semana'
               },
               {
                 num: '2',
                 title: 'Primer mes',
                 time: 'Semanas 2-8',
                 desc: 'Atención por niveles de necesidad, capacitación docente, adaptación del plan de estudios',
-                href: '/escuelas/primer-mes'
+                href: '/educacion/primer-mes'
               },
               {
                 num: '3',
                 title: 'Primer semestre',
                 time: 'Meses 2-6',
                 desc: 'Recuperación de aprendizajes, tutoría, plan de recuperación RAPID',
-                href: '/escuelas/primer-semestre'
+                href: '/educacion/primer-semestre'
               },
               {
                 num: '4',
                 title: 'Largo plazo',
                 time: 'Año 1+',
                 desc: 'Escuelas seguras, Marco de Seguridad Escolar (CSSF), capacidad de recuperación institucional',
-                href: '/escuelas/largo-plazo'
+                href: '/educacion/largo-plazo'
               }
             ].map((phase, i) => (
               <Link 
@@ -142,7 +142,7 @@ export default function EscuelasPage() {
         />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Link href="/escuelas/evidencia" className="group flex flex-col bg-[var(--surface)] border border-[var(--border)] p-8 hover:border-[var(--accent)] transition-all">
+          <Link href="/educacion/evidencia" className="group flex flex-col bg-[var(--surface)] border border-[var(--border)] p-8 hover:border-[var(--accent)] transition-all">
             <svg className="w-6 h-6 text-[var(--muted)] group-hover:text-[var(--accent)] mb-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             <h3 className="text-lg font-medium text-[var(--foreground)] mb-2">Evidencia</h3>
             <p className="text-[15px] text-[var(--muted)] leading-relaxed">
@@ -150,7 +150,7 @@ export default function EscuelasPage() {
             </p>
           </Link>
 
-          <Link href="/escuelas/recursos" className="group flex flex-col bg-[var(--surface)] border border-[var(--border)] p-8 hover:border-[var(--accent)] transition-all">
+          <Link href="/educacion/recursos" className="group flex flex-col bg-[var(--surface)] border border-[var(--border)] p-8 hover:border-[var(--accent)] transition-all">
             <svg className="w-6 h-6 text-[var(--muted)] group-hover:text-[var(--accent)] mb-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13H8"/><path d="M16 17H8"/><path d="M16 13h-2"/></svg>
             <h3 className="text-lg font-medium text-[var(--foreground)] mb-2">Recursos</h3>
             <p className="text-[15px] text-[var(--muted)] leading-relaxed">
@@ -158,7 +158,7 @@ export default function EscuelasPage() {
             </p>
           </Link>
 
-          <Link href="/escuelas/experiencia" className="group flex flex-col bg-[var(--surface)] border border-[var(--border)] p-8 hover:border-[var(--accent)] transition-all">
+          <Link href="/educacion/experiencia" className="group flex flex-col bg-[var(--surface)] border border-[var(--border)] p-8 hover:border-[var(--accent)] transition-all">
             <svg className="w-6 h-6 text-[var(--muted)] group-hover:text-[var(--accent)] mb-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
             <h3 className="text-lg font-medium text-[var(--foreground)] mb-2">Experiencia internacional</h3>
             <p className="text-[15px] text-[var(--muted)] leading-relaxed">

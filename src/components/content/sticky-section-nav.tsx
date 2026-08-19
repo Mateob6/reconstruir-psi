@@ -14,7 +14,7 @@ export function StickySectionNav({ items, className }: StickySectionNavProps) {
   const navRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
   const pathname = usePathname();
-  const hasTimeline = pathname.startsWith("/escuelas");
+  const hasTimeline = pathname.startsWith("/educacion");
 
   // Set up intersection observer for scroll spy
   useEffect(() => {

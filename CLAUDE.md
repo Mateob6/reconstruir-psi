@@ -26,8 +26,8 @@ git push         # trigger deploy en Vercel
 
 | Nivel | Componente | Qué muestra |
 |-------|-----------|-------------|
-| Global nav | Header | Logo → `/`, [Escuelas, Acerca de], logos institucionales, theme toggle |
-| Section nav | TopTimeline | Fases temporales (solo en /escuelas/*) |
+| Global nav | Header | Logo → `/`, [Educación, Acerca de], logos institucionales, theme toggle |
+| Section nav | TopTimeline | Fases temporales (solo en /educacion/*) |
 | Floating nav | FloatingNav | Evidencia, Recursos, Experiencia, Referencias (panel derecho desktop, FAB+bottom sheet mobile) |
 | Page nav | StickySectionNav | Anchors intra-página (scroll spy) |
 
@@ -38,12 +38,12 @@ src/
 ├── app/
 │   ├── globals.css              ← tokens carmesí/cream/stone + .stat-inline
 │   ├── layout.tsx               ← Header + TopTimeline + FloatingNav + Footer
-│   ├── page.tsx                 ← HOME: logos + hero horizontal + card Escuelas + autoría
+│   ├── page.tsx                 ← HOME: logos + hero horizontal + card Educación + autoría
 │   ├── icon.svg                 ← favicon ψ carmesí
 │   ├── opengraph-image.tsx      ← OG image 1200×630
 │   ├── sitemap.ts               ← 12 URLs
 │   ├── robots.ts                ← allow all + sitemap
-│   ├── escuelas/
+│   ├── educacion/
 │   │   ├── page.tsx             ← landing: KPIs + timeline fases + soporte
 │   │   ├── esta-semana/         ← primeros 7 días + LevelTabs por nivel educativo
 │   │   ├── primer-mes/          ← modelo escalonado + programas por nivel
@@ -96,7 +96,7 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 | Fase | Descripción | Estado |
 |------|-------------|--------|
 | W1 | Scaffold, design system, layout, rutas placeholder | Completada |
-| W2 | Contenido Escuelas (8 páginas desde 4 fuentes) | Completada |
+| W2 | Contenido Educación (8 páginas desde 4 fuentes) | Completada |
 | W4 | SEO + Open Graph + favicon + sitemap | Completada |
 | W5 | Repo GitHub + Deploy Vercel | Completada |
 | A | Sistema de referencias (128 refs + ~80 citas inline) | Completada |
@@ -107,7 +107,7 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 | Paleta | Carmesí Univalle (#9B1B30) reemplaza teal | Completada |
 | Auditoría | Corregir atribuciones + moderar lenguaje | Completada |
 | UX | Trazabilidad KPIs, subtítulo ampliado, CTA fases | Completada |
-| Home | Home page como puerta de entrada (horizontal, logos, card Escuelas) | Completada |
+| Home | Home page como puerta de entrada (horizontal, logos, card Educación) | Completada |
 | Nav | Reestructurar: header → áreas, FloatingNav → sección, FAB mobile | Completada |
 | W6 | Iteración y pulido (Accesibilidad, logos, copy, pedagogía) | Completada |
 | Glosario | Sistema de glosario contextual: ~99 entradas, componente Term con popover | Completada |

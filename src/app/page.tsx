@@ -46,16 +46,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Card Escuelas */}
+        {/* Card Educación */}
         <Link
-          href="/escuelas"
+          href="/educacion"
           className="group block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 transition-all hover:border-[var(--accent)] hover:shadow-md lg:sticky lg:top-28"
         >
           <p className="font-mono text-xs tracking-wider uppercase text-[var(--accent)] mb-3">
             ÁREA ACTIVA
           </p>
           <h2 className="text-2xl font-semibold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors mb-3">
-            Escuelas
+            Educación
           </h2>
           <p className="text-[15px] text-[var(--muted)] leading-relaxed mb-5">
             Guía para la respuesta psicosocial, la recuperación educativa y la seguridad escolar.

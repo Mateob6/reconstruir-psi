@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     template: "%s — Reconstruir Psi",
   },
   description:
-    "Guía basada en evidencia para la respuesta psicosocial y educativa en escuelas tras el terremoto de agosto 2026 en Colombia.",
+    "Guía basada en evidencia para la respuesta psicosocial y educativa en instituciones educativas tras el terremoto de agosto 2026 en Colombia.",
   keywords: [
     "terremoto",
     "Colombia",
     "psicosocial",
-    "escuelas",
+    "educación",
     "intervención",
     "evidencia",
     "2026",
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     siteName: "Reconstruir Psi",
     title: "Reconstruir Psi",
     description:
-      "Guía basada en evidencia para la respuesta psicosocial y educativa en escuelas tras el terremoto de agosto 2026 en Colombia.",
+      "Guía basada en evidencia para la respuesta psicosocial y educativa en instituciones educativas tras el terremoto de agosto 2026 en Colombia.",
     url: "https://reconstruir-psi.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
     title: "Reconstruir Psi",
     description:
-      "Guía basada en evidencia para la respuesta psicosocial y educativa en escuelas post-terremoto.",
+      "Guía basada en evidencia para la respuesta psicosocial y educativa en instituciones educativas post-terremoto.",
   },
 };
 

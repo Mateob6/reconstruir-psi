@@ -61,7 +61,7 @@ export default function OgImage() {
               maxWidth: "800px",
             }}
           >
-            Respuesta psicosocial y educativa en escuelas tras el terremoto de agosto 2026 en
+            Respuesta psicosocial y educativa en instituciones educativas tras el terremoto de agosto 2026 en
             Colombia
           </p>
         </div>

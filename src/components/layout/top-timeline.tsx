@@ -5,18 +5,18 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/components/ui";
 
 const TIMELINE_STEPS = [
-  { href: "/escuelas", label: "Vista general", exact: true },
-  { href: "/escuelas/esta-semana", label: "Esta semana", exact: false },
-  { href: "/escuelas/primer-mes", label: "Primer mes", exact: false },
-  { href: "/escuelas/primer-semestre", label: "Primer semestre", exact: false },
-  { href: "/escuelas/largo-plazo", label: "Largo plazo", exact: false },
+  { href: "/educacion", label: "Vista general", exact: true },
+  { href: "/educacion/esta-semana", label: "Esta semana", exact: false },
+  { href: "/educacion/primer-mes", label: "Primer mes", exact: false },
+  { href: "/educacion/primer-semestre", label: "Primer semestre", exact: false },
+  { href: "/educacion/largo-plazo", label: "Largo plazo", exact: false },
 ];
 
 export function TopTimeline() {
   const pathname = usePathname();
 
   // Ocultar la línea de tiempo si no estamos en la sección de escuelas
-  if (!pathname.startsWith("/escuelas")) return null;
+  if (!pathname.startsWith("/educacion")) return null;
 
   return (
     <div className="w-full border-b border-border bg-surface/80 backdrop-blur-md sticky top-[60px] z-20">
