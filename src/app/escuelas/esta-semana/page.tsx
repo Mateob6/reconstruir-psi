@@ -11,7 +11,8 @@ import {
   StatGrid,
   Stat,
   StickySectionNav,
-  LevelTabs
+  LevelTabs,
+  Term
 } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function EstaSemanaPage() {
               Qué hacer en los primeros 7 días tras el sismo
             </h1>
             <p className="text-xl text-[var(--muted)] max-w-2xl">
-              Qué hacer en los primeros 7 días tras el sismo: primeros auxilios psicológicos, guía para directivos y docentes, y continuidad educativa.
+              Qué hacer en los primeros 7 días tras el sismo: apoyo emocional de primera respuesta, guía para directivos y docentes, y continuidad educativa.
             </p>
           </div>
           <div className="mt-16">
@@ -68,14 +69,14 @@ export default function EstaSemanaPage() {
           <Callout type="danger" title="Lo que NO debe hacerse">
             <ul className="list-disc space-y-1 pl-5">
               <li>
-                No realizar <strong>debriefing psicológico</strong> de sesión única. La evidencia muestra
-                que puede ser dañino y el IASC lo prohíbe explícitamente<Ref id="R-023" />.
+                No realizar <strong><Term id="debriefing">sesiones donde se pide relatar la experiencia traumática en detalle</Term></strong>. La evidencia muestra
+                que puede ser dañino y el <Term id="iasc">comité de coordinación humanitaria de la ONU</Term> lo prohíbe explícitamente<Ref id="R-023" />.
               </li>
               <li>
                 No forzar a los niños y niñas a narrar su experiencia del terremoto.
               </li>
               <li>
-                No patologizar las reacciones normales de angustia. La mayoría de las respuestas
+                No <Term id="patologizar">tratar como enfermedad</Term> las reacciones normales de angustia. La mayoría de las respuestas
                 emocionales en las primeras semanas son adaptativas.
               </li>
               <li>
@@ -103,7 +104,7 @@ export default function EstaSemanaPage() {
             </p>
             <p>
               Una vez confirmada la <strong>seguridad física</strong>, el paso siguiente consiste en
-              activar los <strong>protocolos del Ministerio de Salud</strong> para atención psicosocial
+              activar los <strong>protocolos del Ministerio de Salud</strong> para <Term id="respuesta-psicosocial">acompañamiento emocional y social</Term>{" "}
               en emergencias<Ref id="R-027" />, sustentados en la Ley 1523 de 2012. Estos protocolos orientan la
               respuesta institucional y ofrecen un marco legal para las decisiones que los directivos
               deberán tomar en las semanas siguientes.
@@ -175,7 +176,7 @@ export default function EstaSemanaPage() {
                 "No forzar a hablar del terremoto — respetar silencios y tiempos",
                 "No usar el sismo como material de trabajo (dibujar el terremoto, escribir sobre el miedo)",
                 "No separar a los niños de sus cuidadores salvo por seguridad",
-                "No confundir evitación con normalidad — observar sin presionar",
+                "No confundir el que un niño evite hablar del tema (evitación) con normalidad — observar sin presionar",
                 "No asumir el rol de profesional de salud mental",
                 "No descuidar el propio bienestar — un docente agotado no puede contener",
               ]}
@@ -187,7 +188,7 @@ export default function EstaSemanaPage() {
           <SectionHeader eyebrow="Adaptación" title="Por nivel educativo" />
           <div className="space-y-6">
             <p>
-              Las intervenciones psicosociales funcionan en todos los niveles educativos, sin diferencias
+              Las actividades de acompañamiento emocional y social funcionan en todos los niveles educativos, sin diferencias
               significativas de efectividad por edad<Ref id="R-002" />. Lo que sí varía es la forma de comunicar,
               los síntomas a observar y las acciones concretas según la etapa del desarrollo<Ref id="R-001" />.
             </p>
@@ -198,7 +199,7 @@ export default function EstaSemanaPage() {
                 <h3 className="font-semibold">Cómo se manifiesta el estrés</h3>
                 <p>
                   Los más pequeños expresan la angustia a través del cuerpo y la conducta, no con palabras.
-                  Las manifestaciones más frecuentes incluyen <strong>regresión</strong> (mojar la cama,
+                  Las manifestaciones más frecuentes incluyen <strong><Term id="regresion">regresión</Term></strong> (mojar la cama,
                   chuparse el dedo, perder habilidades ya adquiridas), llanto excesivo, <strong>apego
                   intenso</strong> al cuidador, trastornos del sueño y miedo a la separación.
                 </p>
@@ -215,7 +216,7 @@ export default function EstaSemanaPage() {
                   <li>Permitir objetos de apego (cobija, juguete favorito)</li>
                   <li>El <strong>juego libre</strong> ES el procesamiento emocional — no hay que &quot;hablar del terremoto&quot;</li>
                   <li>Presencia física constante — no forzar separación del cuidador</li>
-                  <li>Herramienta GIRE: <strong>&quot;Señales Seguras&quot;</strong> — señalización participativa accesible a primera infancia<Ref id="R-106" /></li>
+                  <li>Herramienta de gestión del riesgo escolar (<Term id="gire">GIRE</Term>): <strong>&quot;Señales Seguras&quot;</strong> — señalización participativa accesible a primera infancia<Ref id="R-106" /></li>
                 </ul>
                 <Callout type="warning" title="Señales de alerta">
                   <p>Regresión persistente por más de 4 semanas, rechazo completo a separarse del cuidador, o pérdida sostenida de habilidades ya adquiridas.</p>
@@ -229,8 +230,8 @@ export default function EstaSemanaPage() {
                   El estudio de Kobe encontró que los estudiantes de <strong>grado 3</strong> (~8 años) fueron
                   los más afectados, y las niñas registraron puntuaciones consistentemente más altas en todos
                   los momentos de evaluación<Ref id="R-079" />. Los síntomas típicos incluyen sentimientos de
-                  <strong> culpa</strong> (&quot;debí haber hecho algo&quot;), quejas somáticas (dolor de cabeza,
-                  dolor de estómago), dificultades de concentración y re-escenificación del evento en el juego.
+                  <strong> culpa</strong> (&quot;debí haber hecho algo&quot;), molestias físicas causadas por el estrés (<Term id="quejas-somaticas">quejas somáticas</Term>) como dolor de cabeza
+                  y dolor de estómago, dificultades de concentración y <Term id="re-escenificacion">repetición del evento traumático</Term> en el juego.
                 </p>
                 <h3 className="font-semibold">Cómo comunicarse</h3>
                 <p>
@@ -247,7 +248,7 @@ export default function EstaSemanaPage() {
                   <li>Enseñar sobre los sismos desde la experiencia vivida — oportunidad de aprendizaje, no retraumatización</li>
                 </ul>
                 <p>
-                  <strong>Programas disponibles:</strong> TRT (8-18 años), CBI (6-12 años), ERASE-Stress (6-12 años)
+                  <strong>Programas disponibles:</strong> técnicas de recuperación (<Term id="trt">TRT</Term>, 8-18 años), intervención en el aula (<Term id="cbi">CBI</Term>, 6-12 años), programa de reducción de estrés (<Term id="erase-stress">ERASE-Stress</Term>, 6-12 años)
                   — este rango concentra el grueso de la base de evidencia.
                 </p>
                 <Callout type="warning" title="Señales de alerta">
@@ -259,9 +260,9 @@ export default function EstaSemanaPage() {
               <div className="space-y-4">
                 <h3 className="font-semibold">Cómo se manifiesta el estrés</h3>
                 <p>
-                  Los adolescentes pueden expresar la angustia a través de <strong>conductas de riesgo</strong>
+                  Los adolescentes pueden expresar la angustia a través de <strong><Term id="conductas-riesgo">comportamientos peligrosos para sí mismos</Term></strong>{" "}
                   (consumo de sustancias, conducta sexual), ira y desafío, aislamiento social pronunciado y
-                  ansiedad sobre el futuro. En casos severos, puede presentarse ideación suicida.
+                  ansiedad sobre el futuro. En casos severos, pueden presentarse <Term id="ideacion-suicida">pensamientos de hacerse daño</Term>.
                 </p>
                 <h3 className="font-semibold">Cómo comunicarse</h3>
                 <p>
@@ -278,7 +279,7 @@ export default function EstaSemanaPage() {
                   <li>Los formatos más cognitivos y estructurados funcionan bien con este grupo</li>
                 </ul>
                 <p>
-                  <strong>Programas disponibles:</strong> TRT (8-18 años), CBITS (10-15 años), SOLAR-Teens (12-18 años).
+                  <strong>Programas disponibles:</strong> TRT (8-18 años), intervención para trauma en escuelas (<Term id="cbits">CBITS</Term>, 10-15 años), programa de apoyo adolescente (<Term id="solar">SOLAR-Teens</Term>, 12-18 años).
                 </p>
                 <Callout type="danger" title="Señales de alerta">
                   <p>Aislamiento prolongado, conductas autolesivas, consumo de sustancias, abandono escolar o cambios drásticos de personalidad. Derivación inmediata a profesional de salud mental.</p>
@@ -295,8 +296,8 @@ export default function EstaSemanaPage() {
               La reapertura de las instituciones educativas tras un desastre no constituye un simple acto
               administrativo de reanudación. La evidencia internacional la posiciona como una{" "}
               <strong>intervención en sí misma</strong>, dado que restaura rutinas, estructura temporal,
-              contacto con pares y acceso a adultos de referencia, todos ellos factores protectores
-              documentados tanto en la dimensión psicosocial como en la educativa.
+              contacto con pares y acceso a adultos de referencia, todos ellos <Term id="factores-protectores">condiciones que favorecen la recuperación</Term>{" "}
+              documentados tanto en la dimensión emocional-social como en la educativa.
             </p>
             <p>
               El riesgo de postergar el retorno se encuentra bien documentado. En Nepal, donde{" "}
@@ -305,14 +306,14 @@ export default function EstaSemanaPage() {
               desplegó <span className="font-mono text-[var(--accent)] bg-[var(--accent-subtle)] px-1 py-0.5 rounded text-sm">15,000</span> centros de aprendizaje transicional en
               el plazo de un mes<Ref id="R-121" />. La introducción de actividades lúdicas, exploración al aire
               libre y ciencias creativas en estos espacios facilitó una atmósfera que favoreció la
-              elaboración del trauma sin sacrificar el proceso educativo.
+              <Term id="elaboracion-trauma">procesamiento gradual de la experiencia difícil</Term> sin sacrificar el proceso educativo.
             </p>
             <p>
               En Ecuador, tras el terremoto de 2016, el Ministerio de Educación implementó el plan
               &quot;Escuela para todos, juntos nos levantamos&quot;<Ref id="R-126" />, que se convirtió en referencia
               regional por articular la respuesta inmediata con la recuperación a mediano plazo. El plan
               combinó espacios temporales, turnos diferenciados, kits escolares de emergencia y
-              acompañamiento psicosocial.
+              acompañamiento emocional y social.
             </p>
 
             <h3 className="text-2xl font-medium mt-8 mb-4">La experiencia colombiana</h3>
@@ -328,7 +329,7 @@ export default function EstaSemanaPage() {
             <Callout type="info" title="Colombia, agosto 2026">
               <p>
                 <span className="font-mono text-[var(--accent)] bg-[var(--accent-subtle)] px-1 py-0.5 rounded text-sm">1,819</span> centros educativos resultaron afectados a
-                nivel nacional<Ref id="R-116" />. El MEN redirigió{" "}
+                nivel nacional<Ref id="R-116" />. El Ministerio de Educación (<Term id="men">MEN</Term>) redirigió{" "}
                 <span className="font-mono text-[var(--accent)] bg-[var(--accent-subtle)] px-1 py-0.5 rounded text-sm">$48 millones de dólares</span> del Programa de Espacios
                 Educativos hacia la recuperación<Ref id="R-116" />. En Cali, 89 instituciones y 214 sedes
                 reportaron daños. La Semana de Desarrollo Institucional del 18 al 21 de agosto es la
@@ -339,13 +340,13 @@ export default function EstaSemanaPage() {
         </section>
 
         <section id="senales" style={{ scrollMarginTop: '120px' }} className="py-16 border-t border-[var(--border)]">
-          <SectionHeader eyebrow="Observación y tamizaje" title="Señales de alerta" />
+          <SectionHeader eyebrow="Observación y detección temprana" title="Señales de alerta" />
           <div className="space-y-6">
             <p>
               Las reacciones emocionales en las primeras semanas tras un desastre son, en su mayoría,
               respuestas normales a una situación anormal. Sin embargo, transcurridas
               aproximadamente <span className="font-mono text-[var(--accent)] bg-[var(--accent-subtle)] px-1 py-0.5 rounded text-sm">4 semanas</span>, ciertos indicadores
-              sugieren que un estudiante podría beneficiarse de una evaluación más especializada. La
+              sugieren que un estudiante podría beneficiarse de una <Term id="tamizaje">evaluación rápida</Term> más especializada. La
               observación docente, aunque valiosa, no es suficiente por sí sola para identificar con
               precisión a quienes necesitan apoyo adicional.
             </p>
@@ -369,7 +370,7 @@ export default function EstaSemanaPage() {
                 },
                 {
                   title: "Agresividad persistente",
-                  description: "O desregulación emocional que no cede fácilmente",
+                  description: "O dificultad para manejar las emociones que no cede fácilmente",
                   icon: "💢"
                 },
                 {
@@ -387,9 +388,9 @@ export default function EstaSemanaPage() {
 
             <Callout type="info" title="Evaluación con instrumentos estandarizados">
               <p>
-                La observación docente debe complementarse con instrumentos validados como el{" "}
-                <strong>CRIES</strong> (Children&apos;s Revised Impact of Event Scale) y
-                el <strong>CPSS</strong> (Child PTSD Symptom Scale)<Ref id="R-003" />. El calendario
+                La observación docente debe complementarse con instrumentos validados como la{" "}
+                <Term id="cries">escala de impacto del evento para niños</Term> (<strong>CRIES</strong>) y
+                la <Term id="cpss">escala de síntomas de estrés postraumático infantil</Term> (<strong>CPSS</strong>)<Ref id="R-003" />. El calendario
                 recomendado incluye mediciones a 1, 3, 6 y 12 meses post-desastre, lo que permite
                 identificar tanto las trayectorias de recuperación como los casos de aparición tardía.
               </p>
@@ -411,7 +412,7 @@ export default function EstaSemanaPage() {
               UNICEF posiciona el bienestar docente como un <strong>pilar independiente</strong> de la
               salud mental escolar, no como un subproducto de la atención a
               estudiantes<Ref id="R-025" />. La experiencia chilena post-terremoto de 2010 identificó
-              la <strong>mentalización</strong> como factor protector central<Ref id="R-001" />: la
+              la <strong><Term id="mentalizacion">mentalización</Term></strong> como factor protector central<Ref id="R-001" />: la
               capacidad de comprender las propias emociones y las de los estudiantes como respuestas
               comprensibles a una situación extraordinaria.
             </p>
@@ -425,8 +426,8 @@ export default function EstaSemanaPage() {
             <Callout type="info">
               <p>
                 <strong>Línea 106</strong> del Ministerio de Salud<Ref id="R-027" /> — atención
-                psicológica 24/7 (escucha, primeros auxilios psicológicos, intervención en crisis,
-                remisión). Disponible para docentes, estudiantes y familias.
+                psicológica 24/7 (escucha, primeros auxilios psicológicos, <Term id="intervencion-crisis">atención de urgencia emocional</Term>,{" "}
+                <Term id="remision">derivación a un profesional especializado</Term>). Disponible para docentes, estudiantes y familias.
               </p>
             </Callout>
           </div>
@@ -437,7 +438,7 @@ export default function EstaSemanaPage() {
           <div className="space-y-6">
             <p>
               Colombia cuenta con un conjunto de instrumentos normativos y operativos que orientan la
-              respuesta psicosocial y educativa en contextos de emergencia. Estos recursos constituyen
+              respuesta emocional, social y educativa en contextos de emergencia. Estos recursos constituyen
               el marco legal y técnico dentro del cual deben operar las instituciones educativas.
             </p>
 
@@ -456,22 +457,22 @@ export default function EstaSemanaPage() {
                 ],
                 [
                   "Primeros auxilios psicológicos",
-                  "OMS",
+                  "Organización Mundial de la Salud (OMS)",
                   "Protocolo OBSERVAR-ESCUCHAR-CONECTAR, 1 día de formación",
                 ],
                 [
                   "Directrices IASC",
                   "Comité Permanente entre Organismos",
-                  "Pirámide de 4 niveles, principio \"no hacer daño\"",
+                  "Modelo de atención en 4 niveles (pirámide escalonada), principio \"no hacer daño\"",
                 ],
                 [
                   "GIRE Cuadernillo",
                   "MEN Colombia",
-                  "17 actividades socioemocionales + 3 momentos de gestión del riesgo",
+                  "17 actividades para trabajar emociones y convivencia + 3 momentos de gestión del riesgo",
                 ],
                 [
-                  "Guía de PAP",
-                  "OPS/PAHO",
+                  "Guía de Primeros Auxilios Psicológicos (PAP)",
+                  "Organización Panamericana de la Salud (OPS)",
                   "9 acciones clave adaptadas para las Américas",
                 ],
               ]}

@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import { cn } from "@/components/ui/cn";
 
 interface SectionHeaderProps {
   eyebrow: string;
   title: string;
-  description?: string;
+  description?: ReactNode;
   centered?: boolean;
   id?: string;
   className?: string;

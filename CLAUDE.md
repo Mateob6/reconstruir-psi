@@ -110,6 +110,33 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 | Home | Home page como puerta de entrada (horizontal, logos, card Escuelas) | Completada |
 | Nav | Reestructurar: header → áreas, FloatingNav → sección, FAB mobile | Completada |
 | W6 | Iteración y pulido (Accesibilidad, logos, copy, pedagogía) | Completada |
+| Glosario | Sistema de glosario contextual: ~99 entradas, componente Term con popover | Completada |
+
+## Sistema de glosario
+
+Componente `<Term>` que hace accesibles los términos técnicos para público no especializado.
+
+**Archivos clave:**
+- `src/data/glossary.ts` — Diccionario (~99 entradas) con `sigla?`, `nombre`, `definicion`
+- `src/components/content/term.tsx` — Client component con portal + `position: fixed` popover
+- `src/app/globals.css` — Estilos de flechita del popover (`.term-arrow-down`, `.term-arrow-up`)
+
+**Uso:**
+```tsx
+// Con sigla: renderiza "texto llano (SIGLA)" con popover en la sigla
+<Term id="tept">reacciones de estrés prolongadas</Term>
+
+// Sin sigla: renderiza "texto" con subrayado punteado y popover
+<Term id="tamizaje">evaluación rápida</Term>
+```
+
+**Reglas de aplicación:**
+1. Solo la PRIMERA ocurrencia por página usa `<Term>`
+2. Repeticiones posteriores: lenguaje llano sin componente
+3. Dentro de strings (props, DataTable, Pyramid): expandir siglas inline, no `<Term>`
+4. Términos auto-explicados: solo envolver en `<Term>` sin reescribir
+
+**Categorías:** siglas institucionales, marcos/frameworks, términos clínicos, estadísticos, programas/intervenciones, instrumentos de evaluación, pedagógicos, normativa.
 
 ## Notas de auditoría
 

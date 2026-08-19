@@ -12,6 +12,7 @@ import {
   DataTable,
   KeyMessage,
   Ref,
+  Term,
 } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -32,14 +33,14 @@ export default function LargoPlazoPage() {
           Construir escuelas más seguras y comunidades más resilientes
         </h1>
         <p className="text-xl text-[var(--muted)] leading-relaxed mb-12">
-          Marco Integral de Seguridad Escolar (CSSF), escuelas seguras, lección de Japón y marco colombiano GIRE para la reconstrucción.
+          <Term id="cssf">Marco Integral de Seguridad Escolar</Term> (CSSF), escuelas seguras, lección de Japón y marco colombiano <Term id="gire">Gestión Integral del Riesgo Escolar</Term> (GIRE) para la reconstrucción.
         </p>
 
         <StatGrid>
-          <Stat value="3" label="Pilares CSSF" />
+          <Stat value="3" label="Pilares del Marco de Seguridad Escolar (CSSF)" />
           <Stat value="42.5% → ~100%" label="Escuelas seguras Japón" />
-          <Stat value="BBB" label="Sendai: Build Back Better" />
-          <Stat value="006519" label="Resolución GIRE 2025" />
+          <Stat value="BBB" label="Marco de Sendai: Reconstruir mejor" />
+          <Stat value="006519" label="Resolución de Gestión del Riesgo Escolar 2025" />
         </StatGrid>
       </div>
 
@@ -48,7 +49,7 @@ export default function LargoPlazoPage() {
           { id: "cssf", label: "CSSF" },
           { id: "instalaciones", label: "Instalaciones" },
           { id: "gestion", label: "Gestión" },
-          { id: "educacion-drr", label: "Educación DRR" },
+          { id: "educacion-drr", label: "Reducción del riesgo" },
           { id: "japon", label: "Japón" },
           { id: "colombia", label: "Marco colombiano" },
         ]}
@@ -92,7 +93,7 @@ export default function LargoPlazoPage() {
                 </svg>
               }
               title="Instalaciones seguras"
-              description="Códigos de construcción, evaluación estructural, WASH y mitigación de riesgo no estructural."
+              description="Códigos de construcción, evaluación estructural, agua, saneamiento e higiene (WASH) y riesgo por caída de objetos (no estructural)."
             />
             <InsightCard
               icon={
@@ -110,7 +111,7 @@ export default function LargoPlazoPage() {
                 </svg>
               }
               title="Educación en reducción del riesgo"
-              description="Formación docente, currículo DRR + SEL y cambio climático."
+              description="Formación docente, currículo de reducción del riesgo (DRR) + educación socioemocional (SEL) y cambio climático."
             />
           </InsightGrid>
 
@@ -126,7 +127,7 @@ export default function LargoPlazoPage() {
               [
                 "Pilar 1: Instalaciones seguras",
                 "Infraestructura",
-                "Códigos de construcción, control de calidad, evaluación de edificios existentes, WASH, mantenimiento, mitigación de riesgo no estructural",
+                "Códigos de construcción, control de calidad, evaluación de edificios existentes, agua, saneamiento e higiene (WASH), mantenimiento, mitigación de riesgo por caída de objetos (no estructural)",
               ],
               [
                 "Pilar 2: Gestión y continuidad",
@@ -136,7 +137,7 @@ export default function LargoPlazoPage() {
               [
                 "Pilar 3: Educación en reducción del riesgo",
                 "Currículo",
-                "Formación docente, mensajes comunitarios, materiales de calidad, integración DRR + SEL + cambio climático",
+                "Formación docente, mensajes comunitarios, materiales de calidad, integración reducción del riesgo (DRR) + educación socioemocional (SEL) + cambio climático",
               ],
             ]}
           />
@@ -152,7 +153,7 @@ export default function LargoPlazoPage() {
             <p>
               El primer pilar del CSSF aborda la dimensión física de la seguridad escolar: códigos de
               construcción para nuevas edificaciones, protocolos de evaluación estructural para las
-              existentes, condiciones de agua, saneamiento e higiene (WASH) y mantenimiento preventivo.
+              existentes, condiciones de agua, saneamiento e higiene (<Term id="wash">WASH</Term>) y mantenimiento preventivo.
             </p>
             <p>
               En el contexto del terremoto de agosto de 2026, la Secretaría de Educación de Cali
@@ -163,7 +164,7 @@ export default function LargoPlazoPage() {
               cuáles requieren alternativas temporales<Ref id="R-111" />.
             </p>
 
-            <h3 className="text-2xl font-semibold mt-8 mb-4">Riesgo no estructural</h3>
+            <h3 className="text-2xl font-semibold mt-8 mb-4"><Term id="riesgo-no-estructural">Riesgo no estructural</Term></h3>
             <p>
               La mitigación del <strong>riesgo no estructural</strong> merece atención particular. Los
               terremotos causan lesiones no solo por el colapso de edificaciones, sino también por la
@@ -187,12 +188,12 @@ export default function LargoPlazoPage() {
               de contingencia con modalidades alternativas.
             </p>
             <p>
-              Colombia cuenta con un marco normativo que ha evolucionado recientemente. Los <strong>Planes
-              Escolares de Gestión del Riesgo (PEGR)</strong>, establecidos por la Guía No. 59 del MEN
-              en 2015<Ref id="R-105" />, fueron ampliados mediante la <strong>Resolución
-              006519</strong> de abril de <span className="font-mono text-sm px-1 py-0.5 bg-[var(--surface-raised)] rounded">2025</span><Ref id="R-107" />,
+              Colombia cuenta con un marco normativo que ha evolucionado recientemente. Los <strong><Term id="pegr">Planes
+              Escolares de Gestión del Riesgo</Term> (PEGR)</strong>, establecidos por la Guía No. 59 del <Term id="men">Ministerio de Educación Nacional</Term> (MEN)
+              en 2015<Ref id="R-105" />, fueron ampliados mediante la <strong><Term id="resolucion-006519">Resolución
+              006519</Term></strong> de abril de <span className="font-mono text-sm px-1 py-0.5 bg-[var(--surface-raised)] rounded">2025</span><Ref id="R-107" />,
               que los transformó en <strong>Planes de Gestión Integral del Riesgo Escolar
-              (PGIRE)</strong>. Este nuevo marco incorpora amenazas sociales y antrópicas junto a las
+              (<Term id="pgire">PGIRE</Term>)</strong>. Este nuevo marco incorpora amenazas sociales y <Term id="amenaza-antropica">antrópicas</Term> (causadas por actividad humana) junto a las
               naturales.
             </p>
 
@@ -266,7 +267,7 @@ export default function LargoPlazoPage() {
               Esta transformación requirió compromiso político sostenido durante dos décadas,
               financiamiento dedicado proveniente tanto del gobierno central como de las prefecturas, y
               estándares técnicos aplicados de manera uniforme en todo el sistema educativo. El programa
-              no se limitó a las nuevas construcciones sino que incluyó el reforzamiento (retrofit) de
+              no se limitó a las nuevas construcciones sino que incluyó el <Term id="retrofit">reforzamiento estructural</Term> (retrofit) de
               las edificaciones existentes.
             </p>
             <p>
@@ -293,7 +294,7 @@ export default function LargoPlazoPage() {
               Colombia dispone de un conjunto de instrumentos normativos que proveen la base para una
               estrategia de largo plazo. La <strong>Guía No. 59</strong> del
               MEN<Ref id="R-105" /> establece las directrices para los Planes Escolares de Gestión del
-              Riesgo, mientras que las guías de la <strong>UNGRD</strong><Ref id="R-108" /> complementan
+              Riesgo, mientras que las guías de la <strong><Term id="ungrd">Unidad Nacional para la Gestión del Riesgo</Term></strong><Ref id="R-108" /> complementan
               la perspectiva institucional con herramientas operativas.
             </p>
             <p>
@@ -309,10 +310,10 @@ export default function LargoPlazoPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 m-0">Reconstruir mejor (Build Back Better)</h3>
+                  <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 m-0"><Term id="bbb">Reconstruir mejor</Term> (Build Back Better)</h3>
                   <p className="text-amber-800 dark:text-amber-200/80">
-                    El principio <strong>&quot;Reconstruir mejor&quot;</strong> (Build Back Better) del Marco
-                    de Sendai establece que la reconstrucción posterior a un desastre debe superar los
+                    El principio <strong>&quot;Reconstruir mejor&quot;</strong> (Build Back Better) del <Term id="marco-sendai">Marco
+                    de Sendai</Term> establece que la reconstrucción posterior a un desastre debe superar los
                     estándares de seguridad previos al evento. Para las escuelas colombianas, esto significa
                     que las reparaciones derivadas del terremoto de 2026 no deben limitarse a restaurar el
                     estado anterior, sino aprovechar la oportunidad para elevar los estándares de seguridad

@@ -16,6 +16,7 @@ import {
   Ref,
   Stat,
   StatGrid,
+  Term,
 } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function EvidenciaPage() {
             Qué dice la investigación sobre las intervenciones psicosociales escolares post-desastre
           </h1>
           <p className="text-[var(--muted)] text-base sm:text-lg leading-relaxed max-w-[62ch]">
-            Tres meta-análisis, 75 estudios y más de 11.000 participantes sintetizan qué funciona,
+            Tres <Term id="meta-analisis">meta-análisis</Term>, 75 estudios y más de 11.000 participantes sintetizan qué funciona,
             bajo qué condiciones y para quién — la base para decisiones informadas en la respuesta
             psicosocial escolar tras el terremoto de agosto 2026 en Colombia.
           </p>
@@ -87,7 +88,7 @@ export default function EvidenciaPage() {
             <Stat value="75" label="Estudios analizados" />
             <Stat value="11,000+" label="Participantes" />
             <Stat value="3" label="Meta-análisis clave" />
-            <Stat value="g = −1.20" label="Efecto en TEPT" />
+            <Stat value="g = −1.20" label="Efecto en estrés postraumático (TEPT)" />
           </StatGrid>
         </section>
 
@@ -126,7 +127,7 @@ export default function EvidenciaPage() {
           <SectionHeader
             eyebrow="La base de evidencia"
             title="Tres meta-análisis clave"
-            description="Tres revisiones sistemáticas con meta-análisis sintetizan 75 estudios con más de 11,000 participantes, permitiendo identificar no solo si las intervenciones funcionan, sino bajo qué condiciones y para qué poblaciones producen los mayores efectos."
+            description="Tres búsquedas exhaustivas de toda la investigación (revisiones sistemáticas) con meta-análisis sintetizan 75 estudios con más de 11,000 participantes, permitiendo identificar no solo si las intervenciones funcionan, sino bajo qué condiciones y para qué poblaciones producen los mayores efectos."
             className="mb-10"
           />
 
@@ -135,7 +136,7 @@ export default function EvidenciaPage() {
               year="2026 · Escuelas exclusivamente"
               title="Laksmita et al."
               meta={{ k: "13", n: "2,418" }}
-              description="13 ensayos controlados aleatorizados. Efecto inmediato grande sobre TEPT (g = −1.20), sostenido a corto (g = −0.25) y largo plazo (g = −0.45). Efecto pequeño pero significativo en depresión (g = −0.34)."
+              description="13 estudios experimentales con grupo de comparación. Efecto inmediato grande sobre TEPT (g = −1.20), sostenido a corto (g = −0.25) y largo plazo (g = −0.45). Efecto pequeño pero significativo en depresión (g = −0.34)."
               href="/referencias#R-003"
               linkLabel="Ver referencia [3] →"
             />
@@ -143,7 +144,7 @@ export default function EvidenciaPage() {
               year="2024 · Meta-análisis en red"
               title="Xie et al."
               meta={{ k: "26", n: "4,331" }}
-              description="26 ensayos controlados. Permite comparar simultáneamente múltiples modalidades terapéuticas y establecer rankings de efectividad mediante el estadístico SUCRA."
+              description="26 estudios experimentales. Permite comparar simultáneamente múltiples modalidades terapéuticas y establecer rankings de efectividad mediante SUCRA (puntaje de 0 a 100 que clasifica las terapias)."
               href="/referencias#R-004"
               linkLabel="Ver referencia [4] →"
             />
@@ -151,7 +152,7 @@ export default function EvidenciaPage() {
               year="2017 · La revisión más amplia"
               title="Morina et al."
               meta={{ k: "36", n: "4,411" }}
-              description="36 estudios. Efecto pre-post grande (g = 1.35) y efecto moderado frente a controles activos (g = 0.44). Base de la taxonomía fina por tipo de terapia."
+              description="36 estudios. Efecto antes-después grande (g = 1.35) y efecto moderado frente a grupos que recibieron otra actividad (controles activos) (g = 0.44). Base de la taxonomía fina por tipo de terapia."
               href="/referencias#R-002"
               linkLabel="Ver referencia [2] →"
             />
@@ -159,10 +160,10 @@ export default function EvidenciaPage() {
 
           <DataTable
             caption="Tamaños de efecto por revisión"
-            headers={["Revisión", "k", "N", "Efecto TEPT", "Efecto depresión"]}
+            headers={["Revisión", "k (estudios)", "N (participantes)", "Efecto TEPT", "Efecto depresión"]}
             rows={[
               ["Laksmita et al. (2026)", "13", "2,418", "g = −1.20", "g = −0.34"],
-              ["Xie et al. (2024)", "26", "4,331", "SMD = −0.67 (EMDR)", "SMD = −0.40 (EMDR)"],
+              ["Xie et al. (2024)", "26", "4,331", "−0.67 (EMDR)", "−0.40 (EMDR)"],
               ["Morina et al. (2017)", "36", "4,411", "g = 0.44 (vs. control)", "No reportado"],
             ]}
           />
@@ -175,11 +176,11 @@ export default function EvidenciaPage() {
           <SectionHeader
             eyebrow="Comparación de modalidades"
             title="¿Qué terapia funciona mejor?"
-            description="El meta-análisis en red de Xie y colaboradores (2024) clasificó diez modalidades mediante SUCRA. Para TEPT, EMDR ocupó la primera posición (69.6), seguida por ET/NET (69.6) y TCC (66.0). Los datos pre-post de Morina et al. (2017) complementan esta imagen con una taxonomía más fina."
+            description="El meta-análisis en red de Xie y colaboradores (2024) clasificó diez modalidades mediante SUCRA. Para TEPT, EMDR ocupó la primera posición (SUCRA 69.6 de 100), seguida por Terapia Narrativa (ET/NET) (SUCRA 69.6 de 100) y Terapia Cognitivo-Conductual (TCC) (SUCRA 66.0 de 100). Los datos antes-después de Morina et al. (2017) complementan esta imagen con una taxonomía más fina."
             className="mb-10"
           />
 
-          <EffectBarList title="Tamaño de efecto pre-post por terapia — Morina et al. (2017)" className="mb-8">
+          <EffectBarList title="Tamaño de efecto antes-después por terapia — Morina et al. (2017)" className="mb-8">
             <EffectBar label="KIDNET / NET" value={1.87} maxValue={2.0} unit=" g" />
             <EffectBar label="EMDR" value={1.46} maxValue={2.0} unit=" g" />
             <EffectBar label="TCC" value={1.07} maxValue={2.0} unit=" g" />
@@ -196,7 +197,7 @@ export default function EvidenciaPage() {
             <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
               <h4 className="font-bold text-[var(--foreground)] text-[14px] mb-2">EMDR</h4>
               <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-                <strong>Desensibilización y Reprocesamiento por Movimientos Oculares.</strong> Utiliza estimulación bilateral (como movimientos oculares guiados) mientras el paciente se enfoca en el recuerdo traumático, ayudando al cerebro a reprocesarlo y reducir su carga emocional.
+                <strong>Desensibilización y Reprocesamiento por Movimientos Oculares.</strong> Utiliza <Term id="estimulacion-bilateral">estimulación bilateral</Term> (como movimientos oculares guiados) mientras el paciente se enfoca en el recuerdo traumático, ayudando al cerebro a reprocesarlo y reducir su carga emocional.
               </p>
             </div>
             <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
@@ -208,19 +209,20 @@ export default function EvidenciaPage() {
             <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--surface-raised)]">
               <h4 className="font-bold text-[var(--foreground)] text-[14px] mb-2">Intervenciones de aula</h4>
               <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-                <strong>Programas grupales preventivos.</strong> Incluyen psicoeducación, arteterapia, juego y técnicas de relajación/mindfulness. Frecuentemente lideradas por docentes para normalizar síntomas y fomentar la regulación emocional a gran escala.
+                <strong>Programas grupales preventivos.</strong> Incluyen <Term id="psicoeducacion">psicoeducación</Term>, arteterapia, juego y técnicas de relajación/atención plena (mindfulness). Frecuentemente lideradas por docentes para normalizar síntomas y fomentar la <Term id="regulacion-emocional">regulación emocional</Term> a gran escala.
               </p>
             </div>
           </div>
 
           <Callout type="info" title="Todas las modalidades son efectivas">
             <p>
-              El análisis formal no encontró diferencias estadísticamente significativas entre
-              tipos de terapia (<span className="stat-inline">F&nbsp;=&nbsp;2.49</span>,{" "}
-              <span className="stat-inline">p&nbsp;=&nbsp;0.062</span>)<Ref id="R-002" />. El
+              Al comparar estadísticamente las distintas terapias, las diferencias entre ellas
+              no fueron lo bastante grandes como para ser concluyentes
+              (<span className="stat-inline">F&nbsp;=&nbsp;2.49</span>,{" "}
+              <Term id="valor-p"><span className="stat-inline">p&nbsp;=&nbsp;0.062</span></Term> — la diferencia podría deberse al azar)<Ref id="R-002" />. El
               mensaje central: implementar cualquier intervención estructurada produce beneficios
-              significativos frente a no intervenir. El ranking no implica diferencia estadísticamente
-              significativa entre modalidades según la evidencia citada.
+              significativos frente a no intervenir. El ranking no implica diferencia concluyente
+              entre modalidades según la evidencia citada.
             </p>
           </Callout>
         </section>
@@ -312,14 +314,14 @@ export default function EvidenciaPage() {
           <SectionHeader
             eyebrow="No todos necesitan lo mismo"
             title="Trayectorias de recuperación"
-            description="No todos los niños y niñas necesitan intervención clínica. La revisión de Witt et al. (2024) sintetizó 15 estudios longitudinales con 11,519 participantes menores de edad, identificando cuatro trayectorias predominantes tras un desastre natural. Entre el 34% y el 82% mostraron trayectorias resilientes; entre el 51% y el 97% fueron resilientes o en recuperación espontánea."
+            description="No todos los niños y niñas necesitan intervención clínica. La revisión de Witt et al. (2024) sintetizó 15 estudios que siguieron a los mismos participantes durante meses (longitudinales) con 11,519 participantes menores de edad, identificando cuatro trayectorias predominantes tras un desastre natural. Entre el 34% y el 82% mostraron trayectorias resilientes; entre el 51% y el 97% fueron resilientes o en recuperación espontánea."
             className="mb-10"
           />
 
           {/* Timeline visual */}
           <div className="relative pl-2 sm:pl-4 ml-4 sm:ml-8 border-l-2 border-[var(--border)] space-y-8 mb-10">
             {[
-              { month: "0 m", title: "Evento disruptivo", desc: "Punto de partida de las cuatro trayectorias: resiliente, recuperación espontánea, recuperación tardía y síntomas persistentes.", key: true },
+              { month: "0 m", title: "Evento disruptivo", desc: "Punto de partida de las cuatro trayectorias: resiliente (se mantiene bien desde el inicio), recuperación espontánea (mejora por sí solo), recuperación tardía (mejora después de meses) y síntomas persistentes (no mejora sin ayuda).", key: true },
               { month: "4–6 m", title: "Primeras mediciones", desc: "El estudio de Kobe evaluó a 8,800 estudiantes a los 4 y 6 meses, junto con 1,886 controles de áreas no afectadas.", key: false },
               { month: "12 m", title: "Ventana de mayor desarrollo", desc: "El desarrollo más dinámico de las trayectorias ocurre durante los primeros 12 meses — la ventana donde intervenir temprano tiene más peso.", key: true },
               { month: "24 m", title: "Persistencia en zonas de mayor daño", desc: "Los síntomas persistieron más de dos años en las zonas más afectadas; un tercer factor no documentado antes, ligado a responsabilidad social y culpa, apareció en los cuestionarios.", key: false },
@@ -357,7 +359,7 @@ export default function EvidenciaPage() {
           <SectionHeader
             eyebrow="Marco organizador"
             title="La pirámide IASC"
-            description="El Comité Permanente entre Organismos (IASC, 2007) propone cuatro niveles que ordenan las intervenciones según su alcance y grado de especialización. La mayoría de las personas se recupera con los niveles 1 y 2, sin requerir intervención clínica."
+            description={<>El <Term id="iasc">Comité Permanente entre Organismos</Term> (IASC, 2007) propone cuatro niveles que ordenan las intervenciones según su alcance y grado de especialización. La mayoría de las personas se recupera con los niveles 1 y 2, sin requerir intervención clínica.</>}
             centered
             className="mb-10"
           />
@@ -386,7 +388,7 @@ export default function EvidenciaPage() {
               </p>
             </div>
             <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6">
-              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3">INEE · 2024</div>
+              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3">INEE (Red Interagencial para Educación en Emergencias) · 2024</div>
               <h3 className="font-bold text-[16.5px] text-[var(--foreground)] mb-3 leading-tight">
                 Estándares mínimos para educación en emergencias
               </h3>
@@ -396,7 +398,7 @@ export default function EvidenciaPage() {
               </p>
             </div>
             <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6">
-              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3">MinSalud Colombia</div>
+              <div className="text-[11px] font-mono font-bold text-[var(--accent)] uppercase tracking-wider mb-3"><Term id="minsalud">Ministerio de Salud</Term> (MinSalud) Colombia</div>
               <h3 className="font-bold text-[16.5px] text-[var(--foreground)] mb-3 leading-tight">
                 Las cuatro fases psicológicas del desastre
               </h3>

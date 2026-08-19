@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { 
-  SectionHeader, 
-  Callout, 
-  DataTable, 
-  Ref, 
-  KeyMessage, 
-  Pyramid, 
-  Timeline, 
-  Stat, 
-  StatGrid, 
-  StickySectionNav, 
-  EffectBar, 
-  EffectBarList 
+import {
+  SectionHeader,
+  Callout,
+  DataTable,
+  Ref,
+  KeyMessage,
+  Pyramid,
+  Timeline,
+  Stat,
+  StatGrid,
+  StickySectionNav,
+  EffectBar,
+  EffectBarList,
+  Term
 } from "@/components/content";
 
 export const metadata: Metadata = {
@@ -27,12 +28,12 @@ export default function PrimerMesPage() {
         <p className="text-sm font-mono text-accent uppercase tracking-wider mb-4">SEMANAS 2 A 8</p>
         <h1 className="text-4xl md:text-5xl font-bold mb-6">De la emergencia a la estructura</h1>
         <p className="text-xl text-muted mb-10 max-w-3xl">
-          De la emergencia a la estructura: implementar la respuesta psicosocial y educativa exige articular un modelo escalonado, ajustar el ritmo pedagógico y sostener a quienes sostienen el sistema.
+          De la emergencia a la estructura: implementar el <Term id="respuesta-psicosocial">apoyo emocional y social</Term> en las escuelas exige articular un <Term id="modelo-escalonado">sistema de atención por niveles de necesidad</Term>, ajustar el ritmo pedagógico y sostener a quienes sostienen el sistema.
         </p>
         <StatGrid>
           <Stat value="2-8 sem" label="Ventana óptima" />
-          <Stat value="1 día" label="Formación PAP" />
-          <Stat value="3-5 días" label="Formación TRT/CBI" />
+          <Stat value="1 día" label="Formación en primeros auxilios psicológicos (PAP)" />
+          <Stat value="3-5 días" label="Formación en programas grupales (TRT/CBI)" />
           <Stat value="≥6" label="Sesiones más efectivas" />
         </StatGrid>
       </header>
@@ -63,14 +64,13 @@ export default function PrimerMesPage() {
             <p>
               En el primer nivel se ubican los <strong>Primeros Auxilios Psicológicos (PAP)</strong>, una
               intervención universal que puede ser entregada por cualquier miembro del personal educativo
-              tras una formación de un día. Los PAP siguen el protocolo de la OMS basado en tres acciones
+              tras una formación de un día. Los PAP siguen el protocolo de la <Term id="oms">Organización Mundial de la Salud</Term> basado en tres acciones
               fundamentales —observar, escuchar y conectar— y no constituyen consejería profesional ni
               intervención terapéutica. Su propósito es estabilizar, ofrecer presencia segura y facilitar
               la conexión con redes de apoyo.
             </p>
             <p>
-              El segundo nivel involucra intervenciones grupales estructuradas, basadas en principios
-              cognitivo-conductuales, que los docentes pueden implementar tras 3 a 5 días de formación
+              El segundo nivel involucra intervenciones grupales estructuradas, basadas en <Term id="cognitivo-conductuales">técnicas que ayudan a cambiar pensamientos y comportamientos problemáticos</Term>, que los docentes pueden implementar tras 3 a 5 días de formación
               supervisada. Los programas <strong>Teaching Recovery Techniques (TRT</strong>, 5 sesiones
               grupales) y <strong>Classroom-Based Intervention (CBI</strong>, 8 sesiones) representan las
               opciones con mayor evidencia para este nivel. Están diseñados para estudiantes con síntomas
@@ -80,9 +80,9 @@ export default function PrimerMesPage() {
             <p>
               El tercer nivel queda reservado para los estudiantes con síntomas severos o persistentes
               que no responden a las intervenciones de los niveles anteriores. Aquí intervienen
-              psicólogos clínicos y psiquiatras con modalidades especializadas como <strong>EMDR</strong>,{" "}
-              <strong>TCC focalizada en trauma</strong> o <strong>Terapia Narrativa de Exposición
-              (NET)</strong>. La derivación oportuna a este nivel depende de la capacidad de los docentes
+              psicólogos clínicos y psiquiatras con modalidades especializadas como la <strong><Term id="emdr">terapia de reprocesamiento con movimientos oculares</Term></strong>,{" "}
+              <strong><Term id="tf-cbt">terapia psicológica centrada en el trauma</Term></strong> o <strong>Terapia Narrativa de Exposición
+              (<Term id="net">NET</Term>)</strong>. La derivación oportuna a este nivel depende de la capacidad de los docentes
               para identificar señales de alerta durante las actividades de los niveles 1 y 2.
             </p>
 
@@ -95,7 +95,7 @@ export default function PrimerMesPage() {
           <div className="my-10 max-w-3xl">
             <Pyramid
               levels={[
-                { label: "Nivel 3", description: "Atención especializada: EMDR, TCC focalizada, NET (psicólogos clínicos)", color: "danger" },
+                { label: "Nivel 3", description: "Atención especializada por psicólogos clínicos (EMDR, TF-CBT, NET)", color: "danger" },
                 { label: "Nivel 2", description: "Intervención grupal: TRT (5 sesiones), CBI (8 sesiones) por docentes capacitados", color: "warning" },
                 { label: "Nivel 1", description: "PAP universal: observar, escuchar, conectar (cualquier persona, 1 día de formación)", color: "success" },
               ]}
@@ -108,11 +108,10 @@ export default function PrimerMesPage() {
               <p>
                 Los datos de Laksmita y colaboradores<Ref id="R-003" /> revelan una paradoja aparente. Las personas
                 sin formación en salud mental producen efectos inmediatos sustancialmente mayores que los
-                profesionales de salud (<span className="stat-inline">g&nbsp;=&nbsp;−2.60</span> vs.{" "}
+                profesionales de salud en la <Term id="tamano-efecto">medida de efectividad</Term> (<span className="stat-inline">g&nbsp;=&nbsp;−2.60</span> vs.{" "}
                 <span className="stat-inline">g&nbsp;=&nbsp;−0.39</span>). Sin embargo, los efectos de
                 los profesionales se sostienen en el seguimiento (g&nbsp;=&nbsp;−0.38,
-                p&nbsp;=&nbsp;0.047), mientras que los de los no especialistas no alcanzan significancia
-                estadística (g&nbsp;=&nbsp;−0.09, p&nbsp;=&nbsp;0.150).
+                p&nbsp;=&nbsp;0.047), mientras que los de los no especialistas no alcanzan <Term id="significancia-estadistica">certeza suficiente de que el efecto no se deba al azar</Term> (g&nbsp;=&nbsp;−0.09, p&nbsp;=&nbsp;0.150).
               </p>
             </Callout>
 
@@ -165,19 +164,17 @@ export default function PrimerMesPage() {
               vs. g&nbsp;=&nbsp;−0.15)<Ref id="R-003" />.
             </p>
 
-            <h3>Calendario de tamizaje</h3>
+            <h3>Calendario de detección</h3>
             <p>
-              El tamizaje con instrumentos estandarizados debe realizarse a los 1, 3, 6 y 12 meses
-              posteriores al evento. Este calendario se alinea con la evidencia sobre trayectorias de
-              recuperación, que muestra que el periodo de mayor dinamismo ocurre durante el primer año y
-              que una proporción de niños y niñas desarrolla síntomas tardíos que solo una evaluación
-              longitudinal puede detectar.
+              La <Term id="tamizaje">evaluación rápida para identificar quién necesita más ayuda</Term> con instrumentos estandarizados debe realizarse a los 1, 3, 6 y 12 meses
+              posteriores al evento. Este calendario se alinea con la evidencia sobre <Term id="trayectorias-recuperacion">los distintos caminos que sigue la recuperación emocional</Term>, que muestra que el periodo de mayor dinamismo ocurre durante el primer año y
+              que una proporción de niños y niñas desarrolla síntomas tardíos que solo una evaluación <Term id="longitudinal">repetida durante varios meses</Term> puede detectar.
             </p>
           </div>
 
           <div className="my-10 max-w-3xl">
             <Timeline items={[
-              { time: "1 mes", label: "Primera evaluación", description: "Detección inicial con CRIES/CPSS" },
+              { time: "1 mes", label: "Primera evaluación", description: "Detección inicial con cuestionarios breves de estrés postraumático (CRIES/CPSS)" },
               { time: "3 meses", label: "Seguimiento temprano", description: "Identificar trayectorias crónicas emergentes" },
               { time: "6 meses", label: "Evaluación intermedia", description: "Detectar aparición tardía de síntomas" },
               { time: "12 meses", label: "Evaluación anual", description: "Balance del primer año, decisión de continuidad" },
@@ -200,16 +197,16 @@ export default function PrimerMesPage() {
                   "Observar, escuchar, conectar + simulaciones",
                 ],
                 [
-                  "Formación IASC básica",
+                  "Formación en el marco del Comité de Coordinación Humanitaria (IASC)",
                   "1-3 días",
                   "Orientadores y coordinadores",
-                  "Pirámide IASC, principio «no hacer daño», derivación",
+                  "Modelo de atención por niveles (pirámide IASC), principio «no hacer daño», derivación",
                 ],
                 [
                   "Programa TRT o CBI",
                   "3-5 días",
                   "Docentes seleccionados",
-                  "Manejo de recuerdos intrusivos, activación, evitación + práctica supervisada",
+                  "Manejo de imágenes que aparecen sin querer (intrusivos), alerta excesiva (activación), tendencia a evitar (evitación) + práctica supervisada",
                 ],
                 [
                   "Supervisión continua",
@@ -230,14 +227,14 @@ export default function PrimerMesPage() {
               contaban con metodología adecuada para evaluar su efectividad. Los resultados sugieren que
               los docentes pueden entregar intervenciones psicosociales con efectos inmediatos
               significativos cuando reciben formación específica y supervisión periódica. Los
-              programas <strong>TRT</strong> y <strong>EASE</strong> han mostrado resultados favorables para
+              programas <strong>TRT</strong> y <strong><Term id="ease">programa de habilidades emocionales de la OMS</Term></strong> han mostrado resultados favorables para
               personas sin formación clínica<Ref id="R-013" />, siempre que cuenten con la estructura de
               acompañamiento descrita.
             </p>
 
             <h3>Límites de la intervención docente</h3>
             <p>
-              No obstante, la evidencia también establece límites claros. El programa ERASE-Stress,
+              No obstante, la evidencia también establece límites claros. El <Term id="erase-stress">programa de reducción de estrés en escuelas</Term>,
               entregado por docentes con nivel de evidencia calificado como «alto», no mostró efectos
               sostenidos en el seguimiento a <span className="stat-inline">3 años</span><Ref id="R-008" />.
               Los docentes que confunden la evitación con el funcionamiento normal pueden pasar por alto
@@ -245,10 +242,10 @@ export default function PrimerMesPage() {
             </p>
             <p>
               Un estudio realizado en Chile tras el terremoto de 2010 encontró que solo 3 de 33 niños
-              evaluados cumplían criterios formales de TEPT, pero el{" "}
+              evaluados cumplían criterios formales de <Term id="tept">trastorno de estrés postraumático</Term>, pero el{" "}
               <span className="stat-inline">45%</span> presentaba síntomas activados por el sismo, y los
-              diagnósticos más frecuentes fueron TDAH (<span className="stat-inline">33%</span>) y
-              trastornos de ajuste (<span className="stat-inline">24%</span>)<Ref id="R-021" />.
+              diagnósticos más frecuentes fueron <Term id="tdah">trastorno por déficit de atención e hiperactividad</Term> (<span className="stat-inline">33%</span>) y
+              <Term id="trastornos-ajuste">dificultades emocionales de adaptación</Term> (<span className="stat-inline">24%</span>)<Ref id="R-021" />.
             </p>
 
             <Callout type="warning" title="Supervisión, no solo formación">
@@ -276,12 +273,12 @@ export default function PrimerMesPage() {
               caption="Programas de intervención por nivel educativo"
               headers={["Programa", "Edad", "Nivel", "Tamizaje recomendado"]}
               rows={[
-                ["CPRT", "0–5", "Preescolar", "Observación conductual por cuidadores"],
+                ["CPRT (terapia de juego padre-hijo)", "0–5", "Preescolar", "Observación conductual por cuidadores"],
                 ["CBI", "6–12", "Primaria", "CRIES/CPSS aplicado por docente"],
                 ["ERASE-Stress", "6–12", "Primaria", "CRIES/CPSS aplicado por docente"],
                 ["TRT", "8–18", "Primaria + Secundaria", "CRIES/CPSS + auto-reporte en secundaria"],
-                ["CBITS", "10–15", "Primaria alta + Secundaria", "UCLA PTSD-RI por clínico"],
-                ["SOLAR-Teens", "12–18", "Secundaria", "Auto-reporte + entrevista breve"],
+                ["CBITS (intervención para trauma en escuelas)", "10–15", "Primaria alta + Secundaria", "Entrevista UCLA de estrés postraumático por clínico"],
+                ["SOLAR-Teens (apoyo adolescente)", "12–18", "Secundaria", "Auto-reporte + entrevista breve"],
               ]}
             />
 
@@ -293,12 +290,12 @@ export default function PrimerMesPage() {
               profesional de salud mental en la primera aplicación, siguiendo el modelo implementado en
               Kobe<Ref id="R-079" />. En <strong>secundaria</strong>, el auto-reporte adquiere mayor
               validez, y los instrumentos pueden complementarse con entrevistas breves que aborden
-              conductas de riesgo específicas de la adolescencia.
+              <Term id="conductas-riesgo">comportamientos que pueden poner en peligro su bienestar</Term> específicos de la adolescencia.
             </p>
 
             <Callout type="info" title="Misma evidencia, diferente aplicación">
               <p>
-                El meta-análisis de Morina et al. testeó la edad como moderador y no encontró diferencias
+                El <Term id="meta-analisis">estudio que combinó múltiples investigaciones</Term> de Morina et al. evaluó la edad como <Term id="moderador">factor que influye en los resultados</Term> y no encontró diferencias
                 significativas de efectividad<Ref id="R-002" />. Las intervenciones funcionan en todos los
                 niveles. Lo que cambia es la presentación de síntomas, la forma de comunicar y el tipo de
                 programa disponible.
@@ -311,14 +308,13 @@ export default function PrimerMesPage() {
           <SectionHeader eyebrow="Currículo" title="Adaptación curricular" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
-              Adaptar el currículo tras un desastre no significa empobrecerlo. El <strong>marco
-              RAPID</strong> del Banco Mundial propone priorizar competencias fundamentales en lectura y
+              Adaptar el currículo tras un desastre no significa empobrecerlo. El <strong><Term id="rapid">plan de recuperación del Banco Mundial</Term></strong> propone priorizar competencias fundamentales en lectura y
               matemáticas sin sacrificar la riqueza de la experiencia educativa. Esta priorización permite
               concentrar los recursos pedagógicos en lo esencial mientras se recupera la capacidad plena
               del sistema.
             </p>
             <p>
-              La integración del <strong>aprendizaje socioemocional</strong> (SEL) en la práctica
+              La integración del <strong><Term id="sel">aprendizaje socioemocional</Term></strong> en la práctica
               cotidiana del aula fue identificada como uno de los tres principales factores de éxito en
               las experiencias post-desastre, presente en el{" "}
               <span className="stat-inline">32%</span> de los casos exitosos
@@ -328,7 +324,7 @@ export default function PrimerMesPage() {
 
             <h3>Las herramientas disponibles</h3>
             <p>
-              El <strong>Cuadernillo GIRE</strong> del Ministerio de Educación Nacional, publicado en
+              El <strong>Cuadernillo <Term id="gire">GIRE</Term></strong> del Ministerio de Educación Nacional, publicado en
               enero de 2026, ofrece <span className="stat-inline">17 actividades</span> prácticas de SEL
               organizadas en su Componente 2, que van desde la identificación de emociones hasta la
               resolución de problemas y la conexión con objetos significativos<Ref id="R-106" />.
@@ -358,9 +354,9 @@ export default function PrimerMesPage() {
 
             <h3>No penalizar</h3>
             <p>
-              Durante el periodo de recuperación, la <strong>evaluación formativa</strong> debe
-              prevalecer sobre la sumativa. Las lecciones de la pandemia sugieren estrategias concretas
-              como la flexibilización de las calificaciones, la promoción condicional automática y la
+              Durante el periodo de recuperación, la <strong><Term id="evaluacion-formativa">evaluación para guiar la enseñanza</Term></strong> debe
+              prevalecer sobre la <Term id="evaluacion-sumativa">evaluación que califica</Term>. Las lecciones de la pandemia sugieren estrategias concretas
+              como la flexibilización de las calificaciones, la <Term id="promocion-condicional">promoción al siguiente grado con plan de nivelación</Term> y la
               evaluación basada en portafolios. El principio de no penalización debe aplicarse en tres
               niveles simultáneamente: a nivel individual, con ponderaciones diferentes para las
               calificaciones del periodo de crisis; a nivel institucional, con indicadores de desempeño
@@ -392,8 +388,8 @@ export default function PrimerMesPage() {
               sueño e irritabilidad persistente.
             </p>
             <p>
-              La guía de UNICEF Chile<Ref id="R-001" /> identifica la <strong>mentalización</strong> como
-              un factor protector fundamental. La capacidad de comprender los propios estados mentales y
+              La guía de UNICEF Chile<Ref id="R-001" /> identifica la <strong><Term id="mentalizacion">capacidad de comprender lo que uno mismo y los demás sienten</Term></strong> como
+              un <Term id="factores-protectores">factor que protege la salud mental</Term> fundamental. La capacidad de comprender los propios estados mentales y
               los de los estudiantes permite al docente responder de manera sensible en lugar de
               reaccionar impulsivamente ante comportamientos difíciles. Fortalecer esta capacidad requiere
               espacios seguros de reflexión, no simplemente una charla motivacional antes de volver al

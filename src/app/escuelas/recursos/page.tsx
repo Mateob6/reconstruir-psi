@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { SectionHeader, Callout, DataTable, Ref, KeyMessage, Stat, StatGrid, StickySectionNav } from "@/components/content";
+import { SectionHeader, Callout, DataTable, Ref, KeyMessage, Stat, StatGrid, StickySectionNav, Term } from "@/components/content";
 import { REFERENCES } from "@/data/references";
 
 export const metadata: Metadata = {
   title: "Recursos y Marco de Acción",
   description:
-    "Programas con evidencia (TRT, CBI), instrumentos de screening, marco normativo colombiano y guías internacionales.",
+    "Programas con evidencia (Teaching Recovery Techniques, Classroom-Based Intervention), instrumentos de tamizaje (screening), marco normativo colombiano y guías internacionales.",
 };
 
 export default function RecursosPage() {
@@ -22,14 +22,14 @@ export default function RecursosPage() {
           Recursos y Marco de Acción
         </h1>
         <p className="text-xl text-muted leading-relaxed max-w-3xl mb-12">
-          Programas con evidencia empírica, instrumentos de screening validados, el marco normativo colombiano para la respuesta psicosocial y las principales guías internacionales.
+          Programas con evidencia empírica, <Term id="tamizaje">instrumentos de tamizaje</Term> validados, el marco normativo colombiano para la <Term id="respuesta-psicosocial">respuesta psicosocial</Term> y las principales guías internacionales.
         </p>
 
         <StatGrid>
           <Stat value="6" label="Programas perfilados" />
           <Stat value="15" label="Guías internacionales" />
           <Stat value="7" label="Instrumentos legales" />
-          <Stat value="4" label="Tests de screening" />
+          <Stat value="4" label="Instrumentos de tamizaje" />
         </StatGrid>
       </header>
 
@@ -51,7 +51,7 @@ export default function RecursosPage() {
           <p>
             La revisión de la literatura permite identificar seis programas estructurados de
             intervención psicosocial escolar con distintos niveles de evidencia empírica. Todos
-            comparten un núcleo común de técnicas cognitivo-conductuales adaptadas para entornos
+            comparten un núcleo común de técnicas <Term id="cognitivo-conductuales">cognitivo-conductuales</Term> adaptadas para entornos
             grupales, pero difieren en la duración, el perfil del facilitador y la viabilidad de
             implementación en contextos como el colombiano.
           </p>
@@ -70,35 +70,35 @@ export default function RecursosPage() {
           />
 
           <p>
-            <strong>Teaching Recovery Techniques (TRT)</strong> consiste en cinco sesiones grupales
+            <Term id="trt"><strong>Teaching Recovery Techniques (TRT)</strong></Term> consiste en cinco sesiones grupales
             basadas en principios de la terapia cognitivo-conductual, diseñadas para niños, niñas y
             adolescentes de 8 a 18 años. Las evaluaciones más recientes le otorgan el nivel más alto
             de evidencia entre los 25 programas analizados por Avery et al. (2024)<Ref id="R-013" />, resultado
             confirmado de manera independiente por Cosgrove et al. (2025)<Ref id="R-012" />. El programa enseña
-            habilidades específicas para manejar memorias intrusivas, activación fisiológica y
-            conductas de evitación. Cuando se combina con un módulo de habilidades parentales, los
+            habilidades específicas para manejar <Term id="recuerdos-intrusivos">memorias intrusivas</Term>, <Term id="activacion">activación fisiológica</Term> y
+            <Term id="evitacion">conductas de evitación</Term>. Cuando se combina con un módulo de habilidades parentales, los
             resultados superan a los de TRT solo. El manual está disponible de forma gratuita en
             childrenandwar.org e incluye un componente de entrenamiento en línea<Ref id="R-031" />.
           </p>
 
           <p>
-            <strong>Classroom-Based Intervention (CBI)</strong>, desarrollado por UNICEF y War Child
+            <Term id="cbi"><strong>Classroom-Based Intervention (CBI)</strong></Term>, desarrollado por UNICEF y War Child
             Holland, se estructura en ocho sesiones grupales que integran terapia de juego, conciencia
             emocional, resolución de conflictos y aprendizaje cooperativo. Las sesiones oscilan entre
-            45 y 120 minutos, y el meta-análisis de Morina et al. (2017) reporta un tamaño de efecto
+            45 y 120 minutos, y el <Term id="meta-analisis">meta-análisis</Term> de Morina et al. (2017) reporta un <Term id="tamano-efecto">tamaño de efecto</Term>{" "}
             pre-post de <span className="stat-inline">g = 0,68</span> para intervenciones de aula de este tipo<Ref id="R-002" />.
           </p>
 
           <p>
-            <strong>CBITS (Cognitive Behavioral Intervention for Trauma in Schools)</strong> comprende
+            <Term id="cbits"><strong>CBITS (Cognitive Behavioral Intervention for Trauma in Schools)</strong></Term> comprende
             diez sesiones grupales desarrolladas por UCLA y RAND Corporation, dirigidas a población de
             10 a 15 años. El programa requiere facilitadores con formación clínica e incluye
-            psicoeducación, relajación, reestructuración cognitiva y exposición gradual. Su manual es
+            <Term id="psicoeducacion">psicoeducación</Term>, relajación, <Term id="reestructuracion-cognitiva">reestructuración cognitiva</Term> y <Term id="exposicion-gradual">exposición gradual</Term>. Su manual es
             comercial. Existe una variante para no clínicos denominada &quot;Trauma Healing Club&quot;.
           </p>
 
           <p>
-            <strong>ERASE-Stress</strong> es un programa entregado por docentes que recibió
+            <Term id="erase-stress"><strong>ERASE-Stress</strong></Term> es un programa entregado por docentes que recibió
             calificación de evidencia &quot;alta&quot; en la evaluación de Cosgrove et al. (2025)<Ref id="R-012" />. Sin
             embargo, un seguimiento a tres años reveló que los efectos no se sostuvieron en el
             tiempo, lo que subraya la necesidad de supervisión y acompañamiento continuos cuando son
@@ -106,8 +106,8 @@ export default function RecursosPage() {
           </p>
 
           <p>
-            <strong>SOLAR-Kids/Teens</strong> es un programa breve y escalable basado en un modelo de
-            &quot;tamizaje y tratamiento&quot; para síntomas moderados. Se encuentra aún en fase
+            <Term id="solar"><strong>SOLAR-Kids/Teens</strong></Term> es un programa breve y escalable basado en un modelo de
+            &quot;<Term id="tamizaje">tamizaje</Term> y tratamiento&quot; para síntomas moderados. Se encuentra aún en fase
             piloto y su efectividad a gran escala está por evaluarse.
           </p>
 
@@ -123,7 +123,7 @@ export default function RecursosPage() {
       <section id="screening" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
         <SectionHeader
           eyebrow="Evaluación"
-          title="Instrumentos de screening"
+          title="Instrumentos de tamizaje"
         />
         <div className="space-y-6 text-[15px] leading-relaxed text-muted mt-8">
           <p>
@@ -133,13 +133,13 @@ export default function RecursosPage() {
           </p>
 
           <p>
-            El <strong>CRIES</strong> (Children&apos;s Revised Impact of Event Scale) evalúa síntomas
-            de estrés postraumático mediante ítems de intrusión, evitación y activación. El{" "}
-            <strong>CPSS</strong> (Child PTSD Symptom Scale) ofrece una medida más detallada alineada
-            con los criterios diagnósticos del DSM. El <strong>UCLA PTSD Reaction Index</strong> es
+            El <Term id="cries"><strong>CRIES</strong> (Children&apos;s Revised Impact of Event Scale)</Term> evalúa síntomas
+            de <Term id="tept">estrés postraumático</Term> mediante ítems de intrusión, evitación y activación. El{" "}
+            <Term id="cpss"><strong>CPSS</strong> (Child PTSD Symptom Scale)</Term> ofrece una medida más detallada alineada
+            con los criterios diagnósticos del <Term id="dsm">DSM</Term>. El <Term id="ucla-ptsd-ri"><strong>UCLA PTSD Reaction Index</strong></Term> es
             uno de los más utilizados internacionalmente y dispone de versiones para distintos rangos
-            de edad. El <strong>Birleson CDI</strong> complementa la evaluación con una medida de
-            sintomatología depresiva.
+            de edad. El <strong>Birleson CDI</strong> (cuestionario de síntomas depresivos en niños) complementa la evaluación con una medida de
+            síntomas de depresión.
           </p>
 
           <p>
@@ -180,7 +180,7 @@ export default function RecursosPage() {
             headers={["Instrumento", "Año", "Alcance"]}
             rows={[
               [
-                <span key="1">MinSalud — Protocolo atención psicosocial <Ref id="R-027" /></span>,
+                <span key="1"><Term id="minsalud">MinSalud</Term> — Protocolo atención psicosocial <Ref id="R-027" /></span>,
                 "2016",
                 "Marco oficial para emergencias (Ley 1523/2012). Tres fases de respuesta, referencias a pueblos indígenas (Paez/Nasas)",
               ],
@@ -190,27 +190,27 @@ export default function RecursosPage() {
                 "Guía clínica validada en todas las regiones colombianas",
               ],
               [
-                <span key="3">MEN — Guía 59 (PEGR) <Ref id="R-105" /></span>,
+                <span key="3"><Term id="men">MEN</Term> — Guía 59 (<Term id="pegr">PEGR</Term>) <Ref id="R-105" /></span>,
                 "2015",
                 "Planes Escolares de Gestión del Riesgo",
               ],
               [
-                <span key="4">MEN — Resolución 006519 (GIRE) <Ref id="R-107" /></span>,
+                <span key="4">MEN — Resolución 006519 (<Term id="gire">GIRE</Term>) <Ref id="R-107" /></span>,
                 "2025",
-                "PEGR se transforma en PGIRE, amplía alcance a amenazas sociales y antrópicas",
+                "PEGR se transforma en PGIRE (Plan de Gestión Integral del Riesgo Escolar), amplía alcance a amenazas sociales y antrópicas (de origen humano)",
               ],
               [
                 <span key="5">MEN — Cuadernillo GIRE <Ref id="R-106" /></span>,
                 "2026",
-                "17 actividades socioemocionales + 3 momentos de gestión del riesgo",
+                "17 actividades para trabajar emociones y convivencia (socioemocionales) + 3 momentos de gestión del riesgo",
               ],
               [
-                <span key="6">PAPSIVI <Ref id="R-039" /></span>,
+                <span key="6"><Term id="papsivi">PAPSIVI</Term> <Ref id="R-039" /></span>,
                 "2019",
                 "Atención psicosocial para víctimas del conflicto — capacidad instalada transferible",
               ],
               [
-                <span key="7">UNGRD — Plan escolar <Ref id="R-108" /></span>,
+                <span key="7"><Term id="ungrd">UNGRD</Term> — Plan escolar <Ref id="R-108" /></span>,
                 "—",
                 "Guía para planes de gestión del riesgo escolar",
               ],

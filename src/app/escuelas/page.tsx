@@ -20,7 +20,7 @@ export default function EscuelasPage() {
           Reconstruir Psi
         </h1>
         <p className="text-xl md:text-2xl text-[var(--muted)] leading-relaxed max-w-3xl">
-          Marco de acción basado en evidencia para la respuesta psicosocial, la recuperación educativa y la seguridad escolar tras el sismo de agosto de 2026 en el suroccidente de Colombia.
+          Marco de acción basado en evidencia para el apoyo emocional y social, la recuperación educativa y la seguridad escolar tras el sismo de agosto de 2026 en el suroccidente de Colombia.
         </p>
         <div className="pt-4 max-w-3xl">
           <div className="p-6 rounded-2xl bg-[var(--surface-raised)] border border-[var(--border)] shadow-sm">
@@ -84,28 +84,28 @@ export default function EscuelasPage() {
                 num: '1',
                 title: 'Esta semana',
                 time: 'Días 1-7',
-                desc: 'Estabilización, PAP, seguridad física, reapertura',
+                desc: 'Estabilización, primeros auxilios psicológicos (PAP), seguridad física, reapertura',
                 href: '/escuelas/esta-semana'
               },
               {
                 num: '2',
                 title: 'Primer mes',
                 time: 'Semanas 2-8',
-                desc: 'Modelo escalonado, capacitación docente, adaptación curricular',
+                desc: 'Atención por niveles de necesidad, capacitación docente, adaptación del plan de estudios',
                 href: '/escuelas/primer-mes'
               },
               {
                 num: '3',
                 title: 'Primer semestre',
                 time: 'Meses 2-6',
-                desc: 'Recuperación de aprendizajes, tutoría, marco RAPID',
+                desc: 'Recuperación de aprendizajes, tutoría, plan de recuperación RAPID',
                 href: '/escuelas/primer-semestre'
               },
               {
                 num: '4',
                 title: 'Largo plazo',
                 time: 'Año 1+',
-                desc: 'Escuelas seguras, CSSF, resiliencia institucional',
+                desc: 'Escuelas seguras, Marco de Seguridad Escolar (CSSF), capacidad de recuperación institucional',
                 href: '/escuelas/largo-plazo'
               }
             ].map((phase, i) => (
@@ -146,7 +146,7 @@ export default function EscuelasPage() {
             <svg className="w-6 h-6 text-[var(--muted)] group-hover:text-[var(--accent)] mb-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             <h3 className="text-lg font-medium text-[var(--foreground)] mb-2">Evidencia</h3>
             <p className="text-[15px] text-[var(--muted)] leading-relaxed">
-              Revisiones sistemáticas, meta-análisis y tamaños de efecto.
+              Análisis de toda la investigación disponible, resultados combinados y medidas de efectividad.
             </p>
           </Link>
 
@@ -154,7 +154,7 @@ export default function EscuelasPage() {
             <svg className="w-6 h-6 text-[var(--muted)] group-hover:text-[var(--accent)] mb-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13H8"/><path d="M16 17H8"/><path d="M16 13h-2"/></svg>
             <h3 className="text-lg font-medium text-[var(--foreground)] mb-2">Recursos</h3>
             <p className="text-[15px] text-[var(--muted)] leading-relaxed">
-              Marcos normativos, guías de evaluación y herramientas.
+              Leyes y normas aplicables, guías de evaluación y herramientas.
             </p>
           </Link>
 

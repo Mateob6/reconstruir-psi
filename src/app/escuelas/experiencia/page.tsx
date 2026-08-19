@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SectionHeader, Callout, KeyMessage, Ref, CaseCard, Stat, StatGrid, StickySectionNav } from "@/components/content";
+import { SectionHeader, Callout, KeyMessage, Ref, CaseCard, Stat, StatGrid, StickySectionNav, Term } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Experiencia internacional",
@@ -26,8 +26,8 @@ export default function ExperienciaPage() {
 
         <StatGrid>
           <Stat value="5" label="Casos de estudio" />
-          <Stat value="8,800" label="NNA evaluados (Kobe)" />
-          <Stat value="15k" label="TLS desplegados (Nepal)" />
+          <Stat value="8,800" label="niños y adolescentes evaluados (Kobe)" />
+          <Stat value="15k" label="centros de aprendizaje temporal desplegados (Nepal)" />
           <Stat value="82%" label="Recuperación resiliente" />
         </StatGrid>
       </header>
@@ -52,34 +52,33 @@ export default function ExperienciaPage() {
             year={2010}
             magnitude="M8.8"
             deaths="~525"
-            lesson="La mentalización como factor protector central y herramienta terapéutica"
+            lesson="La mentalización (comprender estados emocionales propios y ajenos) como condición que protege la salud mental"
           />
           <p>
             El terremoto del 27 de febrero de 2010 en Chile, uno de los más potentes registrados a
-            nivel global, dio lugar a una respuesta psicosocial escolar que priorizó un concepto poco
+            nivel global, dio lugar a una <Term id="respuesta-psicosocial">respuesta de apoyo emocional y social</Term> escolar que priorizó un concepto poco
             frecuente en la literatura de emergencias: la <strong>mentalización</strong>. La guía
             publicada por UNICEF Chile posicionó la capacidad de reflexionar sobre los propios estados
             mentales y los de otras personas como factor protector central y como herramienta
-            terapéutica, desplazando el énfasis habitual en las técnicas conductuales<Ref id="R-001" />.
+            terapéutica, desplazando el énfasis habitual en las técnicas enfocadas en modificar comportamientos<Ref id="R-001" />.
           </p>
 
           <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Resultados del programa escolar</h3>
           <p>
             Un programa escolar rural implementado durante ocho meses evaluó a 33 niños, niñas y
             adolescentes con la participación de 11 docentes capacitados. Los resultados cuestionaron
-            supuestos frecuentes sobre la prevalencia del trauma post-desastre: solo
+            supuestos frecuentes sobre la proporción de casos de trauma post-desastre: solo
             el <span className="stat-inline">9%</span> de los participantes cumplió criterios formales
-            de trastorno de estrés postraumático. Los diagnósticos más frecuentes fueron trastorno por
-            déficit de atención e hiperactividad (<span className="stat-inline">33%</span>) y
-            trastornos adaptativos (<span className="stat-inline">24%</span>), lo que sugiere que las
+            de <Term id="tept">trastorno de estrés postraumático</Term>. Los diagnósticos más frecuentes fueron <Term id="tdah">trastorno por
+            déficit de atención e hiperactividad</Term> (<span className="stat-inline">33%</span>) y
+            <Term id="trastornos-ajuste">dificultades emocionales de adaptación</Term> (trastornos adaptativos) (<span className="stat-inline">24%</span>), lo que sugiere que las
             dificultades preexistentes pueden amplificarse tras un sismo sin constituir necesariamente
-            patología traumática<Ref id="R-021" />.
+            <Term id="patologia-traumatica">enfermedad causada por el trauma</Term><Ref id="R-021" />.
           </p>
           <p>
             La evaluación de los docentes arrojó un dato relevante para la implementación:
             el <span className="stat-inline">91%</span> calificó las técnicas de relajación
-            como &quot;útiles&quot;, lo que indica que las herramientas de regulación
-            fisiológica son las que los docentes adoptan con mayor facilidad y confianza, aun sin
+            como &quot;útiles&quot;, lo que indica que las técnicas para calmar el cuerpo (como respiración y relajación) son las que los docentes adoptan con mayor facilidad y confianza, aun sin
             formación clínica previa<Ref id="R-021" />.
           </p>
         </div>
@@ -94,7 +93,7 @@ export default function ExperienciaPage() {
             magnitude="M7.2"
             deaths="~6,400"
             schools="~4,000"
-            lesson="Estudio longitudinal de referencia: 8,800 NNA evaluados en 4 momentos"
+            lesson="Seguimiento de 8,800 niños y adolescentes en 4 momentos durante 2 años"
           />
           <p>
             El terremoto de Kobe del 17 de enero de 1995 generó una de las bases de evidencia
@@ -147,22 +146,21 @@ export default function ExperienciaPage() {
             magnitude="M7.5"
             deaths="4,340"
             schools="1,299"
-            lesson="Prácticas culturales locales como mecanismos de afrontamiento colectivo"
+            lesson="Prácticas culturales como estrategias colectivas para manejar el trauma"
           />
           <p>
             El terremoto y tsunami de Sulawesi Central en septiembre de 2018
             causó <span className="stat-inline">4,340</span> muertes y daños
             en <span className="stat-inline">1,299</span> escuelas<Ref id="R-086" />. Un estudio con 40
             docentes documentó cómo, ante la insuficiencia de protocolos formales, los maestros
-            recurrieron espontáneamente a prácticas culturales locales como mecanismos de
-            afrontamiento colectivo.
+            recurrieron espontáneamente a prácticas culturales locales como <Term id="afrontamiento">estrategias colectivas para manejar el trauma</Term>.
           </p>
           <p>
             Tres prácticas resultaron centrales. El <strong>gotong royong</strong>, una tradición de
             cooperación mutua arraigada en las comunidades indonesias, facilitó la reconstrucción de
             espacios educativos provisionales y la redistribución de recursos entre familias afectadas.
             La <strong>tutura</strong>, una práctica de narración oral tradicional, ofreció a los niños
-            un marco culturalmente familiar para elaborar la experiencia traumática sin recurrir a
+            un marco culturalmente familiar para <Term id="elaboracion-trauma">procesar y dar sentido a la experiencia traumática</Term> sin recurrir a
             protocolos clínicos importados. La religiosidad proporcionó marcos de sentido compartidos
             que permitieron a las comunidades integrar el evento dentro de sistemas de creencias
             preexistentes.
@@ -187,7 +185,7 @@ export default function ExperienciaPage() {
             year={1999}
             magnitude="M6.2"
             deaths="~1,200"
-            lesson="PAPSIVI como capacidad instalada transferible del conflicto armado"
+            lesson="PAPSIVI (Programa de Atención Psicosocial a Víctimas) como recurso institucional activable"
           />
           <p>
             El terremoto del 25 de enero de 1999, con epicentro en el Eje Cafetero,
@@ -206,9 +204,9 @@ export default function ExperienciaPage() {
             no subordinados a los protocolos técnicos.
           </p>
           <p>
-            La infraestructura del <strong>PAPSIVI</strong> (Programa de Atención Psicosocial y Salud
+            La infraestructura del <strong><Term id="papsivi">PAPSIVI</Term></strong> (Programa de Atención Psicosocial y Salud
             Integral a Víctimas), construida a lo largo de décadas de conflicto armado, representa una
-            capacidad instalada que diferencia a Colombia de otros países afectados por desastres
+            <Term id="capacidad-instalada">recursos ya disponibles</Term> que diferencia a Colombia de otros países afectados por desastres
             naturales. Los profesionales formados en atención psicosocial comunitaria, las redes
             territoriales y los protocolos de adaptación cultural constituyen recursos activables para
             la respuesta al terremoto de 2026<Ref id="R-039" />.
@@ -224,8 +222,8 @@ export default function ExperienciaPage() {
             year={2015}
             magnitude="M7.8"
             deaths="~8,900"
-            schools="15,000 TLS"
-            lesson="Centros transicionales desplegados en un mes; retraso aumenta deserción"
+            schools="15,000 centros de aprendizaje temporal"
+            lesson="Centros transicionales desplegados en un mes; retraso aumenta abandono escolar"
           />
           <p>
             El terremoto de abril de 2015 en Nepal interrumpió la educación de <span className="stat-inline">un
@@ -246,7 +244,7 @@ export default function ExperienciaPage() {
           <p>
             Los datos de Nepal también documentan las consecuencias de la demora. El rendimiento
             académico cayó un <span className="stat-inline">7%</span> en las zonas afectadas, y las
-            interrupciones prolongadas incrementaron significativamente la probabilidad de deserción,
+            interrupciones prolongadas incrementaron significativamente la probabilidad de abandono escolar,
             especialmente entre las niñas y los estudiantes de hogares con menores
             ingresos<Ref id="R-113" also={["R-121"]} />.
           </p>
@@ -275,13 +273,13 @@ export default function ExperienciaPage() {
             La experiencia ecuatoriana demostró que la integración de las dimensiones educativa y
             emocional dentro de una misma estrategia resulta más efectiva que abordarlas como acciones
             separadas, un principio consistente con la evidencia de Nepal y con las recomendaciones
-            del <strong>Marco Integral de Seguridad Escolar</strong> (CSSF 2022-2030).
+            del <strong>Marco Integral de Seguridad Escolar</strong> (<Term id="cssf">Marco de Seguridad Escolar</Term>, CSSF, 2022-2030).
           </p>
         </div>
       </section>
 
       <section id="trayectorias" style={{ scrollMarginTop: "150px" }} className="py-8 border-t border-[var(--border)]">
-        <SectionHeader eyebrow="Síntesis" title="Trayectorias de recuperación" />
+        <SectionHeader eyebrow="Síntesis" title="Trayectorias de recuperación: cómo evolucionan los síntomas" />
         <div className="space-y-6 text-[15px] leading-relaxed text-muted mt-8">
           <p>
             La revisión de Witt y colaboradores (2024) sintetizó 15 estudios longitudinales
@@ -296,14 +294,14 @@ export default function ExperienciaPage() {
             La trayectoria de <strong>recuperación</strong> mostró síntomas iniciales elevados que
             disminuyeron progresivamente. La trayectoria <strong>crónica</strong> se caracterizó por
             síntomas persistentemente altos, y la trayectoria de <strong>aparición tardía</strong> por
-            síntomas que emergieron después de un periodo inicial asintomático.
+            síntomas que emergieron después de un periodo inicial sin síntomas visibles.
           </p>
           <p>
             Tomadas en conjunto, las trayectorias resilientes y de recuperación representan entre
             el <span className="stat-inline">51%</span> y
             el <span className="stat-inline">97%</span> de las muestras estudiadas, lo que confirma
             que la mayoría de los niños y niñas se recuperará con un apoyo ambiental adecuado,
-            correspondiente a los niveles 1 y 2 de la pirámide IASC. El desarrollo más dinámico ocurre
+            correspondiente a los niveles 1 y 2 de la <Term id="piramide-iasc">pirámide de niveles de atención</Term>. El desarrollo más dinámico ocurre
             durante los primeros 12 meses, lo que define la ventana de intervención más
             productiva<Ref id="R-050" />.
           </p>

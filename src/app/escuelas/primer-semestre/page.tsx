@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { 
-  SectionHeader, 
-  Callout, 
-  KeyMessage, 
-  Ref, 
-  StepCards, 
-  Stat, 
-  StatGrid, 
-  StickySectionNav, 
-  EffectBar, 
-  EffectBarList 
+import {
+  SectionHeader,
+  Callout,
+  KeyMessage,
+  Ref,
+  StepCards,
+  Stat,
+  StatGrid,
+  StickySectionNav,
+  EffectBar,
+  EffectBarList,
+  Term
 } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Primer semestre",
   description:
-    "Recuperación de aprendizajes, tutoría de alta dosis, marco RAPID del Banco Mundial y evaluación formativa post-terremoto.",
+    "Recuperación de aprendizajes, tutoría intensiva en grupos pequeños, plan de recuperación RAPID y evaluación para guiar la enseñanza post-terremoto.",
 };
 
 export default function PrimerSemestrePage() {
@@ -31,7 +32,7 @@ export default function PrimerSemestrePage() {
           <Stat value="1.1 años" label="Pérdida por 1 año de cierre" />
           <Stat value="~⅔ año" label="Recupera tutoría en mate" />
           <Stat value="7%" label="Caída rendimiento Nepal" />
-          <Stat value="$48M" label="USD redirigidos por MEN" />
+          <Stat value="$48M" label="USD redirigidos por el Ministerio de Educación (MEN)" />
         </StatGrid>
       </header>
 
@@ -98,8 +99,8 @@ export default function PrimerSemestrePage() {
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
               Entre las estrategias de recuperación de aprendizajes con mayor respaldo empírico se
-              encuentra la <strong>tutoría de alta dosis</strong>. Un meta-análisis que
-              integró <span className="stat-inline">96</span> ensayos controlados aleatorizados encontró
+              encuentra el <strong><Term id="tutoria-alta-dosis">refuerzo intensivo en grupos pequeños</Term></strong>. Un <Term id="meta-analisis">estudio que combinó múltiples investigaciones</Term> que
+              integró <span className="stat-inline">96</span> <Term id="eca">estudios experimentales con grupo de comparación</Term> encontró
               que esta modalidad permite recuperar
               aproximadamente <span className="stat-inline">dos tercios</span> de un año escolar en
               matemáticas<Ref id="R-124" />.
@@ -115,7 +116,7 @@ export default function PrimerSemestrePage() {
 
             <Callout type="info" title="Infraestructura existente en Colombia">
               <p>
-                El <strong>Programa Todos a Aprender (PTA)</strong> del MEN Colombia ofrece
+                El <strong><Term id="pta">Programa Todos a Aprender</Term> (PTA)</strong> del Ministerio de Educación Nacional de Colombia ofrece
                 infraestructura existente para implementar tutoría de alta dosis. Cuenta con tutores
                 formados, mecanismos de articulación con las instituciones educativas y experiencia
                 acumulada en acompañamiento pedagógico situado<Ref id="R-116" />.
@@ -125,7 +126,7 @@ export default function PrimerSemestrePage() {
         </section>
 
         <section id="rapid" className="scroll-mt-[120px] border-t border-border py-16">
-          <SectionHeader eyebrow="Marco del Banco Mundial" title="Marco RAPID" />
+          <SectionHeader eyebrow="Marco del Banco Mundial" title="Marco RAPID — plan de recuperación educativa" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
               El Banco Mundial propuso el marco <strong>RAPID</strong> como guía para la recuperación de
@@ -140,8 +141,8 @@ export default function PrimerSemestrePage() {
               { num: 1, title: "R", subtitle: "Reach — Alcanzar", description: "Asegurar que cada estudiante regrese al sistema educativo" },
               { num: 2, title: "A", subtitle: "Assess — Evaluar", description: "Evaluación diagnóstica de los niveles reales de aprendizaje" },
               { num: 3, title: "P", subtitle: "Prioritize — Priorizar", description: "Focalizar en competencias fundamentales de lectura y matemáticas" },
-              { num: 4, title: "I", subtitle: "Increase — Eficiencia", description: "Pedagogía estructurada, instrucción diferenciada, optimización del tiempo" },
-              { num: 5, title: "D", subtitle: "Develop — Psicosocial", description: "Integrar aprendizaje socioemocional transversalmente" },
+              { num: 4, title: "I", subtitle: "Increase — Eficiencia", description: "Enseñanza paso a paso con materiales definidos (pedagogía estructurada), enseñanza adaptada al nivel de cada grupo (instrucción diferenciada), optimización del tiempo" },
+              { num: 5, title: "D", subtitle: "Develop — Psicosocial", description: "Integrar actividades para manejar emociones y convivir (aprendizaje socioemocional) transversalmente" },
             ]} />
           </div>
 
@@ -153,8 +154,8 @@ export default function PrimerSemestrePage() {
             </p>
             <p>
               <strong>Assess</strong> (Evaluar) establece la evaluación diagnóstica de los niveles reales
-              de aprendizaje como segundo paso obligatorio. Las <strong>evaluaciones tipo ASER</strong>,
-              rápidas, de bajo costo e individuales, permiten identificar el punto de partida real sin
+              de aprendizaje como segundo paso obligatorio. Las <strong><Term id="aser">evaluaciones rápidas de lectura y matemáticas</Term> (tipo ASER)</strong>,
+              de bajo costo e individuales, permiten identificar el punto de partida real sin
               asumir que el currículo previo al desastre fue completamente asimilado.
             </p>
             <p>
@@ -164,8 +165,8 @@ export default function PrimerSemestrePage() {
               bases, el currículo se expande progresivamente.
             </p>
             <p>
-              <strong>Increase efficiency</strong> (Aumentar la eficiencia) apela a la pedagogía
-              estructurada, la optimización del tiempo de aprendizaje y la instrucción diferenciada.
+              <strong>Increase efficiency</strong> (Aumentar la eficiencia) apela a la enseñanza paso a paso
+              con materiales definidos, la optimización del tiempo de aprendizaje y la enseñanza adaptada al nivel de cada grupo.
             </p>
             <p>
               <strong>Develop psychosocial health</strong> (Desarrollar la salud psicosocial) integra el
@@ -177,11 +178,11 @@ export default function PrimerSemestrePage() {
         </section>
 
         <section id="acelerada" className="scroll-mt-[120px] border-t border-border py-16">
-          <SectionHeader eyebrow="Programa AEWG" title="Educación acelerada" />
+          <SectionHeader eyebrow="Educación acelerada (AEWG)" title="Educación acelerada" />
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
-              El Grupo de Trabajo de <strong>Educación Acelerada</strong> (AEWG), coordinado por ACNUR y
-              UNGEI, ha formulado diez principios para programas diseñados para estudiantes que han
+              El Grupo de Trabajo de <strong>Educación Acelerada</strong> (AEWG), coordinado por la <Term id="acnur">Agencia de la ONU para los Refugiados</Term> y
+              la <Term id="ungei">Iniciativa de la ONU para la Educación de las Niñas</Term>, ha formulado diez principios para programas diseñados para estudiantes que han
               perdido periodos significativos de escolaridad. A diferencia de lo que sugiere el nombre,
               no consiste en avanzar más rápido, sino en concentrar los esfuerzos en lo que resulta más
               relevante con mayor eficiencia pedagógica<Ref id="R-102" />.
@@ -200,22 +201,22 @@ export default function PrimerSemestrePage() {
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
               Más allá de las adaptaciones inmediatas del primer mes, el primer semestre requiere una
-              transformación más profunda de la práctica pedagógica. La integración del <strong>aprendizaje
-              socioemocional (SEL)</strong> fue identificada como uno de los tres principales factores de
+              transformación más profunda de la práctica pedagógica. La integración del <strong><Term id="sel">aprendizaje
+              socioemocional</Term> (SEL)</strong> fue identificada como uno de los tres principales factores de
               éxito en las experiencias educativas post-desastre, presente en
               el <span className="stat-inline">32%</span> de los casos exitosos documentados, junto con
               el uso de medios de aprendizaje innovadores y la participación de la
               comunidad<Ref id="R-089" />.
             </p>
             <p>
-              El <strong>Cuadernillo GIRE</strong> del Ministerio de Educación Nacional ofrece 17
+              El <strong>Cuadernillo <Term id="gire">GIRE</Term></strong> (Guía de Gestión del Riesgo Escolar) del Ministerio de Educación Nacional ofrece 17
               actividades prácticas de aprendizaje socioemocional organizadas en su Componente 2. Estas
               actividades cubren un espectro que va desde la identificación de emociones hasta la
               conexión con objetos significativos, pasando por el manejo del estrés, la escucha activa y
               la resolución de problemas<Ref id="R-106" />.
             </p>
             <p>
-              El Pilar 3 del <strong>CSSF</strong> aboga por incorporar la educación sobre reducción del
+              El Pilar 3 del <strong><Term id="cssf">Marco Integral de Seguridad Escolar</Term> (CSSF)</strong> aboga por incorporar la educación sobre reducción del
               riesgo de desastres en el currículo formal y no formal<Ref id="R-101" />. La experiencia
               chilena demostró que enseñar sobre los terremotos a partir de la vivencia directa de los
               estudiantes facilita simultáneamente la comprensión científica del fenómeno y el
@@ -229,21 +230,21 @@ export default function PrimerSemestrePage() {
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-3xl">
             <p>
               El enfoque evaluativo durante el primer semestre posterior al desastre debe privilegiar la
-              función formativa sobre la sumativa. Las <strong>evaluaciones tipo ASER</strong>, diseñadas
+              <Term id="evaluacion-formativa">evaluación para guiar la enseñanza</Term> (formativa) sobre la que <Term id="evaluacion-sumativa">califica</Term> (sumativa). Las <strong>evaluaciones tipo ASER</strong>, diseñadas
               para ser rápidas, de bajo costo e individuales, permiten valorar competencias fundamentales
               en pocos minutos por estudiante sin la carga logística de las pruebas convencionales.
             </p>
 
             <h3>Calendario de evaluación</h3>
             <p>
-              El calendario de evaluación diagnóstica debe alinearse con la evidencia sobre trayectorias
-              de recuperación: evaluaciones al mes, a los 3 meses, a los 6 meses y al año del evento
+              El calendario de evaluación diagnóstica debe alinearse con la evidencia sobre los <Term id="trayectorias-recuperacion">caminos que sigue la recuperación</Term>:
+              evaluaciones al mes, a los 3 meses, a los 6 meses y al año del evento
               permiten rastrear tanto las trayectorias crónicas como las de aparición tardía.
             </p>
             <p>
               Las lecciones de la pospandemia sugieren estrategias concretas adaptables al contexto
-              post-terremoto: flexibilización de las calificaciones, <strong>promoción condicional
-              automática</strong> y evaluación basada en portafolios demostraron ser mecanismos efectivos
+              post-terremoto: flexibilización de las calificaciones, <strong><Term id="promocion-condicional">pasar al siguiente grado con compromisos de nivelación</Term> (promoción condicional
+              automática)</strong> y evaluación basada en portafolios demostraron ser mecanismos efectivos
               para mantener la continuidad educativa sin penalizar a los estudiantes por circunstancias
               fuera de su control.
             </p>
@@ -252,10 +253,10 @@ export default function PrimerSemestrePage() {
             <p>
               El terremoto puede generar necesidades educativas que no existían antes del evento.
               Dificultades de concentración, problemas de memoria, disminución de la motivación y
-              conductas de evitación pueden manifestarse en el aula como bajo rendimiento cuando en
+              <Term id="evitacion">conductas de evitación</Term> (negarse a entrar al salón o evitar temas que recuerdan el terremoto) pueden manifestarse en el aula como bajo rendimiento cuando en
               realidad reflejan secuelas psicológicas. Los docentes necesitan orientación clara para
-              distinguir cuándo un estudiante necesita un ajuste pedagógico y cuándo requiere derivación
-              a un profesional de salud mental.
+              distinguir cuándo un estudiante necesita un ajuste pedagógico y cuándo requiere <Term id="remision">derivación
+              a un profesional</Term> de salud mental.
             </p>
 
             <Callout type="warning" title="Evaluar antes de enseñar">
