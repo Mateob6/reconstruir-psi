@@ -102,5 +102,18 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 | B1 | Presentación de texto (strong, h3, KeyMessage, stat-inline) | Completada |
 | B2 | Componentes visuales (Pyramid, HBar, CaseCard, Timeline, StepCards) | Completada |
 | C | Enlaces descargables (DOIs + URLs en Recursos) | Completada |
+| Niveles | Diferenciación por nivel educativo (preescolar/primaria/secundaria) | Completada |
+| Paleta | Carmesí Univalle (#9B1B30) reemplaza teal | Completada |
+| Auditoría | Corregir atribuciones (R-021↔R-086 swap, R-008, R-113) + moderar lenguaje | Completada |
+| UX | Trazabilidad KPIs, subtítulo ampliado, CTA fases | Completada |
 | W3 | Área Trabajo (revisión de literatura + contenido) | Descartada |
 | W6 | Iteración y pulido (Accesibilidad, logos, copy, pedagogía) | Completada |
+
+## Notas de auditoría
+
+- R-021 = Chile (Sommera 2013, 33 NNA, 9% TEPT). R-086 = Indonesia (Parrott 2025, 40 docentes)
+- R-008 = Coombe 2015 (teacher-mediated SR, 18 intervenciones). No confundir con R-021
+- R-113 = Nepal 7% caída rendimiento (earthquake exposure schooling). R-121 = ADB blog (15,000 TLS)
+- Japón "4,000 escuelas" y "42.5%→100%" atribuidos a R-079 pero Uemoto es sobre TEPT, no infraestructura — pendiente fuente correcta
+- g = −2.60 (no especialistas) tiene IC amplio: −4.88 a −0.32, I² = 97.77%
+- Sección "Colombia cumple moderadores" removida de Evidencia por ser interpretación especulativa
