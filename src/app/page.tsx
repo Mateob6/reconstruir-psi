@@ -3,6 +3,21 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 space-y-24">
+      {/* Logos institucionales */}
+      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <a href="https://www.univalle.edu.co/" target="_blank" rel="noreferrer" className="hover:scale-105 transition-transform">
+          <img src="/logos/logo1.png" alt="Universidad del Valle" className="h-16 md:h-20 w-auto object-contain" />
+        </a>
+        <div className="hidden md:block w-px h-12 bg-[var(--border)]" />
+        <a href="https://psicologia.univalle.edu.co/" target="_blank" rel="noreferrer" className="hover:scale-105 transition-transform">
+          <img src="/logos/logo2.png" alt="Facultad de Psicología" className="h-16 md:h-20 w-auto object-contain" />
+        </a>
+        <div className="hidden md:block w-px h-12 bg-[var(--border)]" />
+        <a href="https://psicologia.univalle.edu.co/?id=834" target="_blank" rel="noreferrer" className="hover:scale-105 transition-transform">
+          <span className="font-bold text-2xl md:text-3xl tracking-widest text-[var(--accent)]">CIDEAS</span>
+        </a>
+      </div>
+
       {/* Above the fold: Hero + Card */}
       <div className="grid gap-12 lg:grid-cols-[1fr_400px] lg:items-start">
         {/* Hero */}
@@ -104,16 +119,7 @@ export default function HomePage() {
       </section>
 
       {/* Autoría */}
-      <section className="max-w-3xl border-t border-[var(--border)] pt-10 space-y-6">
-        <div className="flex items-center gap-6">
-          <a href="https://www.univalle.edu.co/" target="_blank" rel="noreferrer" title="Universidad del Valle">
-            <img src="/logos/logo1.png" alt="Universidad del Valle" className="h-16 w-auto object-contain" />
-          </a>
-          <div className="h-10 w-px bg-[var(--border)]" />
-          <a href="https://psicologia.univalle.edu.co/" target="_blank" rel="noreferrer" title="Facultad de Psicología">
-            <img src="/logos/logo2.png" alt="Facultad de Psicología" className="h-16 w-auto object-contain" />
-          </a>
-        </div>
+      <section className="max-w-3xl border-t border-[var(--border)] pt-10">
         <p className="text-sm text-[var(--muted)] leading-relaxed">
           Elaborado por <strong className="text-[var(--foreground)]">Mateo Belalcázar Correa</strong> (MSc),
           CIDEAS, Facultad de Psicología, Universidad del Valle. Revisión de alcance rápida conducida
