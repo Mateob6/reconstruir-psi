@@ -11,7 +11,8 @@ Plataforma de guías basadas en evidencia para la recuperación post-terremoto e
 
 - Next.js 16 + React 19 + TypeScript (static export)
 - Tailwind CSS v4 (tokens semánticos via `@theme inline`, sin tailwind.config)
-- Vercel (hosting estático, deploy automático con cada push a main)
+- Vercel (hosting estático, deploy automático con cada push a main, redirects en vercel.json)
+- Vercel Analytics + Speed Insights (zero cookies, GDPR compliant)
 - Paleta carmesí Univalle (#9B1B30) + warm cream/stone
 
 ## Desarrollo
@@ -37,7 +38,7 @@ git push         # trigger deploy en Vercel
 src/
 ├── app/
 │   ├── globals.css              ← tokens carmesí/cream/stone + .stat-inline
-│   ├── layout.tsx               ← Header + TopTimeline + FloatingNav + Footer
+│   ├── layout.tsx               ← Header + TopTimeline + FloatingNav + Footer + Analytics + SpeedInsights
 │   ├── page.tsx                 ← HOME: logos + hero horizontal + card Educación + autoría
 │   ├── icon.svg                 ← favicon ψ carmesí
 │   ├── opengraph-image.tsx      ← OG image 1200×630
@@ -56,10 +57,11 @@ src/
 │   └── acerca/                  ← metodología, autoría, logos institucionales
 ├── components/
 │   ├── ui/                      ← Card, Badge, Button, cn
-│   ├── layout/                  ← Header, TopTimeline, FloatingNav, Footer, ThemeToggle
+│   ├── layout/                  ← Header, TopTimeline, FloatingNav, Footer, ThemeToggle, ScrollTracker, ExternalLinkTracker
 │   └── content/                 ← ver componentes abajo
 └── data/
-    └── references.ts            ← 128 refs extraídas de revision.json
+    ├── references.ts            ← 128 refs extraídas de revision.json
+    └── glossary.ts              ← ~99 entradas de glosario contextual
 ```
 
 ## Componentes de contenido
@@ -82,6 +84,7 @@ src/
 | `LevelTabs` | Tabs preescolar/primaria/secundaria |
 | `Accordion` | Secciones expandibles |
 | `GridCards` | Grid de cards enlazables |
+| `Term` | Glosario contextual: popover con definición al click (subrayado punteado) |
 
 ## Contenido fuente
 
@@ -111,6 +114,8 @@ Las 13 síntesis temáticas en `~/Desktop/Proyectos/ayuda-terremoto/sintesis/` a
 | Nav | Reestructurar: header → áreas, FloatingNav → sección, FAB mobile | Completada |
 | W6 | Iteración y pulido (Accesibilidad, logos, copy, pedagogía) | Completada |
 | Glosario | Sistema de glosario contextual: ~99 entradas, componente Term con popover | Completada |
+| Rename | Escuelas → Educación: URLs, nav, metadata, redirects 301 en vercel.json | Completada |
+| Analytics | Vercel Analytics + Speed Insights + 6 custom events de interacción | Completada |
 
 ## Sistema de glosario
 
@@ -137,6 +142,25 @@ Componente `<Term>` que hace accesibles los términos técnicos para público no
 4. Términos auto-explicados: solo envolver en `<Term>` sin reescribir
 
 **Categorías:** siglas institucionales, marcos/frameworks, términos clínicos, estadísticos, programas/intervenciones, instrumentos de evaluación, pedagógicos, normativa.
+
+## Analytics
+
+Vercel Analytics + Speed Insights habilitados. Zero cookies, GDPR compliant. Dashboard en Vercel > Analytics.
+
+**Custom events** (via `track()` de `@vercel/analytics`):
+
+| Evento | Componente | Propiedades |
+|--------|-----------|-------------|
+| `tab_switch` | LevelTabs | `{ tab }` |
+| `glossary_open` | Term | `{ term }` |
+| `accordion_expand` | Accordion | `{ title }` |
+| `nav_click` | FloatingNav (mobile) | `{ label }` |
+| `scroll_depth` | ScrollTracker | `{ depth, page }` |
+| `external_link` | ExternalLinkTracker | `{ url, page }` |
+
+**Componentes de tracking** (en `src/components/layout/`):
+- `scroll-tracker.tsx` — milestones 25/50/75/100% por página
+- `external-link-tracker.tsx` — clicks en enlaces externos (DOIs, recursos)
 
 ## Notas de auditoría
 
