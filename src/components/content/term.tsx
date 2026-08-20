@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import type { ReactNode, CSSProperties } from 'react'
+import { track } from '@vercel/analytics'
 import { glossary } from '@/data/glossary'
 
 interface TermProps {
@@ -77,7 +78,10 @@ export function Term({ id, children }: TermProps) {
 
   if (!entry) return <>{children}</>
 
-  const toggle = () => setOpen(prev => !prev)
+  const toggle = () => {
+    if (!open) track("glossary_open", { term: id })
+    setOpen(prev => !prev)
+  }
 
   const triggerClass =
     'cursor-help underline decoration-dotted underline-offset-2 decoration-current/40'

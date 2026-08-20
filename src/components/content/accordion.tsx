@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { cn } from "@/components/ui/cn";
 
 interface AccordionItem {
@@ -16,6 +17,7 @@ export function Accordion({ items }: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
+    if (openIndex !== index) track("accordion_expand", { title: items[index].title });
     setOpenIndex(openIndex === index ? null : index);
   };
 

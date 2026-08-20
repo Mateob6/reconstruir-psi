@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { cn } from "@/components/ui/cn";
 
 interface NavItem {
@@ -94,7 +95,7 @@ export function FloatingNav() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      onClick={() => setOpen(false)}
+                      onClick={() => { track("nav_click", { label: item.label }); setOpen(false); }}
                       className={cn(
                         "flex items-center gap-3 rounded-xl px-4 py-3 text-base transition-colors",
                         active

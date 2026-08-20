@@ -4,6 +4,10 @@ import { Header } from "@/components/layout/header";
 import { TopTimeline } from "@/components/layout/top-timeline";
 import { FloatingNav } from "@/components/layout/floating-nav";
 import { Footer } from "@/components/layout/footer";
+import { ScrollTracker } from "@/components/layout/scroll-tracker";
+import { ExternalLinkTracker } from "@/components/layout/external-link-tracker";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -62,6 +66,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1 w-full mx-auto p-4 md:p-6 lg:p-8">{children}</main>
         <FloatingNav />
         <Footer />
+        <ScrollTracker />
+        <ExternalLinkTracker />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

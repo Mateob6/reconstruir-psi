@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import { track } from "@vercel/analytics";
 import { cn } from "@/components/ui/cn";
 
 const TABS = [
@@ -22,7 +23,7 @@ export function LevelTabs({ children }: LevelTabsProps) {
         {TABS.map((tab) => (
           <button
             key={tab.id}
-            onClick={() => setActive(tab.id)}
+            onClick={() => { setActive(tab.id); track("tab_switch", { tab: tab.label }); }}
             className={cn(
               "flex flex-1 flex-col items-center gap-0.5 px-3 py-3 text-center transition-colors",
               active === tab.id
