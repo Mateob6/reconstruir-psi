@@ -12,6 +12,10 @@ const NAV_LINKS: NavLink[] = [
   { href: "/acerca", label: "Acerca de" },
 ];
 
+const EXTERNAL_LINKS = [
+  { href: "https://recursos-psi.vercel.app", label: "Recursos" },
+];
+
 export function Header() {
   const pathname = usePathname();
 
@@ -49,6 +53,23 @@ export function Header() {
               </Link>
             );
           })}
+        </nav>
+
+        <nav className="hidden md:flex items-center gap-1 ml-2">
+          {EXTERNAL_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium text-muted hover:bg-surface-raised hover:text-foreground transition-colors"
+            >
+              {link.label}
+              <svg className="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          ))}
         </nav>
       </div>
 

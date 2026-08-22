@@ -29,6 +29,14 @@ export function Footer() {
           <div className="text-xs text-muted text-center md:text-right">
             <p className="font-medium text-foreground">Reconstruir Psi</p>
             <p className="mt-1">Guía basada en evidencia — Agosto 2026</p>
+            <a
+              href="https://recursos-psi.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block mt-2 text-accent hover:underline"
+            >
+              Directorio de recursos →
+            </a>
           </div>
         </div>
       </div>
